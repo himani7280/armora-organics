@@ -74,7 +74,6 @@ export default function Footer() {
           <span>{footer.copyright} powered by lestow</span>
           <div className="flex items-center gap-4">
             <Link href="/thank-you" className="transition hover:text-gold">Thank You</Link>
-            <Link href="/enquiry" className="transition hover:text-gold">Enquiry Now</Link>
           </div>
         </div>
       </div>

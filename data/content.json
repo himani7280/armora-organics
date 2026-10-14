@@ -112,7 +112,7 @@
               { "label": "About Us",    "href": "/about" },
               { "label": "Services",    "href": "/services" },
               { "label": "Our Products","href": "/products" },
-              { "label": "Our Team",    "href": "/testimonials" },
+              { "label": "Our Team",    "href": "/our-team" },
               { "label": "Gallery",     "href": "/gallery" },
               { "label": "Contact",     "href": "/contact" }
             ],
@@ -124,11 +124,11 @@
               { "label": "Home",         "href": "/" },
               { "label": "About Us",     "href": "/about" },
               { "label": "Our Services", "href": "/services" },
-              { "label": "Our Team",     "href": "/testimonials" },
+              { "label": "Our Team",     "href": "/our-team" },
               { "label": "Gallery",      "href": "/gallery" },
-              { "label": "Blog",         "href": "/blog" },
-              { "label": "Contact Us",   "href": "/contact" },
-              { "label": "Enquiry Now",  "href": "/enquiry" }
+              { "label": "Blog",           "href": "/blog" },
+              { "label": "Testimonials",   "href": "/testimonials" },
+              { "label": "Contact Us",     "href": "/contact" }
             ],
             "services": [
               { "label": "Agriculture Solutions", "href": "/service-detail" },
