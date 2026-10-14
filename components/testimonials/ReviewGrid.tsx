@@ -46,11 +46,7 @@ export default function ReviewGrid() {
     return () => clearInterval(timer);
   }, [go]);
 
-  /* clamp index when perView changes */
-  useEffect(() => {
-    setCurrent((prev) => Math.min(prev, maxIndex));
-  }, [maxIndex]);
-
+  const activeIndex = Math.min(current, maxIndex);
   const dotCount = maxIndex + 1;
 
   return (
@@ -61,7 +57,7 @@ export default function ReviewGrid() {
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{
-              transform: `translateX(-${current * (100 / perView)}%)`,
+              transform: `translateX(-${activeIndex * (100 / perView)}%)`,
             }}
           >
             {reviews.map((r) => (
@@ -70,7 +66,7 @@ export default function ReviewGrid() {
                 className="shrink-0 px-2.5"
                 style={{ width: `${100 / perView}%` }}
               >
-                <article className="flex h-full flex-col rounded-2xl border border-mint bg-gradient-to-br from-[#f1f7ea] to-white p-4 sm:flex-row sm:p-5 sm:pb-7 lg:flex-col xl:flex-row">
+                <article className="group flex h-full flex-col rounded-2xl border border-mint bg-gradient-to-br from-[#f1f7ea] to-white p-4 sm:flex-row sm:p-5 sm:pb-7 lg:flex-col xl:flex-row transition-all duration-300 hover:shadow-lg">
                   <Image
                     src={r.avatar}
                     alt={r.name}
@@ -79,7 +75,7 @@ export default function ReviewGrid() {
                     className="h-24 w-24 shrink-0 rounded-full object-cover sm:h-[110px] sm:w-[110px] xl:h-[126px] xl:w-[126px]"
                   />
                   <div className="relative mt-4 flex-1 sm:mt-0 sm:pl-5 xl:pl-6">
-                    <span className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full bg-[#f5ead2] text-gold">
+                    <span className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full bg-[#f5ead2] text-gold transition-all duration-300 group-hover:bg-gold group-hover:text-white group-hover:scale-105 shadow-xs">
                       <FaQuoteLeft className="h-4 w-4" />
                     </span>
                     <div className="flex gap-0.5 pt-1 text-sm text-gold">
@@ -106,7 +102,7 @@ export default function ReviewGrid() {
             type="button"
             aria-label="Previous review"
             onClick={() => go(-1)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-mint text-forest transition hover:bg-forest hover:text-white"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-mint bg-white text-forest shadow-xs transition-all duration-300 hover:bg-forest hover:text-white hover:scale-105"
           >
             <FiArrowLeft />
           </button>
@@ -119,7 +115,7 @@ export default function ReviewGrid() {
                 aria-label={`Go to slide ${i + 1}`}
                 onClick={() => setCurrent(i)}
                 className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                  i === current ? "bg-forest" : "bg-[#c9d8a8]"
+                  i === activeIndex ? "bg-forest" : "bg-[#c9d8a8]"
                 }`}
               />
             ))}
@@ -129,7 +125,7 @@ export default function ReviewGrid() {
             type="button"
             aria-label="Next review"
             onClick={() => go(1)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-mint text-forest transition hover:bg-forest hover:text-white"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-mint bg-white text-forest shadow-xs transition-all duration-300 hover:bg-forest hover:text-white hover:scale-105"
           >
             <FiArrowRight />
           </button>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaQuoteRight, FaStar } from "react-icons/fa6";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import SectionTitle from "@/components/common/SectionTitle";
@@ -20,7 +20,14 @@ export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const total = t.reviews.length;
   const review = t.reviews[index];
+  const [paused, setPaused] = useState(false);
   const go = (dir: number) => setIndex((i) => (i + dir + total) % total);
+
+  useEffect(() => {
+    if (paused || total < 2) return;
+    const id = setInterval(() => setIndex((i) => (i + 1) % total), 4500);
+    return () => clearInterval(id);
+  }, [paused, total]);
 
   return (
     <section className="overflow-hidden py-6 sm:py-8 lg:py-10">
@@ -34,11 +41,11 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <div className="relative">
+        <div className="relative" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
           <div className="absolute -right-5 top-0 hidden h-[380px] w-[101px] overflow-hidden rounded-tl-3xl sm:block lg:-right-[calc((100vw-1300px)/2+20px)] lg:w-[101px]">
             <Image src={t.fieldImage} alt="" fill sizes="101px" className="object-cover" />
           </div>
-          <div className="relative z-10 rounded-3xl border border-slate-100 p-7 shadow-xl sm:mr-[100px] sm:p-10">
+          <div key={index} className="relative z-10 animate-[testi-in_0.6s_ease] rounded-3xl border border-slate-100 p-7 shadow-xl sm:mr-[100px] sm:p-10 bg-white">
             <div className="flex gap-1 text-gold">
               {Array.from({ length: 5 }).map((_, i) => (
                 <FaStar key={i} />
@@ -58,15 +65,33 @@ export default function Testimonials() {
             </div>
           </div>
           <div className="relative z-10 mt-8 flex items-center justify-center gap-6 sm:mr-[100px]">
-            <button type="button" aria-label="Previous review" onClick={() => go(-1)} className="flex h-11 w-11 items-center justify-center rounded-full border border-mint text-forest transition hover:bg-forest hover:text-white">
+            <button
+              type="button"
+              aria-label="Previous review"
+              onClick={() => go(-1)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-mint bg-white text-forest shadow-xs transition-all duration-300 hover:bg-forest hover:text-white hover:scale-105"
+            >
               <FiArrowLeft />
             </button>
             <div className="flex gap-3">
-              {Array.from({ length: Math.max(total, 3) }).map((_, i) => (
-                <span key={i} className={`h-2.5 w-2.5 rounded-full ${i === index ? "bg-forest" : "bg-[#c9d8a8]"}`} />
+              {Array.from({ length: total }).map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  aria-label={`Show review ${i + 1}`}
+                  onClick={() => setIndex(i)}
+                  className={`h-2.5 w-2.5 rounded-full transition-colors ${
+                    i === index ? "bg-forest" : "bg-[#c9d8a8]"
+                  }`}
+                />
               ))}
             </div>
-            <button type="button" aria-label="Next review" onClick={() => go(1)} className="flex h-11 w-11 items-center justify-center rounded-full border border-mint text-forest transition hover:bg-forest hover:text-white">
+            <button
+              type="button"
+              aria-label="Next review"
+              onClick={() => go(1)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-mint bg-white text-forest shadow-xs transition-all duration-300 hover:bg-forest hover:text-white hover:scale-105"
+            >
               <FiArrowRight />
             </button>
           </div>

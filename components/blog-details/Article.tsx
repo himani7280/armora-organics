@@ -14,11 +14,26 @@ export default function Article() {
         <span className="block text-[#f47a1f]">{a.titleLine2}</span>
       </h2>
       <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[17px] text-slate-700">
-        <span className="flex items-center gap-2"><FiCalendar className="text-[#f47a1f]" />{a.date}</span>
+        <span className="group flex items-center gap-2 cursor-pointer">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-forest/5 text-[#f47a1f] transition-all duration-200 group-hover:bg-[#f47a1f] group-hover:text-white">
+            <FiCalendar className="h-3.5 w-3.5" />
+          </span>
+          {a.date}
+        </span>
         <span className="hidden h-4 w-px bg-slate-300 sm:block" />
-        <span className="flex items-center gap-2"><FiUser className="text-[#f47a1f]" />{a.author}</span>
+        <span className="group flex items-center gap-2 cursor-pointer">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-forest/5 text-[#f47a1f] transition-all duration-200 group-hover:bg-[#f47a1f] group-hover:text-white">
+            <FiUser className="h-3.5 w-3.5" />
+          </span>
+          {a.author}
+        </span>
         <span className="hidden h-4 w-px bg-slate-300 sm:block" />
-        <span className="flex items-center gap-2"><FiClock className="text-[#f47a1f]" />{a.readTime}</span>
+        <span className="group flex items-center gap-2 cursor-pointer">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-forest/5 text-[#f47a1f] transition-all duration-200 group-hover:bg-[#f47a1f] group-hover:text-white">
+            <FiClock className="h-3.5 w-3.5" />
+          </span>
+          {a.readTime}
+        </span>
       </div>
       <p className="mt-6 text-[17px] leading-8 text-slate-600">{a.intro}</p>
       <div className="relative mt-6 aspect-[758/316] overflow-hidden rounded-2xl">
@@ -41,9 +56,9 @@ export default function Article() {
         <span className="mt-3 block h-[3px] w-14 bg-[#f47a1f]" />
         <ul className="mt-5 space-y-3">
           {a.maintain.items.map((i) => (
-            <li key={i} className="flex items-start gap-3 text-[17px] text-slate-600">
-              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-forest text-white"><FiCheck className="h-3.5 w-3.5" /></span>
-              {i}
+            <li key={i} className="group flex items-start gap-3 text-[17px] text-slate-600 cursor-pointer">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-forest text-white transition-all duration-200 group-hover:bg-leaf group-hover:scale-110 shadow-xs"><FiCheck className="h-3.5 w-3.5" /></span>
+              <span className="transition-colors group-hover:text-forest">{i}</span>
             </li>
           ))}
         </ul>

@@ -4,6 +4,7 @@ import type { IconType } from "react-icons";
 import { FiChevronRight } from "react-icons/fi";
 import { FaLeaf, FaSeedling, FaHandHoldingHeart, FaFlask, FaDroplet, FaChartColumn, FaBoxOpen, FaTruck, FaLocationDot } from "react-icons/fa6";
 import { productDetailContent } from "@/lib/content";
+import type { CatalogProduct } from "@/lib/catalog";
 
 const data = productDetailContent;
 
@@ -26,7 +27,7 @@ function Ico({ name }: { name: string }) {
 
 function IconCircle({ name }: { name: string }) {
   return (
-    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-mint text-2xl text-forest">
+    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-mint text-2xl text-forest transition-all duration-300 hover:bg-forest hover:text-white hover:scale-105 cursor-pointer shadow-xs">
       <Ico name={name} />
     </span>
   );
@@ -41,8 +42,14 @@ function Heading({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function ProductDetailView() {
-  const { hero, overview, features, specs, benefits, availability } = data;
+function splitTitle(title: string) {
+  const words = title.split(" ");
+  return words.length > 1 ? { title: words.slice(0, -1).join(" "), accent: words[words.length - 1] } : { title, accent: "" };
+}
+
+export default function ProductDetailView({ product }: { product?: CatalogProduct }) {
+  const { overview, features, specs, benefits, availability } = data;
+  const hero = product ? { ...data.hero, ...splitTitle(product.title), text: product.text, image: product.image } : data.hero;
   return (
     <div className="py-12 lg:py-20">
       <div className="container-x space-y-14 lg:space-y-16">
@@ -66,9 +73,9 @@ export default function ProductDetailView() {
                 </div>
               ))}
             </div>
-            <Link href={hero.button.href} className="mt-8 inline-flex items-center gap-6 rounded-full bg-gold py-1.5 pl-8 pr-1.5 font-ui text-lg font-semibold text-white hover:opacity-90">
-              {hero.button.label}
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-forest text-white">
+            <Link href={hero.button.href} className="group mt-8 inline-flex items-center gap-6 rounded-full bg-gold py-1.5 pl-8 pr-1.5 font-ui text-lg font-semibold text-white shadow-md transition-all duration-300 hover:bg-gold-light hover:shadow-lg">
+              <span>{hero.button.label}</span>
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-forest text-white transition-all duration-300 group-hover:bg-forest-deep group-hover:scale-105">
                 <FiChevronRight />
               </span>
             </Link>
@@ -92,10 +99,10 @@ export default function ProductDetailView() {
           <Heading>{features.title}</Heading>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {features.items.map((f) => (
-              <div key={f.title} className="flex items-center gap-4 rounded-xl border border-slate-200 p-4">
+              <div key={f.title} className="group flex items-center gap-4 rounded-xl border border-slate-200 p-4 transition-all duration-300 hover:border-mint hover:shadow-md cursor-pointer">
                 <IconCircle name={f.icon} />
                 <div>
-                  <h3 className="font-body text-base font-bold text-forest">{f.title}</h3>
+                  <h3 className="font-body text-base font-bold text-forest transition-colors group-hover:text-leaf">{f.title}</h3>
                   <p className="mt-1 text-sm leading-5 text-slate-600">{f.text}</p>
                 </div>
               </div>
@@ -119,10 +126,10 @@ export default function ProductDetailView() {
             <Heading>{benefits.title}</Heading>
             <ul className="mt-6 space-y-5">
               {benefits.items.map((b) => (
-                <li key={b.title} className="flex items-center gap-4">
+                <li key={b.title} className="group flex items-center gap-4 cursor-pointer">
                   <IconCircle name={b.icon} />
                   <div>
-                    <h3 className="font-body text-lg font-bold text-forest">{b.title}</h3>
+                    <h3 className="font-body text-lg font-bold text-forest transition-colors group-hover:text-leaf">{b.title}</h3>
                     <p className="text-[15px] text-slate-600">{b.text}</p>
                   </div>
                 </li>
@@ -135,10 +142,10 @@ export default function ProductDetailView() {
           <Heading>{availability.title}</Heading>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {availability.items.map((a) => (
-              <div key={a.title} className="flex items-center gap-4 md:border-r md:border-slate-200 md:last:border-r-0">
+              <div key={a.title} className="group flex items-center gap-4 md:border-r md:border-slate-200 md:last:border-r-0 md:pr-4 cursor-pointer">
                 <IconCircle name={a.icon} />
                 <div>
-                  <h3 className="font-body text-lg font-bold text-forest">{a.title}</h3>
+                  <h3 className="font-body text-lg font-bold text-forest transition-colors group-hover:text-leaf">{a.title}</h3>
                   <p className="text-[15px] text-slate-600">{a.text}</p>
                 </div>
               </div>

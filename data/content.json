@@ -150,7 +150,7 @@
             "text": "Farmora Organics brings you fresh, naturally grown and chemical-free produce from our farms to your table. Good for you, better for the planet.",
             "primaryButton":   { "label": "Explore Our Products", "href": "/products" },
             "secondaryButton": { "label": "Our Services",          "href": "/services" },
-            "image": "/images/home/hero-farmer.png"
+            "image": "/images/home/hero-farmer.jpg"
           }
         }
       },
@@ -657,7 +657,7 @@
           "FarmoraContactInfo1": {
             "items": [
               { "key": "address", "title": "Our Address", "lines": ["Farmora Organics LLC", "742 Evergreen Terrace,", "Springfield, IL 62704,", "United States"] },
-              { "key": "phone",   "title": "Call Us",     "lines": ["+1 00000 00000"], "note": "Mon - Sat: 9:00 AM – 6:00 PM (Sunday Closed)" },
+              { "key": "phone",   "title": "Call Us",     "lines": ["+1 00000 00000"] },
               { "key": "email",   "title": "Email Us",    "lines": ["info@xyz.com"], "note": "We usually respond within 24 hours." },
               { "key": "follow",  "title": "Follow Us",   "note": "Stay connected for updates and farming insights." }
             ]

@@ -7,7 +7,11 @@ import { FiArrowRight } from "react-icons/fi";
 import SectionTitle from "@/components/common/SectionTitle";
 import { teamMembers } from "@/lib/teamData";
 
-const socials = [FaFacebookF, FaInstagram, FaLinkedinIn];
+const socials = [
+  { label: "Facebook", href: "https://www.facebook.com", icon: FaFacebookF },
+  { label: "Instagram", href: "https://www.instagram.com", icon: FaInstagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com", icon: FaLinkedinIn },
+];
 
 function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
   return (
@@ -26,16 +30,21 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
 
         {/* Social icons slide up on hover */}
         <div className="absolute bottom-0 left-0 right-0 flex translate-y-full items-center justify-center gap-3 pb-5 transition-transform duration-500 group-hover:translate-y-0">
-          {socials.map((Icon, i) => (
-            <a
-              key={i}
-              href="#"
-              aria-label="social"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-forest shadow transition hover:bg-gold hover:text-white"
-            >
-              <Icon className="h-4 w-4" />
-            </a>
-          ))}
+          {socials.map((s) => {
+            const Icon = s.icon;
+            return (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-forest shadow transition-all duration-300 hover:bg-gold hover:text-white hover:scale-110"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            );
+          })}
         </div>
       </div>
 
@@ -94,7 +103,7 @@ export default function TeamGrid() {
           </p>
           <a
             href="/contact"
-            className="mt-6 inline-block rounded-full bg-gold px-8 py-3 font-semibold text-white shadow transition hover:bg-gold-light hover:shadow-lg"
+            className="mt-6 inline-block rounded-full bg-gold px-8 py-3 font-semibold text-white shadow transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:scale-105"
           >
             Contact Us
           </a>

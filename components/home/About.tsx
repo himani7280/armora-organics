@@ -16,29 +16,32 @@ export default function About() {
           <p className="mx-auto mt-5 max-w-xl text-center text-base leading-7 text-slate-600 sm:text-[17px] lg:mx-0 lg:text-left">{a.text}</p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
             {a.features.map((f) => (
-              <div key={f.title} className="flex items-center gap-4">
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+              <div key={f.title} className="group flex items-center gap-4 cursor-pointer">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
                   <Icon name={f.icon} className="h-6 w-6" />
                 </span>
                 <div>
-                  <h4 className="text-base">{f.title}</h4>
+                  <h4 className="text-base font-bold text-forest transition-colors duration-200 group-hover:text-leaf">{f.title}</h4>
                   <p className="text-sm text-slate-500">{f.text}</p>
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-9 flex flex-wrap items-center gap-6">
-            <Link href={a.button.href} className="flex items-center gap-3 rounded-full bg-forest px-8 py-4 font-ui text-[15px] font-medium text-white transition hover:bg-leaf">
-              {a.button.label} <FiArrowRight />
+            <Link href={a.button.href} className="group flex items-center gap-3 rounded-full bg-forest px-8 py-4 font-ui text-[15px] font-medium text-white shadow-md transition-all duration-300 hover:bg-leaf hover:shadow-lg">
+              <span>{a.button.label}</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-all duration-200 group-hover:bg-white group-hover:text-forest group-hover:scale-105">
+                <FiArrowRight />
+              </span>
             </Link>
             <span className="hidden h-10 w-px bg-slate-300 sm:block" />
-            <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="flex items-center gap-3">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8b95a] text-forest">
+            <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="group flex items-center gap-3">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8b95a] text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
                 <FiPhone className="h-5 w-5" />
               </span>
               <span>
                 <span className="block text-sm text-slate-500">{a.callLabel}</span>
-                <span className="block font-ui text-xl font-bold text-forest">{site.phone}</span>
+                <span className="block font-ui text-xl font-bold text-forest transition-colors duration-200 group-hover:text-leaf">{site.phone}</span>
               </span>
             </a>
           </div>

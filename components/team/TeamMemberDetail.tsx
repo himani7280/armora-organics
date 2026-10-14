@@ -5,7 +5,11 @@ import { FiBriefcase, FiCheckCircle, FiAward, FiBook } from "react-icons/fi";
 import { FaQuoteLeft } from "react-icons/fa6";
 import { teamMembers } from "@/lib/teamData";
 
-const socials = [FaFacebookF, FaInstagram, FaLinkedinIn];
+const socials = [
+  { label: "Facebook", href: "https://www.facebook.com", icon: FaFacebookF },
+  { label: "Instagram", href: "https://www.instagram.com", icon: FaInstagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com", icon: FaLinkedinIn },
+];
 
 export default function TeamMemberDetail({ slug }: { slug: string }) {
   const member = teamMembers.find((m) => m.slug === slug);
@@ -16,7 +20,7 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
         <p className="text-2xl text-slate-500">Team member not found.</p>
         <Link
           href="/our-team"
-          className="mt-6 inline-block rounded-full bg-forest px-8 py-3 text-white"
+          className="mt-6 inline-block rounded-full bg-forest px-8 py-3 text-white transition hover:bg-leaf"
         >
           Back to Team
         </Link>
@@ -27,7 +31,6 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
   return (
     <section className="py-8 sm:py-12">
       <div className="container-x">
-
         {/* Main card */}
         <div className="overflow-hidden rounded-3xl bg-white shadow-2xl">
           <div className="grid lg:grid-cols-[380px_1fr]">
@@ -60,15 +63,19 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
 
               {/* Stats */}
               <div className="flex w-full flex-col gap-4">
-                <div className="flex items-center gap-3 rounded-xl bg-white/10 px-4 py-3">
-                  <FiBriefcase className="h-5 w-5 shrink-0 text-gold" />
+                <div className="group flex items-center gap-3 rounded-xl bg-white/10 px-4 py-3 transition hover:bg-white/15">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold/20 text-gold transition-colors duration-200 group-hover:bg-gold group-hover:text-forest">
+                    <FiBriefcase className="h-4 w-4" />
+                  </span>
                   <div>
                     <p className="text-[11px] uppercase tracking-wider text-white/60">Experience</p>
                     <p className="font-semibold">{member.experience}</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 rounded-xl bg-white/10 px-4 py-3">
-                  <FiBook className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                <div className="group flex items-start gap-3 rounded-xl bg-white/10 px-4 py-3 transition hover:bg-white/15">
+                  <span className="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-gold/20 text-gold transition-colors duration-200 group-hover:bg-gold group-hover:text-forest">
+                    <FiBook className="h-4 w-4" />
+                  </span>
                   <div>
                     <p className="text-[11px] uppercase tracking-wider text-white/60">Education</p>
                     <p className="text-sm font-semibold leading-5">{member.education}</p>
@@ -78,16 +85,21 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
 
               {/* Socials */}
               <div className="mt-8 flex gap-3">
-                {socials.map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    aria-label="social"
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-gold"
-                  >
-                    <Icon className="h-4 w-4" />
-                  </a>
-                ))}
+                {socials.map((s) => {
+                  const Icon = s.icon;
+                  return (
+                    <a
+                      key={s.label}
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={s.label}
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:bg-gold hover:text-white hover:scale-110 shadow-xs"
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
 
@@ -124,9 +136,11 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
                   {member.expertise.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-3 rounded-xl border border-mint bg-cream/60 px-4 py-3 text-sm font-medium text-forest shadow-sm"
+                      className="group flex items-center gap-3 rounded-xl border border-mint bg-cream/60 px-4 py-3 text-sm font-medium text-forest shadow-xs transition-all duration-200 hover:border-forest/20 hover:bg-mint/40"
                     >
-                      <FiCheckCircle className="h-4 w-4 shrink-0 text-leaf" />
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-leaf/10 text-leaf transition-colors group-hover:bg-leaf group-hover:text-white">
+                        <FiCheckCircle className="h-4 w-4" />
+                      </span>
                       {item}
                     </li>
                   ))}
@@ -137,14 +151,16 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-leaf px-7 py-3 font-semibold text-white shadow-md transition hover:bg-forest"
+                  className="group inline-flex items-center gap-2.5 rounded-full bg-leaf px-7 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:bg-forest hover:shadow-lg"
                 >
-                  <FiAward className="h-5 w-5" />
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-all duration-200 group-hover:bg-white group-hover:text-forest group-hover:scale-105">
+                    <FiAward className="h-4 w-4" />
+                  </span>
                   Get in Touch
                 </Link>
                 <Link
                   href="/our-team"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-forest px-7 py-3 font-semibold text-forest transition hover:bg-forest hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-forest px-7 py-3 font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white"
                 >
                   Meet the Team
                 </Link>

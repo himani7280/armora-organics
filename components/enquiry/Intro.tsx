@@ -22,10 +22,12 @@ export default function Intro() {
       <p className="mt-5 text-lg leading-8 text-slate-600">{i.text}</p>
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
         {i.cards.map((c) => (
-          <div key={c.title} className="flex gap-4 rounded-xl border border-slate-100 p-5">
-            <span className="flex h-[70px] w-[70px] shrink-0 items-center justify-center rounded-full bg-forest/10 text-3xl text-forest">{icons[c.icon]}</span>
+          <div key={c.title} className="group flex gap-4 rounded-xl border border-slate-100 p-5 transition-all duration-300 hover:border-mint hover:shadow-md cursor-pointer">
+            <span className="flex h-[70px] w-[70px] shrink-0 items-center justify-center rounded-full bg-forest/10 text-3xl text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
+              {icons[c.icon]}
+            </span>
             <div>
-              <h3 className="font-body text-lg font-extrabold">{c.title}</h3>
+              <h3 className="font-body text-lg font-extrabold text-forest transition-colors duration-200 group-hover:text-leaf">{c.title}</h3>
               <p className="mt-1 text-[15px] leading-6 text-slate-500">{c.text}</p>
             </div>
           </div>

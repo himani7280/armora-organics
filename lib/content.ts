@@ -10,11 +10,8 @@ import raw from "@/data/content.json";
 
 // Shorthand for the variant-level objects
 const s = raw.Farmora.sections;
-const v = <S extends keyof typeof s>(section: S) => {
-  const variants = s[section].variants;
-  const keys = Object.keys(variants) as (keyof typeof variants)[];
-  return variants[keys[0]];
-};
+type FirstVariant<S extends keyof typeof s> = (typeof s)[S]["variants"][keyof (typeof s)[S]["variants"]];
+const v = <S extends keyof typeof s>(section: S) => Object.values(s[section].variants)[0] as FirstVariant<S>;
 
 /* ------------------------------------------------------------------ */
 /*  HOME PAGE                                                         */

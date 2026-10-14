@@ -9,31 +9,42 @@ const icons: Record<string, React.ReactNode> = {
   address: <FiMapPin />, phone: <FiPhone />, email: <FiMail />, follow: <LuSprout />,
 };
 const socials = [
-  { label: "Facebook", icon: <FaFacebookF /> },
-  { label: "Instagram", icon: <FaInstagram /> },
-  { label: "LinkedIn", icon: <FaLinkedinIn /> },
-  { label: "YouTube", icon: <FaYoutube /> },
+  { label: "Facebook", href: "https://www.facebook.com", icon: <FaFacebookF /> },
+  { label: "Instagram", href: "https://www.instagram.com", icon: <FaInstagram /> },
+  { label: "LinkedIn", href: "https://www.linkedin.com", icon: <FaLinkedinIn /> },
+  { label: "YouTube", href: "https://www.youtube.com", icon: <FaYoutube /> },
 ];
 
 export default function InfoCards() {
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       {data.info.map((c) => (
-        <div key={c.key} className="group cursor-pointer rounded-2xl border border-slate-100 p-6 transition-shadow duration-300 hover:shadow-md">
-          <span className="flex h-[74px] w-[74px] items-center justify-center rounded-full bg-forest/10 text-3xl text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white">
+        <div key={c.key} className="group cursor-pointer rounded-2xl border border-slate-100 p-6 transition-all duration-300 hover:shadow-lg hover:border-mint">
+          <span className="flex h-[74px] w-[74px] items-center justify-center rounded-full bg-forest/10 text-3xl text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
             {icons[c.key]}
           </span>
           <h3 className="mt-5 text-2xl transition-colors duration-300 group-hover:text-forest">{c.title}</h3>
           {c.key === "follow" && (
             <div className="mt-4 flex gap-3">
               {socials.map((s) => (
-                <span key={s.label} aria-label={s.label} className="flex h-12 w-12 items-center justify-center rounded-full bg-forest text-lg text-white">{s.icon}</span>
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-forest text-lg text-white transition-all duration-300 hover:bg-gold hover:text-white hover:scale-110 hover:shadow-md cursor-pointer"
+                >
+                  {s.icon}
+                </a>
               ))}
             </div>
           )}
           {"lines" in c && c.lines && (
             <p className={`mt-4 leading-7 ${c.key === "address" ? "text-slate-600" : "text-lg text-forest"}`}>
-              {c.lines.map((l) => (<span key={l} className="block">{l}</span>))}
+              {c.lines.map((l) => (
+                <span key={l} className="block transition-colors group-hover:text-leaf">{l}</span>
+              ))}
             </p>
           )}
           {"note" in c && c.note && <p className="mt-4 text-[17px] leading-7 text-slate-500">{c.note}</p>}

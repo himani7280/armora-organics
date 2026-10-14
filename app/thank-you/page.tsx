@@ -39,15 +39,21 @@ export default function ThankYouPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/"
-                className="inline-flex items-center gap-3 rounded-full bg-forest px-8 py-4 font-ui text-lg font-medium text-white shadow-lg transition hover:bg-forest-deep hover:shadow-xl"
+                className="group inline-flex items-center gap-3 rounded-full bg-forest px-8 py-3.5 font-ui text-lg font-medium text-white shadow-lg transition-all duration-300 hover:bg-forest-deep hover:shadow-xl"
               >
-                <FiHome className="h-5 w-5" /> Back to Home
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15 transition-all duration-200 group-hover:bg-white group-hover:text-forest">
+                  <FiHome className="h-4 w-4" />
+                </span>
+                <span>Back to Home</span>
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 rounded-full border-2 border-gold bg-transparent px-8 py-4 font-ui text-lg font-medium text-forest transition hover:bg-gold hover:text-white"
+                className="group inline-flex items-center gap-3 rounded-full border-2 border-gold bg-transparent px-8 py-3.5 font-ui text-lg font-medium text-forest transition-all duration-300 hover:bg-gold hover:text-white"
               >
-                Contact Us <FiArrowRight className="h-5 w-5" />
+                <span>Contact Us</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-forest/10 transition-all duration-200 group-hover:bg-white group-hover:text-gold">
+                  <FiArrowRight className="h-4 w-4" />
+                </span>
               </Link>
             </div>
 

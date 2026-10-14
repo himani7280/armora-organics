@@ -6,6 +6,7 @@ import { FaLeaf } from "react-icons/fa6";
 import { LuCoins, LuGlobe, LuHandHeart, LuSprout } from "react-icons/lu";
 import ServiceSidebar from "@/components/service-detail/ServiceSidebar";
 import { serviceDetailContent } from "@/lib/content";
+import type { CatalogService } from "@/lib/catalog";
 
 const data = serviceDetailContent;
 
@@ -25,8 +26,16 @@ function Heading({ children }: { children: string }) {
   );
 }
 
-export default function ServiceDetail() {
-  const { intro, overview, benefits, why } = data;
+function splitTitle(title: string) {
+  const words = title.split(" ");
+  return words.length > 1 ? { title: words.slice(0, -1).join(" "), accent: words[words.length - 1] } : { title, accent: "" };
+}
+
+export default function ServiceDetail({ service }: { service?: CatalogService }) {
+  const { overview, benefits, why } = data;
+  const intro = service
+    ? { ...data.intro, ...splitTitle(service.title), text: service.text, image: service.image }
+    : data.intro;
   return (
     <section className="py-10 sm:py-12 lg:py-[60px]">
       <div className="container-x grid gap-10 lg:grid-cols-[1fr_360px] lg:gap-8">
@@ -43,9 +52,9 @@ export default function ServiceDetail() {
                 <span className="text-gold">{intro.accent}</span>
               </h2>
               <p className="mt-4 text-base leading-7 text-slate-600 sm:text-[17px]">{intro.text}</p>
-              <Link href={intro.button.href} className="mt-6 inline-flex items-center gap-6 rounded-full bg-gold py-1.5 pl-7 pr-1.5 font-ui text-base font-semibold text-white">
-                {intro.button.label}
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-forest"><FiArrowRight /></span>
+              <Link href={intro.button.href} className="group mt-6 inline-flex items-center gap-6 rounded-full bg-gold py-1.5 pl-7 pr-1.5 font-ui text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-gold-light hover:shadow-lg">
+                <span>{intro.button.label}</span>
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-forest text-white transition-all duration-300 group-hover:bg-forest-deep group-hover:scale-105"><FiArrowRight /></span>
               </Link>
             </div>
             <div className="relative aspect-[410/424] overflow-hidden rounded-2xl">
@@ -67,12 +76,12 @@ export default function ServiceDetail() {
               {benefits.items.map((b) => {
                 const BIcon = benefitIcons[b.icon] ?? LuSprout;
                 return (
-                  <div key={b.title} className="flex items-start gap-4">
-                    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-forest/10 text-leaf">
+                  <div key={b.title} className="group flex items-start gap-4 cursor-pointer">
+                    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-forest/10 text-leaf transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
                       <BIcon className="h-8 w-8" />
                     </span>
                     <div>
-                      <h3 className="font-body text-base font-bold">{b.title}</h3>
+                      <h3 className="font-body text-base font-bold text-forest transition-colors duration-200 group-hover:text-leaf">{b.title}</h3>
                       <p className="mt-1 text-sm leading-5 text-slate-500">{b.text}</p>
                     </div>
                   </div>
@@ -90,16 +99,16 @@ export default function ServiceDetail() {
               <p className="mt-5 text-[15px] leading-6 text-slate-600">{why.text}</p>
               <ul className="mt-5 space-y-3">
                 {why.points.map((p) => (
-                  <li key={p} className="flex items-center gap-3 text-[15px] text-forest">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-forest text-white"><FiCheck className="h-4 w-4" /></span>
-                    {p}
+                  <li key={p} className="group flex items-center gap-3 text-[15px] text-forest">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-forest text-white transition-all duration-300 group-hover:bg-gold group-hover:scale-105"><FiCheck className="h-4 w-4" /></span>
+                    <span className="transition-colors group-hover:text-leaf">{p}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
         </div>
-        <ServiceSidebar />
+        <ServiceSidebar activeSlug={service?.slug} />
       </div>
     </section>
   );

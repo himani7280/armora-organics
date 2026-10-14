@@ -86,9 +86,10 @@
   .hero-overlay {
     background: linear-gradient(
       90deg,
-      rgba(10, 45, 18, 0.55) 0%,
-      rgba(10, 45, 18, 0.35) 45%,
-      rgba(10, 45, 18, 0) 70%
+      rgba(7, 36, 14, 0.88) 0%,
+      rgba(7, 36, 14, 0.55) 40%,
+      rgba(7, 36, 14, 0.15) 70%,
+      transparent 100%
     );
   }
 
@@ -129,4 +130,9 @@
 .plant-fade {
   -webkit-mask-image: linear-gradient(to right, transparent, #000 16%, #000 84%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 16%, #000 84%, transparent);
+}
+
+@keyframes testi-in {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
