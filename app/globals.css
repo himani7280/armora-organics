@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-forest: #0b3b1f;
+  --color-forest-deep: #07301a;
+  --color-leaf: #2f7a2b;
+  --color-gold: #c08a2e;
+  --color-gold-light: #e8b95a;
+  --color-cream: #f8f7f1;
+  --color-mint: #e6efd5;
+  --color-ink: #4b5563;
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-display: var(--font-oswald), Impact, sans-serif;
+  --font-body: var(--font-nunito), Arial, sans-serif;
+  --font-ui: var(--font-roboto), Arial, sans-serif;
+  --font-eyebrow: var(--font-montserrat), Arial, sans-serif;
+  --font-copy: var(--font-poppins), Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #fdfcfa;
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    color: var(--color-forest);
+    font-weight: 700;
+  }
+
+  h1,
+  h2 {
+    font-weight: 800;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* ---------- shared building blocks ---------- */
+  .container-x {
+    width: 100%;
+    max-width: 1300px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .card-shadow {
+    box-shadow: 0 6px 24px rgba(11, 59, 31, 0.08);
+  }
+
+  .eyebrow {
+    font-family: var(--font-eyebrow);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-forest);
+  }
+
+  .eyebrow-line {
+    display: block;
+    height: 1px;
+    width: 44px;
+    background: var(--color-gold);
+  }
+
+  /* hand-painted torn edge used by the home hero */
+  .hero-torn {
+    clip-path: polygon(
+      0 4%, 6% 2%, 12% 4.5%, 20% 2%, 28% 4%, 36% 1.5%, 45% 4%, 53% 2%, 62% 4.5%,
+      70% 2%, 79% 4%, 88% 1.5%, 100% 3.5%, 100% 95%, 93% 97%, 85% 94.5%, 76% 97%,
+      66% 95%, 57% 97.5%, 47% 95%, 38% 97%, 28% 94.5%, 18% 97%, 9% 95%, 0 97%
+    );
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 45, 18, 0.55) 0%,
+      rgba(10, 45, 18, 0.35) 45%,
+      rgba(10, 45, 18, 0) 70%
+    );
+  }
+
+  .banner-overlay {
+    background: rgba(34, 94, 38, 0.38);
+  }
+
+  .footer-bottom {
+    background: #07341f;
+  }
+
+  .footer-top-line {
+    border-top: 3px solid var(--color-gold);
+  }
+
+}
+
+/* footer: four columns with thin dividers on desktop */
+@media (min-width: 1024px) {
+  .footer-grid > * {
+    padding-inline: 2rem;
+  }
+  .footer-grid > :first-child {
+    padding-left: 0;
+  }
+  .footer-grid > :not(:first-child) {
+    border-left: 1px solid var(--color-mint);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-torn {
+    clip-path: none;
+  }
+}
+
+/* why-choose plant: soft edges so the cropped photo melts into the page */
+.plant-fade {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 16%, #000 84%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 16%, #000 84%, transparent);
 }

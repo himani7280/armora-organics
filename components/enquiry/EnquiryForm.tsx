@@ -1,0 +1,91 @@
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { FiUser, FiMail, FiPhone, FiGrid, FiFileText, FiMessageSquare, FiChevronDown, FiArrowRight } from "react-icons/fi";
+import { enquiryContent } from "@/lib/content";
+
+const data = enquiryContent;
+
+const empty = { name: "", email: "", phone: "", type: "", subject: "", message: "" };
+const box = "w-full rounded-lg border border-slate-200 bg-transparent py-3.5 pl-14 pr-4 text-[15px] text-slate-700 outline-none placeholder:text-slate-400 focus:border-leaf";
+const labelCls = "mb-2 block font-body text-[17px] font-bold text-forest";
+
+type Key = keyof typeof empty;
+
+export default function EnquiryForm() {
+  const f = data.form;
+  const router = useRouter();
+  const [v, setV] = useState(empty);
+  const set = (k: Key) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setV({ ...v, [k]: e.target.value });
+  };
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setV(empty);
+    router.push("/thank-you");
+  };
+  const star = <span className="text-red-600"> *</span>;
+  return (
+    <div className="rounded-2xl border border-slate-200 p-6 sm:p-9">
+      <p className="flex items-center gap-4 font-ui text-sm font-medium uppercase text-gold">
+        <span className="h-[3px] w-9 bg-gold" />{f.eyebrow}
+      </p>
+      <h2 className="mt-3 font-body text-4xl font-extrabold sm:text-5xl">{f.title} <span className="text-gold">{f.accent}</span></h2>
+      <p className="mt-3 text-[17px] leading-7 text-slate-600">{f.subtitle}</p>
+      <form onSubmit={submit} className="mt-6 grid gap-x-6 gap-y-5 sm:grid-cols-2">
+        <div>
+          <label htmlFor="enq-name" className={labelCls}>{f.labels.name}{star}</label>
+          <div className="relative">
+            <FiUser className="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+            <input id="enq-name" required value={v.name} onChange={set("name")} placeholder={f.placeholders.name} className={box} />
+          </div>
+        </div>
+        <div>
+          <label htmlFor="enq-email" className={labelCls}>{f.labels.email}{star}</label>
+          <div className="relative">
+            <FiMail className="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+            <input id="enq-email" required type="email" value={v.email} onChange={set("email")} placeholder={f.placeholders.email} className={box} />
+          </div>
+        </div>
+        <div>
+          <label htmlFor="enq-phone" className={labelCls}>{f.labels.phone}{star}</label>
+          <div className="relative">
+            <FiPhone className="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+            <input id="enq-phone" required type="tel" value={v.phone} onChange={set("phone")} placeholder={f.placeholders.phone} className={box} />
+          </div>
+        </div>
+        <div>
+          <label htmlFor="enq-type" className={labelCls}>{f.labels.type}{star}</label>
+          <div className="relative">
+            <FiGrid className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+            <select id="enq-type" required value={v.type} onChange={set("type")} className={`${box} appearance-none ${v.type ? "" : "text-slate-400"}`}>
+              <option value="">{f.placeholders.type}</option>
+              {f.types.map((t) => (<option key={t} value={t}>{t}</option>))}
+            </select>
+            <FiChevronDown className="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+          </div>
+        </div>
+        <div className="sm:col-span-2">
+          <label htmlFor="enq-subject" className={labelCls}>{f.labels.subject}{star}</label>
+          <div className="relative">
+            <FiFileText className="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+            <input id="enq-subject" required value={v.subject} onChange={set("subject")} placeholder={f.placeholders.subject} className={box} />
+          </div>
+        </div>
+        <div className="sm:col-span-2">
+          <label htmlFor="enq-message" className={labelCls}>{f.labels.message}{star}</label>
+          <div className="relative">
+            <FiMessageSquare className="absolute left-5 top-5 h-5 w-5 text-forest" />
+            <textarea id="enq-message" required rows={4} value={v.message} onChange={set("message")} placeholder={f.placeholders.message} className={`${box} resize-y`} />
+          </div>
+        </div>
+        <div className="sm:col-span-2">
+          <button type="submit" className="inline-flex items-center gap-8 rounded-full bg-gradient-to-r from-[#b87a25] to-[#e0a94e] py-2 pl-8 pr-2 font-ui text-lg font-medium text-white transition hover:brightness-110">
+            {f.button}
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-forest"><FiArrowRight className="h-5 w-5" /></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+}

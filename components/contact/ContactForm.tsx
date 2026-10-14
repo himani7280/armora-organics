@@ -1,0 +1,61 @@
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { FiUser, FiMail, FiPhone, FiFileText, FiMessageSquare, FiChevronRight } from "react-icons/fi";
+import { contactContent } from "@/lib/content";
+
+const data = contactContent;
+
+const empty = { name: "", email: "", phone: "", subject: "", message: "" };
+const box = "w-full rounded-xl border border-slate-200 bg-transparent py-4 pl-14 pr-4 text-[15px] text-slate-700 outline-none focus:border-leaf";
+
+export default function ContactForm() {
+  const f = data.form;
+  const router = useRouter();
+  const [v, setV] = useState(empty);
+  const set = (k: keyof typeof empty) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setV({ ...v, [k]: e.target.value });
+  };
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setV(empty);
+    router.push("/thank-you");
+  };
+  const ph = (label: string, req: boolean) => (req ? `${label} *` : label);
+  return (
+    <div className="rounded-2xl border border-slate-100 p-6 sm:p-9">
+      <h2 className="text-4xl sm:text-5xl">{f.title} <span className="text-gold">{f.accent}</span></h2>
+      <span className="mt-4 block h-[3px] w-14 bg-gold" />
+      <p className="mt-4 text-lg text-slate-600">{f.subtitle}</p>
+      <form onSubmit={submit} className="mt-6 grid gap-5 sm:grid-cols-2">
+        <label className="relative block">
+          <FiUser className="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+          <input required value={v.name} onChange={set("name")} placeholder={ph(f.fields.name, true)} aria-label={f.fields.name} className={box} />
+        </label>
+        <label className="relative block">
+          <FiMail className="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+          <input required type="email" value={v.email} onChange={set("email")} placeholder={ph(f.fields.email, true)} aria-label={f.fields.email} className={box} />
+        </label>
+        <label className="relative block">
+          <FiPhone className="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+          <input type="tel" value={v.phone} onChange={set("phone")} placeholder={ph(f.fields.phone, false)} aria-label={f.fields.phone} className={box} />
+        </label>
+        <label className="relative block">
+          <FiFileText className="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-forest" />
+          <input value={v.subject} onChange={set("subject")} placeholder={ph(f.fields.subject, false)} aria-label={f.fields.subject} className={box} />
+        </label>
+        <label className="relative block sm:col-span-2">
+          <FiMessageSquare className="absolute left-5 top-5 h-5 w-5 text-forest" />
+          <textarea required rows={5} value={v.message} onChange={set("message")} placeholder={ph(f.fields.message, true)} aria-label={f.fields.message} className={`${box} resize-y`} />
+        </label>
+        <div className="sm:col-span-2">
+          <button type="submit" className="inline-flex items-center gap-8 rounded-full bg-forest py-2 pl-12 pr-2 font-ui text-lg font-medium text-white transition hover:bg-forest-deep">
+            {f.button}
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gold"><FiChevronRight className="h-5 w-5" /></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+}
+
