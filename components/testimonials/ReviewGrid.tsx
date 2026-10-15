@@ -1,121 +1,256 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useCallback } from "react";
-import { FaQuoteLeft, FaStar } from "react-icons/fa6";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import { FaQuoteRight, FaStar } from "react-icons/fa6";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { testimonialsContent } from "@/lib/content";
 
-const data = testimonialsContent;
+interface ReviewItem {
+  name: string;
+  role: string;
+  quote: string;
+  avatar: string;
+}
+
+const data = testimonialsContent as { reviews: ReviewItem[] };
+
+function TestimonialCard({ review }: { review: ReviewItem }) {
+  return (
+    <article className="group relative flex h-full flex-col justify-between rounded-2xl border border-[#e3edd5] bg-[#fbfdf9] p-5 sm:p-6 shadow-xs transition-all duration-300 hover:shadow-md hover:border-leaf/40 hover:-translate-y-1">
+      <div className="flex gap-4 sm:gap-5">
+        {/* Left Column: Avatar + Name + Underline + Role */}
+        <div className="flex w-[100px] sm:w-[115px] shrink-0 flex-col items-start text-left">
+          <div className="relative h-20 w-20 sm:h-[84px] sm:w-[84px] shrink-0 overflow-hidden rounded-full border-2 border-white ring-2 ring-[#a4c97a]/60 shadow-xs">
+            <Image
+              src={review.avatar}
+              alt={review.name}
+              fill
+              quality={95}
+              sizes="100px"
+              className="object-cover rounded-full"
+            />
+          </div>
+          <h3 className="mt-3 sm:mt-3.5 font-serif font-bold text-forest text-[15px] sm:text-[17px] leading-tight text-left">
+            {review.name}
+          </h3>
+          <span className="mt-1.5 block h-[2.5px] w-7 sm:w-8 rounded-full bg-gold" />
+          <p className="mt-1.5 text-xs sm:text-[13px] text-slate-500 font-normal leading-snug text-left">
+            {review.role}
+          </p>
+        </div>
+
+        {/* Right Column: Stars + Quote Icon Badge + Review Quote */}
+        <div className="flex flex-1 min-w-0 flex-col justify-start">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex gap-1 text-[#e5a824] text-sm sm:text-[15px]">
+              {Array.from({ length: 5 }).map((_, starIdx) => (
+                <FaStar key={starIdx} />
+              ))}
+            </div>
+            <span className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-[#faeed6] text-[#c98a2c] shadow-2xs">
+              <FaQuoteRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+            </span>
+          </div>
+
+          <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-slate-600 font-normal">
+            &ldquo;{review.quote}&rdquo;
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default function ReviewGrid() {
   const reviews = data.reviews;
-  const total = reviews.length;
 
-  /* ---- responsive: how many cards visible at once ---- */
-  const [perView, setPerView] = useState(3);
+ 
+  const [colsVisible, setColsVisible] = useState(3);
 
   useEffect(() => {
-    const update = () => {
-      if (window.innerWidth >= 1024) setPerView(3);
-      else if (window.innerWidth >= 768) setPerView(2);
-      else setPerView(1);
+    const updateCols = () => {
+      if (window.innerWidth >= 1024) setColsVisible(3);
+      else if (window.innerWidth >= 768) setColsVisible(2);
+      else setColsVisible(1);
     };
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
+    updateCols();
+    window.addEventListener("resize", updateCols);
+    return () => window.removeEventListener("resize", updateCols);
   }, []);
 
-  const maxIndex = Math.max(total - perView, 0);
-  const [current, setCurrent] = useState(0);
 
+  const baseColumns = useMemo(() => {
+    return Array.from({ length: 9 }).map((_, i) => ({
+      id: i,
+      top: reviews[i % 9],
+      bottom: reviews[(i + 3) % 9],
+    }));
+  }, [reviews]);
+
+  const baseCount = baseColumns.length; // 9
+
+  // Cloned sets for seamless infinite X-axis scrolling without any rewind/reverse jump
+  const displayColumns = useMemo(() => {
+    return [...baseColumns, ...baseColumns, ...baseColumns];
+  }, [baseColumns]);
+
+  // Start in the middle set at index baseCount (index 9)
+  const [currentIndex, setCurrentIndex] = useState(baseCount);
+  const [withTransition, setWithTransition] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Advance by 1 vertical column along the X-axis
   const go = useCallback(
-    (dir: number) =>
-      setCurrent((prev) => {
-        const next = prev + dir;
-        if (next < 0) return maxIndex;
-        if (next > maxIndex) return 0;
-        return next;
-      }),
-    [maxIndex]
+    (dir: number) => {
+      setWithTransition(true);
+      setIsTransitioning(true);
+      setCurrentIndex((prev) => prev + dir);
+    },
+    []
   );
 
-  /* ---- auto-play ---- */
-  useEffect(() => {
-    const timer = setInterval(() => go(1), 4000);
-    return () => clearInterval(timer);
-  }, [go]);
+  
+  const handleTransitionEnd = () => {
+    setIsTransitioning(false);
+    if (currentIndex >= 2 * baseCount) {
+      setWithTransition(false);
+      setCurrentIndex((prev) => prev - baseCount);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setWithTransition(true);
+        });
+      });
+    } else if (currentIndex < baseCount) {
+      setWithTransition(false);
+      setCurrentIndex((prev) => prev + baseCount);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setWithTransition(true);
+        });
+      });
+    }
+  };
 
-  const activeIndex = Math.min(current, maxIndex);
-  const dotCount = maxIndex + 1;
+  // Autoplay: 1 column forward along X-axis every 4.5 seconds in continuous infinite loop
+  useEffect(() => {
+    if (paused) return;
+    autoPlayTimerRef.current = setInterval(() => {
+      go(1);
+    }, 4500);
+    return () => {
+      if (autoPlayTimerRef.current) clearInterval(autoPlayTimerRef.current);
+    };
+  }, [paused, go]);
+
+  // 4 Navigation Dots mapping across the 9 column positions
+  const DOT_COUNT = 4;
+  const dotTargets = [0, 2, 5, 7];
+  const currentCol = ((currentIndex % baseCount) + baseCount) % baseCount;
+  const activeDot =
+    currentCol <= 1 ? 0 : currentCol <= 3 ? 1 : currentCol <= 6 ? 2 : 3;
+
+  // Jump to one of the 4 dots using shortest circular direction (never rewinds)
+  const goToDot = (dotIndex: number) => {
+    const targetCol = dotTargets[dotIndex];
+    let diff = targetCol - currentCol;
+    if (diff > baseCount / 2) diff -= baseCount;
+    else if (diff < -baseCount / 2) diff += baseCount;
+    go(diff);
+  };
+
+  // Touch swipe support for mobile (X-axis swipe)
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEndX(null);
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX === null || touchEndX === null) return;
+    const distance = touchStartX - touchEndX;
+    if (distance > 45) {
+      go(1); // Swipe left -> advance forward along X-axis
+    } else if (distance < -45) {
+      go(-1); // Swipe right -> go backward along X-axis
+    }
+  };
+
+  const colWidthPercent = 100 / colsVisible;
 
   return (
-    <section className="py-10 sm:py-12 lg:py-[60px] overflow-hidden">
+    <section className="reveal-on-scroll pt-8 pb-3 sm:pt-10 sm:pb-4 lg:pt-12 lg:pb-5 overflow-hidden bg-white">
       <div className="container-x">
-        {/* ---- Carousel Track ---- */}
-        <div className="relative">
+        {/* ---- X-Axis Carousel Viewport (Shows exactly 6 cards: 3 columns x 2 rows) ---- */}
+        <div
+          className="relative overflow-hidden"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            className="flex"
+            onTransitionEnd={handleTransitionEnd}
             style={{
-              transform: `translateX(-${activeIndex * (100 / perView)}%)`,
+              transform: `translateX(-${currentIndex * colWidthPercent}%)`,
+              transition: withTransition
+                ? "transform 650ms cubic-bezier(0.25, 1, 0.5, 1)"
+                : "none",
             }}
           >
-            {reviews.map((r) => (
+            {displayColumns.map((col, idx) => (
               <div
-                key={r.name}
-                className="shrink-0 px-2.5"
-                style={{ width: `${100 / perView}%` }}
+                key={`${idx}-${col.id}`}
+                className="shrink-0 px-2.5 sm:px-3"
+                style={{ width: `${colWidthPercent}%` }}
               >
-                <article className="group flex h-full flex-col rounded-2xl border border-mint bg-gradient-to-br from-[#f1f7ea] to-white p-4 sm:flex-row sm:p-5 sm:pb-7 lg:flex-col xl:flex-row transition-all duration-300 hover:shadow-lg">
-                  <Image
-                    src={r.avatar}
-                    alt={r.name}
-                    width={128}
-                    height={128}
-                    className="h-24 w-24 shrink-0 rounded-full object-cover sm:h-[110px] sm:w-[110px] xl:h-[126px] xl:w-[126px]"
-                  />
-                  <div className="relative mt-4 flex-1 sm:mt-0 sm:pl-5 xl:pl-6">
-                    <span className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full bg-[#f5ead2] text-gold transition-all duration-300 group-hover:bg-gold group-hover:text-white group-hover:scale-105 shadow-xs">
-                      <FaQuoteLeft className="h-4 w-4" />
-                    </span>
-                    <div className="flex gap-0.5 pt-1 text-sm text-gold">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <FaStar key={i} />
-                      ))}
-                    </div>
-                    <p className="mt-3 text-[15px] leading-6 text-slate-600">
-                      &ldquo;{r.quote}&rdquo;
-                    </p>
-                    <h3 className="mt-4 text-lg text-forest">{r.name}</h3>
-                    <span className="mt-1 block h-0.5 w-9 bg-gold" />
-                    <p className="mt-2 text-[15px] text-slate-500">{r.role}</p>
+                {/* 1 Vertical Column containing 2 Cards */}
+                <div className="flex flex-col gap-5 sm:gap-6 h-full">
+                  <div className="flex-1">
+                    <TestimonialCard review={col.top} />
                   </div>
-                </article>
+                  <div className="flex-1">
+                    <TestimonialCard review={col.bottom} />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* ---- Navigation ---- */}
-        <div className="mt-8 flex items-center justify-center gap-6">
+        {/* ---- Navigation Controls: X-Axis Horizontal Arrows + 4 Step Dots ---- */}
+        <div className="mt-5 sm:mt-6 flex items-center justify-center gap-4 sm:gap-5">
           <button
             type="button"
-            aria-label="Previous review"
+            aria-label="Previous column"
             onClick={() => go(-1)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-mint bg-white text-forest shadow-xs transition-all duration-300 hover:bg-forest hover:text-white hover:scale-105"
+            disabled={isTransitioning}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-mint bg-white text-forest shadow-xs transition-all duration-300 hover:bg-forest hover:text-white hover:scale-105 cursor-pointer disabled:opacity-60"
           >
-            <FiArrowLeft />
+            <FiArrowLeft className="h-5 w-5" />
           </button>
 
-          <div className="flex gap-2.5">
-            {Array.from({ length: dotCount }).map((_, i) => (
+          <div className="flex items-center gap-2.5">
+            {Array.from({ length: DOT_COUNT }).map((_, i) => (
               <button
                 key={i}
                 type="button"
-                aria-label={`Go to slide ${i + 1}`}
-                onClick={() => setCurrent(i)}
-                className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                  i === activeIndex ? "bg-forest" : "bg-[#c9d8a8]"
+                aria-label={`Go to testimonial group ${i + 1}`}
+                onClick={() => goToDot(i)}
+                className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                  i === activeDot
+                    ? "w-7 bg-forest"
+                    : "w-2.5 bg-[#c9d8a8] hover:bg-forest/50"
                 }`}
               />
             ))}
@@ -123,11 +258,12 @@ export default function ReviewGrid() {
 
           <button
             type="button"
-            aria-label="Next review"
+            aria-label="Next column"
             onClick={() => go(1)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-mint bg-white text-forest shadow-xs transition-all duration-300 hover:bg-forest hover:text-white hover:scale-105"
+            disabled={isTransitioning}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-mint bg-white text-forest shadow-xs transition-all duration-300 hover:bg-forest hover:text-white hover:scale-105 cursor-pointer disabled:opacity-60"
           >
-            <FiArrowRight />
+            <FiArrowRight className="h-5 w-5" />
           </button>
         </div>
       </div>

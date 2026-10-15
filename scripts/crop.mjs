@@ -1,5 +1,4 @@
-// usage: node scripts/crop.mjs <page> <out> <x> <y> <w> <h> [circle]  (run from project root)
-// <page> = home|about|... (full-page screenshot in reference/Image Preview_files), coordinates in full-page pixels
+
 import sharp from 'sharp'; import fs from 'fs'; import path from 'path';
 const [page,out,x,y,w,h,mode]=process.argv.slice(2);
 const src=`./reference/Image Preview_files/${page}.jpg`;

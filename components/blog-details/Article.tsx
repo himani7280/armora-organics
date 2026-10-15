@@ -9,7 +9,7 @@ export default function Article() {
   const a = data.article;
   return (
     <article className="min-w-0">
-      <h2 className="font-body text-4xl font-extrabold leading-tight sm:text-5xl">
+      <h2 className="font-serif text-4xl font-extrabold leading-tight sm:text-5xl">
         {a.titleLine1}
         <span className="block text-[#f47a1f]">{a.titleLine2}</span>
       </h2>
@@ -41,7 +41,7 @@ export default function Article() {
       </div>
       {a.sections.map((s) => (
         <div key={s.heading} className="mt-8">
-          <h3 className="font-body text-2xl font-extrabold">{s.heading}</h3>
+          <h3 className="font-serif text-2xl font-extrabold">{s.heading}</h3>
           <span className="mt-3 block h-[3px] w-14 bg-[#f47a1f]" />
           <p className="mt-4 text-[17px] leading-8 text-slate-600">{s.text}</p>
         </div>
@@ -52,7 +52,7 @@ export default function Article() {
         <p className="text-lg italic leading-8 text-slate-700">{a.quote}</p>
       </blockquote>
       <div className="mt-8">
-        <h3 className="font-body text-2xl font-extrabold">{a.maintain.heading}</h3>
+        <h3 className="font-serif text-2xl font-extrabold">{a.maintain.heading}</h3>
         <span className="mt-3 block h-[3px] w-14 bg-[#f47a1f]" />
         <ul className="mt-5 space-y-3">
           {a.maintain.items.map((i) => (

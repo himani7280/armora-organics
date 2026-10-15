@@ -5,7 +5,14 @@ import { serviceDetailPageData } from "@/lib/content";
 export default function ServiceDetailPage() {
   return (
     <>
-      <PageBanner title={serviceDetailPageData.banner.title} />
+      <PageBanner
+        title={serviceDetailPageData.banner.title}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Service Detail" },
+        ]}
+      />
       <ServiceDetail />
     </>
   );

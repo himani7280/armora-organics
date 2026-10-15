@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import PageBanner from "@/components/common/PageBanner";
 import ServiceDetail from "@/components/service-detail/ServiceDetail";
-import { serviceDetailPageData } from "@/lib/content";
-import { services } from "@/lib/catalog";
+import { serviceDetailPageData, services } from "@/lib/content";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -22,7 +21,14 @@ export default async function ServiceDetailSlugPage(props: ServiceDetailPageProp
 
   return (
     <>
-      <PageBanner title={serviceDetailPageData.banner.title} />
+      <PageBanner
+        title={serviceDetailPageData.banner.title}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Service Detail" },
+        ]}
+      />
       <ServiceDetail service={service} />
     </>
   );

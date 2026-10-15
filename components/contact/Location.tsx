@@ -1,5 +1,5 @@
-import { FiChevronRight } from "react-icons/fi";
 import { contactContent } from "@/lib/content";
+import { Button } from "@/components/ui";
 
 const data = contactContent;
 
@@ -26,17 +26,13 @@ export default function Location() {
         <span className="mt-3 block h-[3px] w-14 bg-gold" />
         <h2 className="mt-4 text-4xl sm:text-5xl">{l.title} <span className="text-gold">{l.accent}</span></h2>
         <p className="mt-4 text-lg leading-8 text-slate-600">{l.text}</p>
-        <a
+        <Button
           href="https://maps.google.com/?q=New+York,+NY,+USA"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group mt-8 inline-flex items-center gap-8 rounded-full bg-forest py-2 pl-8 pr-2 font-ui text-lg font-medium text-white shadow-md transition-all duration-300 hover:bg-forest-deep hover:shadow-lg"
+          size="lg"
+          className="mt-8"
         >
           {l.button}
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold text-forest transition-all duration-300 group-hover:bg-gold-light group-hover:scale-105">
-            <FiChevronRight className="h-5 w-5" />
-          </span>
-        </a>
+        </Button>
       </div>
     </div>
   );

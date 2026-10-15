@@ -6,17 +6,17 @@ const data = contactContent;
 export default function Promo() {
   const p = data.promo;
   return (
-    <div className="flex flex-col overflow-hidden rounded-2xl bg-[#1d130b] text-white">
-      <div className="relative h-56 shrink-0 sm:h-72 lg:h-[300px]">
-        <Image src={p.image} alt="Young plant in sunlight" fill sizes="(min-width:1024px) 40vw, 100vw" className="object-cover" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#1d130b] to-transparent" />
+    <div className="reveal-right flex flex-col overflow-hidden rounded-2xl bg-[#1d130b] text-white h-full justify-between">
+      <div className="relative min-h-[170px] sm:min-h-[190px] flex-1 overflow-hidden">
+        <Image src={p.image} alt="Young plant in sunlight" fill sizes="(min-width:1024px) 40vw, 100vw" className="object-cover transition-transform duration-700 hover:scale-105" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#1d130b] to-transparent" />
       </div>
-      <div className="flex-1 px-7 pb-9 pt-2 sm:px-8">
-        <h3 className="font-serif text-3xl leading-tight text-white sm:text-4xl">
+      <div className="shrink-0 p-5 sm:p-6 lg:p-7 flex flex-col justify-center">
+        <h3 className="font-serif text-2xl leading-snug text-white sm:text-3xl">
           {p.titleLine1} {p.titlePrefix} <span className="text-gold-light">{p.titleAccent}</span> {p.titleLine3}
         </h3>
-        <span className="mt-4 block h-[3px] w-14 bg-gold-light" />
-        <p className="mt-5 text-lg leading-8">{p.text}</p>
+        <span className="mt-2 block h-[3px] w-12 bg-gold-light" />
+        <p className="mt-2 text-[15px] leading-relaxed text-slate-200">{p.text}</p>
       </div>
     </div>
   );

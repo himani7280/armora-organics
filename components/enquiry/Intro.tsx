@@ -10,11 +10,11 @@ const icons: Record<string, React.ReactNode> = {
 export default function Intro() {
   const i = data.intro;
   return (
-    <div>
+    <div className="reveal-left flex flex-col justify-between h-full">
       <p className="flex items-center gap-4 font-ui text-sm font-medium uppercase text-gold">
         <span className="h-[3px] w-9 bg-gold" />{i.eyebrow}
       </p>
-      <h2 className="mt-5 font-body text-5xl font-extrabold leading-[1.15] sm:text-6xl">
+      <h2 className="mt-5 font-serif text-5xl font-extrabold leading-[1.15] sm:text-6xl">
         {i.titleLine1}
         <span className="block text-gold">{i.titleAccent}</span>
       </h2>
@@ -27,7 +27,7 @@ export default function Intro() {
               {icons[c.icon]}
             </span>
             <div>
-              <h3 className="font-body text-lg font-extrabold text-forest transition-colors duration-200 group-hover:text-leaf">{c.title}</h3>
+              <h3 className="font-serif text-lg font-extrabold text-forest transition-colors duration-200 group-hover:text-leaf">{c.title}</h3>
               <p className="mt-1 text-[15px] leading-6 text-slate-500">{c.text}</p>
             </div>
           </div>

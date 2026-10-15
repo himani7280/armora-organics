@@ -242,24 +242,36 @@
             ],
             "fieldImage": "/images/home/testi-field.jpg",
             "reviews": [
-                              {
-                  "quote": "The quality of fruits and vegetables from this farm is outstanding. Everything is fresh, natural and full of flavor. We've been regular customers for over a year and couldn't be happier with the service and product quality.",
-                  "name": "Michael Thompson",
-                  "role": "Regular Customer",
-                  "avatar": "/images/home/avatar-card.png"
-                },
-                {
-                  "quote": "I love the farm's commitment to organic practices. The produce is always crisp and flavorful.",
-                  "name": "Aisha Patel",
-                  "role": "Health Enthusiast",
-                  "avatar": "/images/home/avatar-2.png"
-                },
-                {
-                  "quote": "The delivery is prompt and the staff are friendly. Freshness is guaranteed every time.",
-                  "name": "Luis Garcia",
-                  "role": "Busy Professional",
-                  "avatar": "/images/home/avatar-3.png"
-                }
+              {
+                "quote": "The quality of organic fruits and vegetables from this farm is outstanding. Everything is harvested fresh, packed with natural flavor, and delivered right on time. We couldn't be happier with their authentic service and produce.",
+                "name": "Michael Thompson",
+                "role": "Regular Customer",
+                "avatar": "/images/home/avatar-1.png"
+              },
+              {
+                "quote": "I absolutely love their dedication to 100% chemical-free organic farming. The vegetables are always crisp, aromatic, and full of natural nutrients. Our entire family has noticed a wonderful difference in our daily health.",
+                "name": "Aisha Patel",
+                "role": "Health Enthusiast",
+                "avatar": "/images/home/avatar-2.png"
+              },
+              {
+                "quote": "Reliable next-day delivery and genuinely friendly customer support every time. Knowing our food comes straight from healthy, pesticide-free soil gives us complete peace of mind. Highly recommended for every conscious home.",
+                "name": "Luis Garcia",
+                "role": "Busy Professional",
+                "avatar": "/images/home/avatar-3.png"
+              },
+              {
+                "quote": "As a chef who values clean eating, Farmora's fresh produce has elevated our daily family meals. The heirloom tomatoes, crisp leafy greens, and seasonal fruits have an unbeatable farm-to-table freshness you can truly taste.",
+                "name": "Sarah Jenkins",
+                "role": "Organic Chef",
+                "avatar": "/images/home/avatar-4.png"
+              },
+              {
+                "quote": "Supporting sustainable organic agriculture is vital for our future, and Farmora sets the gold standard. Pure, transparent, and ethically grown food with zero synthetic sprays—they are our trusted farming partners for life.",
+                "name": "David Miller",
+                "role": "Eco Advocate",
+                "avatar": "/images/home/avatar-5.png"
+              }
             ]
           }
         }
@@ -513,7 +525,7 @@
               { "src": "/images/gallery/g3.jpg",  "alt": "Fresh ripe tomatoes on the vine" },
               { "src": "/images/gallery/g4.jpg",  "alt": "Hands holding rich organic compost" },
               { "src": "/images/gallery/g5.jpg",  "alt": "Fresh lettuce growing in the field" },
-              { "src": "/images/gallery/g6.jpg",  "alt": "Sprinkler irrigation over crop rows" },
+              { "src": "/images/gallery/g6_clean.jpg",  "alt": "Sprinkler irrigation over crop rows" },
               { "src": "/images/gallery/g7.jpg",  "alt": "Young plants in a greenhouse row" },
               { "src": "/images/gallery/g8.jpg",  "alt": "Basket of fresh organic vegetables" },
               { "src": "/images/gallery/g9.jpg",  "alt": "Sunlit seedling in the soil" },
@@ -524,7 +536,7 @@
               { "src": "/images/gallery/g14.jpg", "alt": "Seedlings growing in sunlight" },
               { "src": "/images/gallery/g15.jpg", "alt": "Leafy green crops" },
               { "src": "/images/gallery/g16.jpg", "alt": "Watering a young plant" },
-              { "src": "/images/gallery/g17.jpg", "alt": "Aerial view of green farmland" },
+              { "src": "/images/gallery/g17_clean.jpg", "alt": "Aerial view of green farmland" },
               { "src": "/images/gallery/g18.jpg", "alt": "Hands holding fresh compost" }
             ]
           }
@@ -537,7 +549,7 @@
               { "name": "Ramesh Patel",     "role": "Progressive Farmer",         "quote": "The organic fertilizer from Farmora Organics has significantly improved the soil quality on my farm. I've noticed healthier crops and better yields naturally.", "avatar": "/images/testimonials/avatar-1.png" },
               { "name": "Sunita Verma",     "role": "Organic Farmer",             "quote": "We have been using Farmora's organic solutions for over a year. The results in our vegetable crops are excellent, and the soil is more fertile than before.", "avatar": "/images/testimonials/avatar-2.png" },
               { "name": "Amit Kumar",       "role": "Agriculture Business Owner", "quote": "Farmora Organics provides truly natural products. Their compost fertilizer has helped us reduce chemical usage and maintain healthier soil for long-term farming.", "avatar": "/images/testimonials/avatar-3.png" },
-              { "name": "Vikram Singh",     "role": "Crop Producer",              "quote": "The quality of Farmora's products is outstanding. Our crop growth has improved, and the plants are stronger and more resilient.", "avatar": "/images/testimonials/avatar-4.png" },
+              { "name": "Vikram Singh",     "role": "Crop Producer",              "quote": "The quality of Farmora's products is outstanding. Our crop growth has improved greatly, and the plants are noticeably healthier, stronger and more resilient.", "avatar": "/images/testimonials/avatar-4.png" },
               { "name": "Mahesh Yadav",     "role": "Organic Farmer",             "quote": "I switched to Farmora Organics for natural farming and the difference is clear. Better soil structure, healthy plants and improved yield without harmful chemicals.", "avatar": "/images/testimonials/avatar-5.png" },
               { "name": "Rohit Sharma",     "role": "Vegetable Grower",           "quote": "Farmora's organic inputs are easy to use and very effective. Our vegetables have better taste and quality, and customers love the natural produce.", "avatar": "/images/testimonials/avatar-6.png" },
               { "name": "Pooja Desai",      "role": "Organic Farmer",             "quote": "Using Farmora's organic fertilizer has improved the health of our crops and reduced soil problems. I highly recommend their products to all farmers.", "avatar": "/images/testimonials/avatar-7.png" },

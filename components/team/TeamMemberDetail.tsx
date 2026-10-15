@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import { FiBriefcase, FiCheckCircle, FiAward, FiBook } from "react-icons/fi";
 import { FaQuoteLeft } from "react-icons/fa6";
-import { teamMembers } from "@/lib/teamData";
+import { teamMembers } from "@/lib/content";
+import { Button } from "@/components/ui";
 
 const socials = [
   { label: "Facebook", href: "https://www.facebook.com", icon: FaFacebookF },
@@ -18,12 +18,9 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
     return (
       <section className="py-24 text-center">
         <p className="text-2xl text-slate-500">Team member not found.</p>
-        <Link
-          href="/our-team"
-          className="mt-6 inline-block rounded-full bg-forest px-8 py-3 text-white transition hover:bg-leaf"
-        >
+        <Button href="/our-team" size="lg" className="mt-6">
           Back to Team
-        </Link>
+        </Button>
       </section>
     );
   }
@@ -149,21 +146,12 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
 
               {/* Contact CTA */}
               <div className="mt-10 flex flex-wrap gap-4">
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-2.5 rounded-full bg-leaf px-7 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:bg-forest hover:shadow-lg"
-                >
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-all duration-200 group-hover:bg-white group-hover:text-forest group-hover:scale-105">
-                    <FiAward className="h-4 w-4" />
-                  </span>
+                <Button href="/contact" size="lg">
                   Get in Touch
-                </Link>
-                <Link
-                  href="/our-team"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-forest px-7 py-3 font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white"
-                >
+                </Button>
+                <Button href="/our-team" size="lg" variant="outline">
                   Meet the Team
-                </Link>
+                </Button>
               </div>
             </div>
           </div>

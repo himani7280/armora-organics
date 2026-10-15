@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { FiUser, FiMail, FiPhone, FiGrid, FiFileText, FiMessageSquare, FiChevronDown, FiArrowRight } from "react-icons/fi";
+import { FiUser, FiMail, FiPhone, FiGrid, FiFileText, FiMessageSquare, FiChevronDown } from "react-icons/fi";
 import { enquiryContent } from "@/lib/content";
+import { Button } from "@/components/ui";
 
 const data = enquiryContent;
 
@@ -26,11 +27,11 @@ export default function EnquiryForm() {
   };
   const star = <span className="text-red-600"> *</span>;
   return (
-    <div className="rounded-2xl border border-slate-200 p-6 sm:p-9 bg-white shadow-xs">
+    <div className="reveal-right rounded-2xl border border-slate-200 p-6 sm:p-9 bg-white shadow-xs h-full flex flex-col justify-between">
       <p className="flex items-center gap-4 font-ui text-sm font-medium uppercase text-gold">
         <span className="h-[3px] w-9 bg-gold" />{f.eyebrow}
       </p>
-      <h2 className="mt-3 font-body text-4xl font-extrabold sm:text-5xl">{f.title} <span className="text-gold">{f.accent}</span></h2>
+      <h2 className="mt-3 font-serif text-4xl font-extrabold sm:text-5xl">{f.title} <span className="text-gold">{f.accent}</span></h2>
       <p className="mt-3 text-[17px] leading-7 text-slate-600">{f.subtitle}</p>
       <form onSubmit={submit} className="mt-6 grid gap-x-6 gap-y-5 sm:grid-cols-2">
         <div>
@@ -92,12 +93,9 @@ export default function EnquiryForm() {
           </div>
         </div>
         <div className="sm:col-span-2">
-          <button type="submit" className="group inline-flex items-center gap-8 rounded-full bg-gradient-to-r from-[#b87a25] to-[#e0a94e] py-2 pl-8 pr-2 font-ui text-lg font-medium text-white shadow-md transition-all duration-300 hover:brightness-110 hover:shadow-lg">
+          <Button type="submit" size="lg">
             {f.button}
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-forest text-white transition-all duration-300 group-hover:bg-forest-deep group-hover:scale-105">
-              <FiArrowRight className="h-5 w-5" />
-            </span>
-          </button>
+          </Button>
         </div>
       </form>
     </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiCheckCircle, FiArrowRight, FiHome } from "react-icons/fi";
+import { FiCheckCircle, FiChevronRight, FiHome } from "react-icons/fi";
 import PageBanner from "@/components/common/PageBanner";
 
 export default function ThankYouPage() {
@@ -39,20 +39,20 @@ export default function ThankYouPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/"
-                className="group inline-flex items-center gap-3 rounded-full bg-forest px-8 py-3.5 font-ui text-lg font-medium text-white shadow-lg transition-all duration-300 hover:bg-forest-deep hover:shadow-xl"
+                className="group inline-flex items-center gap-8 rounded-full bg-forest py-2 pl-8 pr-2 font-ui text-lg font-medium text-white shadow-md transition-all duration-300 hover:bg-forest-deep hover:shadow-lg"
               >
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15 transition-all duration-200 group-hover:bg-white group-hover:text-forest">
-                  <FiHome className="h-4 w-4" />
-                </span>
                 <span>Back to Home</span>
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold text-forest transition-all duration-300 group-hover:bg-gold-light group-hover:scale-105">
+                  <FiHome className="h-5 w-5" />
+                </span>
               </Link>
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 rounded-full border-2 border-gold bg-transparent px-8 py-3.5 font-ui text-lg font-medium text-forest transition-all duration-300 hover:bg-gold hover:text-white"
+                className="group inline-flex items-center gap-8 rounded-full bg-forest py-2 pl-8 pr-2 font-ui text-lg font-medium text-white shadow-md transition-all duration-300 hover:bg-forest-deep hover:shadow-lg"
               >
                 <span>Contact Us</span>
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-forest/10 transition-all duration-200 group-hover:bg-white group-hover:text-gold">
-                  <FiArrowRight className="h-4 w-4" />
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold text-forest transition-all duration-300 group-hover:bg-gold-light group-hover:scale-105">
+                  <FiChevronRight className="h-5 w-5" />
                 </span>
               </Link>
             </div>

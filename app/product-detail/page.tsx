@@ -4,7 +4,14 @@ import ProductDetailView from "@/components/product-detail/ProductDetailView";
 export default function ProductDetailPage() {
   return (
     <>
-      <PageBanner title="Product Detail" />
+      <PageBanner
+        title="Product Detail"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Products", href: "/products" },
+          { label: "Product Detail" },
+        ]}
+      />
       <ProductDetailView />
     </>
   );

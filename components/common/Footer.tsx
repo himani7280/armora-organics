@@ -1,19 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { FiChevronRight, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import content from "@/data/content.json";
-import { services, serviceHref } from "@/lib/catalog";
+import { services, serviceHref } from "@/lib/content";
+import { SocialIcons, footerSocials } from "@/components/ui";
 
 const header = content.Farmora.sections.SiteChrome.variants.FarmoraHeader1;
 const footer = content.Farmora.sections.SiteChrome.variants.FarmoraFooter1;
-
-const socials = [
-  { label: "Facebook", href: "https://www.facebook.com", icon: FaFacebookF },
-  { label: "Instagram", href: "https://www.instagram.com", icon: FaInstagram },
-  { label: "YouTube", href: "https://www.youtube.com", icon: FaYoutube },
-  { label: "LinkedIn", href: "https://www.linkedin.com", icon: FaLinkedinIn },
-];
 
 function LinkList({ title, links }: { title: string; links: { label: string; href: string }[] }) {
   return (
@@ -76,27 +69,17 @@ function ContactRow({
 export default function Footer() {
   return (
     <footer>
-      <div className="container-x footer-grid grid gap-10 py-10 sm:py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr] lg:gap-0">
+      <div className="container-x grid gap-10 py-10 sm:py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr] lg:gap-0 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:not(:first-child)]:border-l lg:[&>*:not(:first-child)]:border-mint">
         <div>
-          <Image src="/images/common/logo.jpg" alt={header.name} width={318} height={96} className="mb-6 h-auto w-64 mix-blend-multiply" />
+          <Image
+            src="/images/common/logo.jpg"
+            alt={header.name}
+            width={332}
+            height={80}
+            className="mb-6 h-11 sm:h-14 md:h-16 lg:h-[68px] w-auto object-contain mix-blend-multiply"
+          />
           <p className="max-w-sm text-[16px] leading-7 text-slate-600">{footer.about}</p>
-          <div className="mt-6 flex gap-3">
-            {socials.map((item) => {
-              const Icon = item.icon;
-              return (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.label}
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-forest text-white transition-all duration-300 hover:bg-gold hover:text-white hover:scale-110 hover:shadow-lg"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              );
-            })}
-          </div>
+          <SocialIcons items={footerSocials} size="lg" variant="dark" className="mt-6" />
         </div>
         <LinkList title="Quick Links" links={footer.quickLinks} />
         <LinkList title="Our Services" links={services.map((s) => ({ label: s.title, href: serviceHref(s.slug) }))} />
@@ -111,10 +94,12 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-top-line footer-bottom">
-        <div className="container-x flex items-center justify-between py-5 font-copy text-sm text-white">
-          <span>{footer.copyright} powered by lestow</span>
-          <div className="flex items-center gap-4">
-            <Link href="/thank-you" className="transition hover:text-gold">Thank You</Link>
+        <div className="container-x flex flex-col items-center justify-between gap-3 py-4 text-center sm:flex-row sm:gap-6 sm:py-5 sm:text-left font-copy text-xs sm:text-sm text-white">
+          <span className="leading-relaxed">{footer.copyright} powered by lestow</span>
+          <div className="flex shrink-0 items-center gap-4">
+            <Link href="/thank-you" className="whitespace-nowrap transition hover:text-gold">
+              Thank You
+            </Link>
           </div>
         </div>
       </div>

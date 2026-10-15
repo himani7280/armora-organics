@@ -48,13 +48,17 @@ export default function WhyChoose() {
     <section className="py-6 sm:py-8 lg:py-10">
       <div className="container-x">
         <SectionTitle pill eyebrow={w.eyebrow} title={w.title} accent={w.accent} text={w.text} />
-        <div className="mt-8 grid items-center gap-10 lg:grid-cols-[1fr_362px_1fr]">
-          <Column points={w.left} side="left" />
-          <div className="relative order-first mx-auto w-full max-w-[362px] lg:order-none">
-            <Image src={w.image} alt="Young plant growing from fertile soil" width={362} height={445} className="plant-fade h-auto w-full mix-blend-multiply" />
+        <div className="mt-8 grid items-stretch gap-10 lg:grid-cols-[1fr_362px_1fr]">
+          <div className="reveal-left h-full flex flex-col justify-between">
+            <Column points={w.left} side="left" />
+          </div>
+          <div className="reveal-scale relative order-first mx-auto w-full max-w-[362px] lg:order-none flex flex-col justify-center">
+            <Image src={w.image} alt="Young plant growing from fertile soil" width={362} height={445} className="plant-fade h-auto w-full mix-blend-multiply transition-transform duration-700 hover:scale-105" />
             <Connectors />
           </div>
-          <Column points={w.right} side="right" />
+          <div className="reveal-right h-full flex flex-col justify-between">
+            <Column points={w.right} side="right" />
+          </div>
         </div>
       </div>
     </section>

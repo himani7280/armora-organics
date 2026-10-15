@@ -1,4 +1,4 @@
-// builds the shared inner-page banner (clean left strip of the field photo, mirrored to widen it)
+
 import sharp from 'sharp';
 const A = await sharp('reference/Image Preview_files/about.jpg').extract({ left: 0, top: 178, width: 520, height: 352 }).toBuffer();
 const F = await sharp(A).flop().toBuffer();

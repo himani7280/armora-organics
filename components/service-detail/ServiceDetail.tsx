@@ -1,12 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { IconType } from "react-icons";
-import { FiArrowRight, FiCheck } from "react-icons/fi";
+import { FiCheck } from "react-icons/fi";
 import { FaLeaf } from "react-icons/fa6";
 import { LuCoins, LuGlobe, LuHandHeart, LuSprout } from "react-icons/lu";
 import ServiceSidebar from "@/components/service-detail/ServiceSidebar";
-import { serviceDetailContent } from "@/lib/content";
-import type { CatalogService } from "@/lib/catalog";
+import { serviceDetailContent, type CatalogService } from "@/lib/content";
+import { Button, Badge } from "@/components/ui";
 
 const data = serviceDetailContent;
 
@@ -17,11 +16,19 @@ const benefitIcons: Record<string, IconType> = {
   globe: LuGlobe,
 };
 
-function Heading({ children }: { children: string }) {
+function Heading({
+  children,
+  className,
+  barClassName,
+}: {
+  children: string;
+  className?: string;
+  barClassName?: string;
+}) {
   return (
     <div>
-      <h2 className="text-3xl sm:text-4xl">{children}</h2>
-      <span className="mt-3 block h-[3px] w-14 bg-gold" />
+      <h2 className={`text-3xl sm:text-4xl ${className ?? ""}`}>{children}</h2>
+      <span className={`mt-3 block h-[3px] rounded-full bg-gold ${barClassName ?? "w-14"}`} />
     </div>
   );
 }
@@ -37,32 +44,32 @@ export default function ServiceDetail({ service }: { service?: CatalogService })
     ? { ...data.intro, ...splitTitle(service.title), text: service.text, image: service.image }
     : data.intro;
   return (
-    <section className="py-10 sm:py-12 lg:py-[60px]">
-      <div className="container-x grid gap-10 lg:grid-cols-[1fr_360px] lg:gap-8">
+    <section className="pt-8 pb-3 sm:pt-10 sm:pb-4 lg:pt-12 lg:pb-5">
+      <div className="container-x grid gap-10 lg:grid-cols-[1fr_320px] lg:gap-8">
         <div className="min-w-0">
-          <div className="grid items-center gap-8 md:grid-cols-2">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-forest/20 px-5 py-2">
-                <FaLeaf className="text-forest" />
-                <span className="eyebrow">{intro.eyebrow}</span>
-              </span>
-              <h2 className="mt-5 font-body text-4xl font-extrabold leading-tight text-forest sm:text-5xl">
-                {intro.title}
-                <br />
-                <span className="text-gold">{intro.accent}</span>
-              </h2>
-              <p className="mt-4 text-base leading-7 text-slate-600 sm:text-[17px]">{intro.text}</p>
-              <Link href={intro.button.href} className="group mt-6 inline-flex items-center gap-6 rounded-full bg-gold py-1.5 pl-7 pr-1.5 font-ui text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-gold-light hover:shadow-lg">
-                <span>{intro.button.label}</span>
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-forest text-white transition-all duration-300 group-hover:bg-forest-deep group-hover:scale-105"><FiArrowRight /></span>
-              </Link>
+          <div className="grid items-stretch gap-8 md:grid-cols-2">
+            <div className="reveal-left flex flex-col justify-between">
+              <div>
+                <Badge icon variant="outline">
+                  <span className="eyebrow">{intro.eyebrow}</span>
+                </Badge>
+                <h2 className="mt-5 font-serif text-4xl font-extrabold leading-tight text-forest sm:text-5xl">
+                  {intro.title}
+                  <br />
+                  <span className="text-gold">{intro.accent}</span>
+                </h2>
+                <p className="mt-4 text-base leading-7 text-slate-600 sm:text-[17px]">{intro.text}</p>
+              </div>
+              <Button href={intro.button.href} size="lg" className="mt-6 self-start">
+                {intro.button.label}
+              </Button>
             </div>
-            <div className="relative aspect-[410/424] overflow-hidden rounded-2xl">
+            <div className="reveal-right relative min-h-[340px] overflow-hidden rounded-2xl">
               <Image src={intro.image} alt={intro.title} fill sizes="(min-width:768px) 30vw, 100vw" className="object-cover" priority />
             </div>
           </div>
 
-          <div className="mt-12">
+          <div className="reveal-on-scroll mt-12">
             <Heading>{overview.title}</Heading>
             <p className="mt-5 text-base leading-7 text-slate-600 sm:text-[17px]">{overview.text}</p>
             <div className="relative mt-6 aspect-[858/290] overflow-hidden rounded-2xl">
@@ -70,7 +77,7 @@ export default function ServiceDetail({ service }: { service?: CatalogService })
             </div>
           </div>
 
-          <div className="mt-12">
+          <div className="reveal-on-scroll mt-12">
             <Heading>{benefits.title}</Heading>
             <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {benefits.items.map((b) => {
@@ -81,7 +88,7 @@ export default function ServiceDetail({ service }: { service?: CatalogService })
                       <BIcon className="h-8 w-8" />
                     </span>
                     <div>
-                      <h3 className="font-body text-base font-bold text-forest transition-colors duration-200 group-hover:text-leaf">{b.title}</h3>
+                      <h3 className="font-serif text-base font-bold text-forest transition-colors duration-200 group-hover:text-leaf">{b.title}</h3>
                       <p className="mt-1 text-sm leading-5 text-slate-500">{b.text}</p>
                     </div>
                   </div>
@@ -90,18 +97,26 @@ export default function ServiceDetail({ service }: { service?: CatalogService })
             </div>
           </div>
 
-          <div className="mt-14 grid items-center gap-8 md:grid-cols-[minmax(0,448px)_1fr]">
-            <div className="relative aspect-[448/380] overflow-hidden rounded-2xl">
-              <Image src={why.image} alt={why.title} fill sizes="(min-width:768px) 40vw, 100vw" className="object-cover" />
+          <div className="reveal-on-scroll mt-14 grid items-stretch gap-6 md:grid-cols-[360px_1fr] lg:grid-cols-[420px_1fr] xl:grid-cols-[460px_1fr]">
+            <div className="relative h-full min-h-[300px] w-full overflow-hidden rounded-2xl">
+              <Image src={why.image} alt={why.title} fill sizes="(min-width:1280px) 460px, (min-width:1024px) 420px, (min-width:768px) 360px, 100vw" className="object-cover" />
             </div>
-            <div>
-              <Heading>{why.title}</Heading>
-              <p className="mt-5 text-[15px] leading-6 text-slate-600">{why.text}</p>
-              <ul className="mt-5 space-y-3">
+            <div className="flex h-full flex-col justify-between">
+              <div>
+                <Heading className="text-2xl sm:text-[26px] lg:text-[28px] xl:text-[30px] sm:whitespace-nowrap" barClassName="w-20 sm:w-24">
+                  {why.title}
+                </Heading>
+                <p className="mt-3.5 text-[15px] leading-6 text-slate-600">{why.text}</p>
+              </div>
+              <ul className="mt-4 space-y-2.5">
                 {why.points.map((p) => (
-                  <li key={p} className="group flex items-center gap-3 text-[15px] text-forest">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-forest text-white transition-all duration-300 group-hover:bg-gold group-hover:scale-105"><FiCheck className="h-4 w-4" /></span>
-                    <span className="transition-colors group-hover:text-leaf">{p}</span>
+                  <li key={p} className="group flex items-center gap-2.5 sm:gap-3 text-forest sm:whitespace-nowrap">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-forest text-white transition-all duration-300 group-hover:bg-gold group-hover:scale-105">
+                      <FiCheck className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-[13.5px] sm:text-[14px] lg:text-[14px] xl:text-[14.5px] transition-colors group-hover:text-leaf">
+                      {p}
+                    </span>
                   </li>
                 ))}
               </ul>

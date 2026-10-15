@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageBanner from "@/components/common/PageBanner";
 import TeamMemberDetail from "@/components/team/TeamMemberDetail";
-import { teamMembers } from "@/lib/teamData";
+import { teamMembers } from "@/lib/content";
 
 // Generate all static paths for team members
 export function generateStaticParams() {
@@ -35,7 +35,14 @@ export default async function TeamMemberPage({
 
   return (
     <>
-      <PageBanner title="Team Detail" />
+      <PageBanner
+        title="Team Detail"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Our Team", href: "/our-team" },
+          { label: "Team Detail" },
+        ]}
+      />
       <TeamMemberDetail slug={slug} />
     </>
   );

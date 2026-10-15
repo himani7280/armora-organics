@@ -10,30 +10,41 @@
   --color-mint: #e6efd5;
   --color-ink: #4b5563;
 
+  /* Titles & Headings: Playfair Display ONLY */
   --font-serif: var(--font-playfair), Georgia, serif;
-  --font-display: var(--font-oswald), Impact, sans-serif;
-  --font-body: var(--font-nunito), Arial, sans-serif;
-  --font-ui: var(--font-roboto), Arial, sans-serif;
-  --font-eyebrow: var(--font-montserrat), Arial, sans-serif;
-  --font-copy: var(--font-poppins), Arial, sans-serif;
+  --font-title: var(--font-playfair), Georgia, serif;
+  --font-display: var(--font-playfair), Georgia, serif;
+
+  /* Body & All Other Text: Poppins ONLY */
+  --font-sans: var(--font-poppins), sans-serif;
+  --font-body: var(--font-poppins), sans-serif;
+  --font-ui: var(--font-poppins), sans-serif;
+  --font-eyebrow: var(--font-poppins), sans-serif;
+  --font-copy: var(--font-poppins), sans-serif;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
   }
 
   body {
     background: #fdfcfa;
     color: var(--color-ink);
     font-family: var(--font-body);
-    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100%;
+    position: relative;
   }
 
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-serif);
     color: var(--color-forest);
     font-weight: 700;
@@ -65,6 +76,7 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--color-forest);
+    white-space: nowrap;
   }
 
   .eyebrow-line {
@@ -72,25 +84,6 @@
     height: 1px;
     width: 44px;
     background: var(--color-gold);
-  }
-
-  /* hand-painted torn edge used by the home hero */
-  .hero-torn {
-    clip-path: polygon(
-      0 4%, 6% 2%, 12% 4.5%, 20% 2%, 28% 4%, 36% 1.5%, 45% 4%, 53% 2%, 62% 4.5%,
-      70% 2%, 79% 4%, 88% 1.5%, 100% 3.5%, 100% 95%, 93% 97%, 85% 94.5%, 76% 97%,
-      66% 95%, 57% 97.5%, 47% 95%, 38% 97%, 28% 94.5%, 18% 97%, 9% 95%, 0 97%
-    );
-  }
-
-  .hero-overlay {
-    background: linear-gradient(
-      90deg,
-      rgba(7, 36, 14, 0.88) 0%,
-      rgba(7, 36, 14, 0.55) 40%,
-      rgba(7, 36, 14, 0.15) 70%,
-      transparent 100%
-    );
   }
 
   .banner-overlay {
@@ -104,26 +97,6 @@
   .footer-top-line {
     border-top: 3px solid var(--color-gold);
   }
-
-}
-
-/* footer: four columns with thin dividers on desktop */
-@media (min-width: 1024px) {
-  .footer-grid > * {
-    padding-inline: 2rem;
-  }
-  .footer-grid > :first-child {
-    padding-left: 0;
-  }
-  .footer-grid > :not(:first-child) {
-    border-left: 1px solid var(--color-mint);
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-torn {
-    clip-path: none;
-  }
 }
 
 /* why-choose plant: soft edges so the cropped photo melts into the page */
@@ -135,4 +108,88 @@
 @keyframes testi-in {
   from { opacity: 0; transform: translateX(40px); }
   to { opacity: 1; transform: translateX(0); }
+}
+
+/* ---------- Scroll Reveal animations ---------- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-26px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(26px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96) translateY(14px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Page Banner entrance */
+@keyframes bannerFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-banner-fade-up {
+  animation: bannerFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle float animation for leaves / badges */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Respect user's reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .animate-banner-fade-up,
+  .animate-float-slow {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
 }

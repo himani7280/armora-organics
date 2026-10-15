@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
-import { FiArrowRight } from "react-icons/fi";
 import SectionTitle from "@/components/common/SectionTitle";
-import { teamMembers } from "@/lib/teamData";
+import { teamMembers } from "@/lib/content";
+import { Button } from "@/components/ui";
 
 const socials = [
   { label: "Facebook", href: "https://www.facebook.com", icon: FaFacebookF },
@@ -15,7 +15,7 @@ const socials = [
 
 function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="reveal-on-scroll group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
       {/* Photo */}
       <div className="relative overflow-hidden" style={{ height: 300 }}>
         <Image
@@ -52,20 +52,18 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
       <div className="p-6">
         {/* Gold bar accent */}
         <span className="mb-3 block h-0.5 w-10 bg-gold transition-all duration-300 group-hover:w-16" />
-        <h3 className="text-xl font-bold text-forest">{member.name}</h3>
+        <Link href={`/our-team/${member.slug}`}>
+          <h3 className="text-xl font-bold text-forest transition-colors duration-200 hover:text-leaf">{member.name}</h3>
+        </Link>
         <p className="mt-0.5 font-eyebrow text-xs font-semibold uppercase tracking-widest text-gold">
           {member.role}
         </p>
         <p className="mt-3 text-sm leading-6 text-slate-500">{member.bio}</p>
 
         {/* View Profile Button */}
-        <Link
-          href={`/our-team/${member.slug}`}
-          className="group/btn mt-5 flex w-fit items-center gap-2 rounded-full border-2 border-forest px-5 py-2 text-sm font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white"
-        >
+        <Button href={`/our-team/${member.slug}`} size="sm" className="mt-5">
           View Profile
-          <FiArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
-        </Link>
+        </Button>
       </div>
     </div>
   );
@@ -101,12 +99,9 @@ export default function TeamGrid() {
             We are always looking for passionate individuals who believe in organic farming and
             sustainable living. Get in touch with us today.
           </p>
-          <a
-            href="/contact"
-            className="mt-6 inline-block rounded-full bg-gold px-8 py-3 font-semibold text-white shadow transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:scale-105"
-          >
+          <Button href="/contact" size="lg" className="mt-6">
             Contact Us
-          </a>
+          </Button>
         </div>
       </div>
     </section>
