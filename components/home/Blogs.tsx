@@ -7,10 +7,10 @@ import { Button, Card } from "@/components/ui";
 export default function Blogs() {
   const b = homeContent.blogs;
   return (
-    <section className="py-6 sm:py-8 lg:py-10">
+    <section className="pt-6 pb-2 sm:pt-8 sm:pb-3 lg:pt-10 lg:pb-3">
       <div className="container-x">
         <SectionTitle pill eyebrow={b.eyebrow} title={b.title} accent={b.accent} text={b.text} />
-        <div className="mx-auto mt-8 grid max-w-[1160px] gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {b.items.map((item) => (
             <Card
               key={item.title}

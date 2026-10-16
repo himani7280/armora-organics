@@ -11,7 +11,7 @@ export default function BlogList() {
     <section className="pt-8 pb-3 sm:pt-10 sm:pb-4 lg:pt-12 lg:pb-5">
       <div className="container-x">
         <SectionTitle pill eyebrow={data.intro.eyebrow} title={data.intro.title} accent={data.intro.accent} text={data.intro.text} />
-        <div className="mx-auto mt-8 sm:mt-10 grid max-w-[1160px] gap-6 md:grid-cols-2 lg:grid-cols-3 gap-y-6 lg:gap-y-6">
+        <div className="mt-8 sm:mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3 gap-y-6 lg:gap-y-6">
           {blogs.map((item) => (
             <Card
               key={item.slug}
