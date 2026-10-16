@@ -76,7 +76,7 @@ export default function Footer() {
             alt={header.name}
             width={332}
             height={80}
-            className="mb-6 h-11 sm:h-14 md:h-16 lg:h-[68px] w-auto object-contain mix-blend-multiply"
+            className="mb-6 h-11 sm:h-14 md:h-16 lg:h-[68px] w-auto object-contain mix-blend-multiply -ml-2 sm:-ml-3.5 lg:-ml-5"
           />
           <p className="max-w-sm text-[16px] leading-7 text-slate-600">{footer.about}</p>
           <SocialIcons items={footerSocials} size="lg" variant="dark" className="mt-6" />

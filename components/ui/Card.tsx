@@ -15,8 +15,8 @@ export default function Card({
 }: CardProps) {
   return (
     <Component
-      className={`reveal-on-scroll rounded-2xl border border-slate-100 bg-white shadow-[0_6px_24px_rgba(11,59,31,0.08)] transition-all duration-400 ease-out ${
-        hoverEffect ? "hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(11,59,31,0.12)] hover:border-mint/80" : ""
+      className={`reveal-on-scroll rounded-2xl border border-slate-100 bg-white shadow-[0_6px_24px_rgba(11,59,31,0.06)] transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] will-change-transform ${
+        hoverEffect ? "hover:-translate-y-2 hover:shadow-[0_20px_40px_-12px_rgba(11,59,31,0.16)] hover:border-forest/20" : ""
       } ${className}`}
     >
       {children}

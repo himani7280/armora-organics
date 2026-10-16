@@ -94,7 +94,7 @@ export default function Header() {
 
       {/* Main nav bar */}
       <div className="container-x flex h-20 items-center justify-between gap-3 lg:gap-4 lg:h-[88px] max-w-full">
-        <Link href="/" className="shrink-0 flex items-center">
+        <Link href="/" className="shrink-0 flex items-center -ml-2 sm:-ml-3.5 lg:-ml-5 transition-transform duration-200 hover:opacity-95">
           <Image
             src="/images/common/logo.jpg"
             alt={site.name}

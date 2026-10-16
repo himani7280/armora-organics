@@ -9,89 +9,206 @@
         "pages": {
           "home": {
             "components": [
-              { "key": "Hero",         "component": "FarmoraHomeHero1" },
-              { "key": "About",        "component": "FarmoraAbout1" },
-              { "key": "Services",     "component": "FarmoraServices1" },
-              { "key": "WhyChoose",    "component": "FarmoraWhyChoose1" },
-              { "key": "Products",     "component": "FarmoraProducts1" },
-              { "key": "Testimonials", "component": "FarmoraTestimonials1" },
-              { "key": "Blogs",        "component": "FarmoraBlogs1" }
+              {
+                "key": "Hero",
+                "component": "FarmoraHomeHero1"
+              },
+              {
+                "key": "About",
+                "component": "FarmoraAbout1"
+              },
+              {
+                "key": "Services",
+                "component": "FarmoraServices1"
+              },
+              {
+                "key": "WhyChoose",
+                "component": "FarmoraWhyChoose1"
+              },
+              {
+                "key": "Products",
+                "component": "FarmoraProducts1"
+              },
+              {
+                "key": "Testimonials",
+                "component": "FarmoraTestimonials1"
+              },
+              {
+                "key": "Blogs",
+                "component": "FarmoraBlogs1"
+              }
             ]
           },
           "about": {
             "components": [
-              { "key": "PageBanner", "component": "FarmoraAboutBanner1" },
-              { "key": "AboutPage",  "component": "FarmoraAboutPage1" }
+              {
+                "key": "PageBanner",
+                "component": "FarmoraAboutBanner1"
+              },
+              {
+                "key": "AboutPage",
+                "component": "FarmoraAboutPage1"
+              }
             ]
           },
           "services": {
             "components": [
-              { "key": "PageBanner",   "component": "FarmoraServicesBanner1" },
-              { "key": "ServicesPage", "component": "FarmoraServicesPage1" }
+              {
+                "key": "PageBanner",
+                "component": "FarmoraServicesBanner1"
+              },
+              {
+                "key": "ServicesPage",
+                "component": "FarmoraServicesPage1"
+              }
             ]
           },
           "serviceDetail": {
             "components": [
-              { "key": "PageBanner",         "component": "FarmoraServiceDetailBanner1" },
-              { "key": "ServiceDetailIntro", "component": "FarmoraServiceDetailIntro1" },
-              { "key": "ServiceOverview",    "component": "FarmoraServiceOverview1" },
-              { "key": "ServiceBenefits",    "component": "FarmoraServiceBenefits1" },
-              { "key": "ServiceWhy",         "component": "FarmoraServiceWhy1" }
+              {
+                "key": "PageBanner",
+                "component": "FarmoraServiceDetailBanner1"
+              },
+              {
+                "key": "ServiceDetailIntro",
+                "component": "FarmoraServiceDetailIntro1"
+              },
+              {
+                "key": "ServiceOverview",
+                "component": "FarmoraServiceOverview1"
+              },
+              {
+                "key": "ServiceBenefits",
+                "component": "FarmoraServiceBenefits1"
+              },
+              {
+                "key": "ServiceWhy",
+                "component": "FarmoraServiceWhy1"
+              }
             ]
           },
           "products": {
             "components": [
-              { "key": "PageBanner",   "component": "FarmoraProductsBanner1" },
-              { "key": "ProductsPage", "component": "FarmoraProductsPage1" }
+              {
+                "key": "PageBanner",
+                "component": "FarmoraProductsBanner1"
+              },
+              {
+                "key": "ProductsPage",
+                "component": "FarmoraProductsPage1"
+              }
             ]
           },
           "productDetail": {
             "components": [
-              { "key": "ProductDetailHero",         "component": "FarmoraProductDetailHero1" },
-              { "key": "ProductOverview",            "component": "FarmoraProductOverview1" },
-              { "key": "ProductFeatures",            "component": "FarmoraProductFeatures1" },
-              { "key": "ProductSpecs",               "component": "FarmoraProductSpecs1" },
-              { "key": "ProductBenefits",            "component": "FarmoraProductBenefits1" },
-              { "key": "ProductAvailability",        "component": "FarmoraProductAvailability1" }
+              {
+                "key": "ProductDetailHero",
+                "component": "FarmoraProductDetailHero1"
+              },
+              {
+                "key": "ProductOverview",
+                "component": "FarmoraProductOverview1"
+              },
+              {
+                "key": "ProductFeatures",
+                "component": "FarmoraProductFeatures1"
+              },
+              {
+                "key": "ProductSpecs",
+                "component": "FarmoraProductSpecs1"
+              },
+              {
+                "key": "ProductBenefits",
+                "component": "FarmoraProductBenefits1"
+              },
+              {
+                "key": "ProductAvailability",
+                "component": "FarmoraProductAvailability1"
+              }
             ]
           },
           "gallery": {
             "components": [
-              { "key": "GalleryPage", "component": "FarmoraGalleryPage1" }
+              {
+                "key": "GalleryPage",
+                "component": "FarmoraGalleryPage1"
+              }
             ]
           },
           "testimonials": {
             "components": [
-              { "key": "PageBanner",       "component": "FarmoraTestimonialsBanner1" },
-              { "key": "TestimonialsPage", "component": "FarmoraTestimonialsPage1" }
+              {
+                "key": "PageBanner",
+                "component": "FarmoraTestimonialsBanner1"
+              },
+              {
+                "key": "TestimonialsPage",
+                "component": "FarmoraTestimonialsPage1"
+              }
             ]
           },
           "blog": {
             "components": [
-              { "key": "PageBanner", "component": "FarmoraBlogBanner1" },
-              { "key": "BlogPage",   "component": "FarmoraBlogPage1" }
+              {
+                "key": "PageBanner",
+                "component": "FarmoraBlogBanner1"
+              },
+              {
+                "key": "BlogPage",
+                "component": "FarmoraBlogPage1"
+              }
             ]
           },
           "blogDetails": {
             "components": [
-              { "key": "PageBanner",   "component": "FarmoraBlogDetailsBanner1" },
-              { "key": "BlogArticle",  "component": "FarmoraBlogArticle1" },
-              { "key": "BlogSidebar", "component": "FarmoraBlogSidebar1" }
+              {
+                "key": "PageBanner",
+                "component": "FarmoraBlogDetailsBanner1"
+              },
+              {
+                "key": "BlogArticle",
+                "component": "FarmoraBlogArticle1"
+              },
+              {
+                "key": "BlogSidebar",
+                "component": "FarmoraBlogSidebar1"
+              }
             ]
           },
           "contact": {
             "components": [
-              { "key": "PageBanner",    "component": "FarmoraContactBanner1" },
-              { "key": "ContactForm",   "component": "FarmoraContactForm1" },
-              { "key": "ContactInfo",   "component": "FarmoraContactInfo1" },
-              { "key": "ContactLocation", "component": "FarmoraContactLocation1" }
+              {
+                "key": "PageBanner",
+                "component": "FarmoraContactBanner1"
+              },
+              {
+                "key": "ContactForm",
+                "component": "FarmoraContactForm1"
+              },
+              {
+                "key": "ContactInfo",
+                "component": "FarmoraContactInfo1"
+              },
+              {
+                "key": "ContactLocation",
+                "component": "FarmoraContactLocation1"
+              }
             ]
           },
           "enquiry": {
             "components": [
-              { "key": "PageBanner",  "component": "FarmoraEnquiryBanner1" },
-              { "key": "EnquiryIntro", "component": "FarmoraEnquiryIntro1" },
-              { "key": "EnquiryForm", "component": "FarmoraEnquiryForm1" }
+              {
+                "key": "PageBanner",
+                "component": "FarmoraEnquiryBanner1"
+              },
+              {
+                "key": "EnquiryIntro",
+                "component": "FarmoraEnquiryIntro1"
+              },
+              {
+                "key": "EnquiryForm",
+                "component": "FarmoraEnquiryForm1"
+              }
             ]
           }
         }
@@ -108,34 +225,97 @@
             "hours": "Monday - Saturday, 9:00 AM - 6:00 PM",
             "logoSrc": "/images/common/logo.jpg",
             "nav": [
-              { "label": "Home",        "href": "/" },
-              { "label": "About Us",    "href": "/about" },
-              { "label": "Services",    "href": "/services" },
-              { "label": "Our Products","href": "/products" },
-              { "label": "Our Team",    "href": "/our-team" },
-              { "label": "Gallery",     "href": "/gallery" },
-              { "label": "Contact",     "href": "/contact" }
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about"
+              },
+              {
+                "label": "Services",
+                "href": "/services"
+              },
+              {
+                "label": "Our Products",
+                "href": "/products"
+              },
+              {
+                "label": "Our Team",
+                "href": "/our-team"
+              },
+              {
+                "label": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "label": "Contact",
+                "href": "/contact"
+              }
             ],
-            "enquiry": { "label": "Enquiry Now", "href": "/enquiry" }
+            "enquiry": {
+              "label": "Enquiry Now",
+              "href": "/enquiry"
+            }
           },
           "FarmoraFooter1": {
             "about": "At Farmora Organics, we are committed to bringing fresh, natural and chemical-free products from our farms to your table, ensuring a healthier and greener tomorrow.",
             "quickLinks": [
-              { "label": "Home",         "href": "/" },
-              { "label": "About Us",     "href": "/about" },
-              { "label": "Our Services", "href": "/services" },
-              { "label": "Our Team",     "href": "/our-team" },
-              { "label": "Gallery",      "href": "/gallery" },
-              { "label": "Blog",           "href": "/blog" },
-              { "label": "Testimonials",   "href": "/testimonials" },
-              { "label": "Contact Us",     "href": "/contact" }
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about"
+              },
+              {
+                "label": "Our Services",
+                "href": "/services"
+              },
+              {
+                "label": "Our Team",
+                "href": "/our-team"
+              },
+              {
+                "label": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Testimonials",
+                "href": "/testimonials"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact"
+              }
             ],
             "services": [
-              { "label": "Agriculture Solutions", "href": "/service-detail" },
-              { "label": "Organic Farming",       "href": "/service-detail" },
-              { "label": "Soil Health Management","href": "/service-detail" },
-              { "label": "Crop Consultation",     "href": "/service-detail" },
-              { "label": "Sustainable Farming",   "href": "/service-detail" }
+              {
+                "label": "Agriculture Solutions",
+                "href": "/service-detail"
+              },
+              {
+                "label": "Organic Farming",
+                "href": "/service-detail"
+              },
+              {
+                "label": "Soil Health Management",
+                "href": "/service-detail"
+              },
+              {
+                "label": "Crop Consultation",
+                "href": "/service-detail"
+              },
+              {
+                "label": "Sustainable Farming",
+                "href": "/service-detail"
+              }
             ],
             "copyright": "© 2026 Farmora Organics. All Rights Reserved."
           }
@@ -145,11 +325,20 @@
         "variants": {
           "FarmoraHomeHero1": {
             "eyebrow": "Natural Farming",
-            "titleLines": ["Pure & Organic", "Food for a"],
+            "titleLines": [
+              "Pure & Organic",
+              "Food for a"
+            ],
             "titleAccent": "Healthier Tomorrow",
             "text": "Farmora Organics brings you fresh, naturally grown and chemical-free produce from our farms to your table. Good for you, better for the planet.",
-            "primaryButton":   { "label": "Explore Our Products", "href": "/products" },
-            "secondaryButton": { "label": "Our Services",          "href": "/services" },
+            "primaryButton": {
+              "label": "Explore Our Products",
+              "href": "/products"
+            },
+            "secondaryButton": {
+              "label": "Our Services",
+              "href": "/services"
+            },
             "image": "/images/home/hero-farmer.jpg"
           }
         }
@@ -162,14 +351,36 @@
             "accent": "Growing a Healthier Future with Nature",
             "text": "At Farmora Organics, we are committed to providing pure, naturally grown and chemical-free produce from our farms to your table. Our mission is to support sustainable farming, empower local farmers, and promote healthier communities through fresh and nutritious food.",
             "features": [
-              { "icon": "leaf",   "title": "100% Organic",       "text": "Natural & Chemical Free" },
-              { "icon": "sprout", "title": "Farm Fresh Produce",  "text": "Naturally Grown" },
-              { "icon": "users",  "title": "Trusted by Thousands","text": "Happy Customers" },
-              { "icon": "truck",  "title": "On-Time Delivery",    "text": "Freshness at Your Doorstep" }
+              {
+                "icon": "leaf",
+                "title": "100% Organic",
+                "text": "Natural & Chemical Free"
+              },
+              {
+                "icon": "sprout",
+                "title": "Farm Fresh Produce",
+                "text": "Naturally Grown"
+              },
+              {
+                "icon": "users",
+                "title": "Trusted by Thousands",
+                "text": "Happy Customers"
+              },
+              {
+                "icon": "truck",
+                "title": "On-Time Delivery",
+                "text": "Freshness at Your Doorstep"
+              }
             ],
-            "button":    { "label": "More About Us", "href": "/about" },
+            "button": {
+              "label": "More About Us",
+              "href": "/about"
+            },
             "callLabel": "Call Us",
-            "images": ["/images/home/about-1.jpg", "/images/home/about-2.jpg"]
+            "images": [
+              "/images/home/about-1.jpg",
+              "/images/home/about-2.jpg"
+            ]
           }
         }
       },
@@ -181,10 +392,34 @@
             "accent": "from Our Farms to Your Table",
             "text": "At Farmora Organics, we offer a wide range of naturally grown, chemical-free farm products and solutions to support healthier living and a greener future.",
             "items": [
-              { "icon": "leaf",   "title": "Fresh Vegetables",     "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste from our farms to your table.", "image": "/images/home/service-1.jpg", "href": "/service-detail" },
-              { "icon": "apple",  "title": "Fresh Fruits",          "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.", "image": "/images/home/service-2.jpg", "href": "/service-detail" },
-              { "icon": "sprout", "title": "Agriculture Products",  "text": "A wide range of natural agriculture produce to support sustainable farming and healthier communities.", "image": "/images/home/service-3.jpg", "href": "/service-detail" },
-              { "icon": "hand",   "title": "Organic Solutions",     "text": "Eco-friendly and sustainable solutions for a healthier soil, better crops, and a greener tomorrow.", "image": "/images/home/service-4.jpg", "href": "/service-detail" }
+              {
+                "icon": "leaf",
+                "title": "Fresh Vegetables",
+                "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste from our farms to your table.",
+                "image": "/images/home/service-1.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "apple",
+                "title": "Fresh Fruits",
+                "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
+                "image": "/images/home/service-2.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "sprout",
+                "title": "Agriculture Products",
+                "text": "A wide range of natural agriculture produce to support sustainable farming and healthier communities.",
+                "image": "/images/home/service-3.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "hand",
+                "title": "Organic Solutions",
+                "text": "Eco-friendly and sustainable solutions for a healthier soil, better crops, and a greener tomorrow.",
+                "image": "/images/home/service-4.jpg",
+                "href": "/service-detail"
+              }
             ]
           }
         }
@@ -198,14 +433,38 @@
             "text": "At Farmora Organics, we follow a natural, sustainable and responsible approach to bring the best from our farms to your table.",
             "image": "/images/home/why-plant.jpg",
             "left": [
-              { "icon": "hand",   "title": "Pure & Organic",         "text": "Naturally grown, chemical-free produce with the goodness of nature." },
-              { "icon": "sprout", "title": "Healthy Soil Enrichment", "text": "We focus on natural soil care to ensure healthier crops and a greener tomorrow." },
-              { "icon": "users",  "title": "Support Local Farmers",   "text": "We empower local farmers and promote sustainable farming communities." }
+              {
+                "icon": "hand",
+                "title": "Pure & Organic",
+                "text": "Naturally grown, chemical-free produce with the goodness of nature."
+              },
+              {
+                "icon": "sprout",
+                "title": "Healthy Soil Enrichment",
+                "text": "We focus on natural soil care to ensure healthier crops and a greener tomorrow."
+              },
+              {
+                "icon": "users",
+                "title": "Support Local Farmers",
+                "text": "We empower local farmers and promote sustainable farming communities."
+              }
             ],
             "right": [
-              { "icon": "cycle",  "title": "Seasonal Crop Rotation", "text": "We follow the natural rhythm of the seasons to grow better, healthier produce." },
-              { "icon": "seed",   "title": "Seed-to-Plate Journey",  "text": "From quality seeds to your table, we ensure freshness at every step." },
-              { "icon": "shield", "title": "Quality You Can Trust",  "text": "Strict quality checks to deliver safe, fresh and nutritious food to your family." }
+              {
+                "icon": "cycle",
+                "title": "Seasonal Crop Rotation",
+                "text": "We follow the natural rhythm of the seasons to grow better, healthier produce."
+              },
+              {
+                "icon": "seed",
+                "title": "Seed-to-Plate Journey",
+                "text": "From quality seeds to your table, we ensure freshness at every step."
+              },
+              {
+                "icon": "shield",
+                "title": "Quality You Can Trust",
+                "text": "Strict quality checks to deliver safe, fresh and nutritious food to your family."
+              }
             ]
           }
         }
@@ -218,10 +477,34 @@
             "accent": "Naturally Better",
             "text": "Explore our wide range of fresh, organic and chemical-free products, grown with care on our farms and delivered with natural goodness.",
             "items": [
-              { "icon": "veg",   "title": "Fresh Vegetables", "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste.", "image": "/images/home/product-1.jpg", "href": "/product-detail" },
-              { "icon": "apple", "title": "Fresh Fruits",     "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.", "image": "/images/home/product-2.jpg", "href": "/product-detail" },
-              { "icon": "wheat", "title": "Grains & Pulses",  "text": "High-quality, naturally grown grains and pulses for a healthier and more balanced diet.", "image": "/images/home/product-3.jpg", "href": "/product-detail" },
-              { "icon": "leaf",  "title": "Organic Products", "text": "A wide range of natural and sustainable products for a healthier you and a greener tomorrow.", "image": "/images/home/product-4.jpg", "href": "/product-detail" }
+              {
+                "icon": "veg",
+                "title": "Fresh Vegetables",
+                "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste.",
+                "image": "/images/home/product-1.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "apple",
+                "title": "Fresh Fruits",
+                "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
+                "image": "/images/home/product-2.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "wheat",
+                "title": "Grains & Pulses",
+                "text": "High-quality, naturally grown grains and pulses for a healthier and more balanced diet.",
+                "image": "/images/home/product-3.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "leaf",
+                "title": "Organic Products",
+                "text": "A wide range of natural and sustainable products for a healthier you and a greener tomorrow.",
+                "image": "/images/home/product-4.jpg",
+                "href": "/product-detail"
+              }
             ]
           }
         }
@@ -284,24 +567,66 @@
             "accent": "Insights",
             "text": "Stay updated with our latest articles, tips and insights on organic farming, healthy living and sustainable agriculture.",
             "items": [
-              { "day": "28", "month": "AUG 2026", "tag": "Farming Tips",      "title": "10 Easy Tips for Growing Organic Vegetables at Home", "text": "Discover simple and effective tips to grow your own organic vegetables and enjoy fresh, chemical-free produce at home.", "image": "/images/home/blog-1.jpg", "href": "/blog-details" },
-              { "day": "24", "month": "AUG 2026", "tag": "Organic Living",    "title": "Why Healthy Soil Leads to Healthier Food",            "text": "Learn how nutrient-rich soil improves crop quality, enhances flavor and supports a healthier lifestyle.", "image": "/images/home/blog-2.jpg", "href": "/blog-details" },
-              { "day": "20", "month": "AUG 2026", "tag": "Health & Nutrition", "title": "The Benefits of Eating Seasonal Fruits",              "text": "Explore the health benefits of seasonal fruits and why they are a better choice for you and the environment.", "image": "/images/home/blog-3.jpg", "href": "/blog-details" }
+              {
+                "day": "28",
+                "month": "AUG 2026",
+                "tag": "Organic Farming",
+                "title": "The Future of Organic Farming",
+                "text": "Explore how certified organic cultivation eliminates synthetic chemicals, protects pollinators, and restores natural ecosystems.",
+                "image": "/images/blog/blog-1.jpg",
+                "href": "/blog-details/the-future-of-organic-farming"
+              },
+              {
+                "day": "24",
+                "month": "AUG 2026",
+                "tag": "Soil Health",
+                "title": "Why Living Soil Grows Better Food",
+                "text": "Uncover how nutrient-dense, microbe-rich living soil directly enhances crop flavor, natural vitality, and human wellness.",
+                "image": "/images/blog/blog-2.jpg",
+                "href": "/blog-details/why-living-soil-grows-better-food"
+              },
+              {
+                "day": "20",
+                "month": "AUG 2026",
+                "tag": "Sustainable Agriculture",
+                "title": "Smart Irrigation for Sustainable Yields",
+                "text": "Discover modern precision drip irrigation and water-saving methods that maximize crop yields while preserving groundwater.",
+                "image": "/images/blog/blog-3.jpg",
+                "href": "/blog-details/smart-irrigation-for-sustainable-yields"
+              }
             ]
           }
         }
       },
       "PageBanner": {
         "variants": {
-          "FarmoraAboutBanner1":         { "title": "About Us" },
-          "FarmoraServicesBanner1":      { "title": "Services" },
-          "FarmoraServiceDetailBanner1": { "title": "Services Detail" },
-          "FarmoraProductsBanner1":      { "title": "Products" },
-          "FarmoraTestimonialsBanner1":  { "title": "Testimonials" },
-          "FarmoraBlogBanner1":          { "title": "Blogs" },
-          "FarmoraBlogDetailsBanner1":   { "title": "Blogs Detail" },
-          "FarmoraContactBanner1":       { "title": "Contact Us" },
-          "FarmoraEnquiryBanner1":       { "title": "Enquire Now" }
+          "FarmoraAboutBanner1": {
+            "title": "About Us"
+          },
+          "FarmoraServicesBanner1": {
+            "title": "Services"
+          },
+          "FarmoraServiceDetailBanner1": {
+            "title": "Services Detail"
+          },
+          "FarmoraProductsBanner1": {
+            "title": "Products"
+          },
+          "FarmoraTestimonialsBanner1": {
+            "title": "Testimonials"
+          },
+          "FarmoraBlogBanner1": {
+            "title": "Blogs"
+          },
+          "FarmoraBlogDetailsBanner1": {
+            "title": "Blogs Detail"
+          },
+          "FarmoraContactBanner1": {
+            "title": "Contact Us"
+          },
+          "FarmoraEnquiryBanner1": {
+            "title": "Enquire Now"
+          }
         }
       },
       "AboutPage": {
@@ -315,7 +640,10 @@
               "At Farmora Organics, we are committed to providing pure, naturally grown and chemical-free produce from our farms to your table. Our mission is to support sustainable farming, empower local farmers, and promote healthier communities through fresh and nutritious food.",
               "At Farmora Organics, we are committed to providing pure, naturally grown and chemical-free produce from our farms to your table. Our mission is to support sustainable farming, empower local farmers, and promote healthier communities through fresh and nutritious food."
             ],
-            "images": ["/images/home/about-1.jpg", "/images/home/about-2.jpg"]
+            "images": [
+              "/images/home/about-1.jpg",
+              "/images/home/about-2.jpg"
+            ]
           }
         }
       },
@@ -328,14 +656,62 @@
             "text": "At Farmora Organics, we offer a wide range of naturally grown, chemical-free farm products and solutions to support healthier living and a greener future.",
             "learnMoreLabel": "Learn More",
             "items": [
-              { "icon": "leaf",   "title": "Fresh Vegetables",    "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste from our farms to your table.", "image": "/images/home/service-1.jpg", "href": "/service-detail" },
-              { "icon": "apple",  "title": "Fresh Fruits",         "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.", "image": "/images/home/service-2.jpg", "href": "/service-detail" },
-              { "icon": "sprout", "title": "Agriculture Products", "text": "A wide range of natural agriculture produce to support sustainable farming and healthier communities.", "image": "/images/home/service-3.jpg", "href": "/service-detail" },
-              { "icon": "hand",   "title": "Organic Solutions",    "text": "Eco-friendly and sustainable solutions for a healthier soil, better crops, and a greener tomorrow.", "image": "/images/home/service-4.jpg", "href": "/service-detail" },
-              { "icon": "leaf",   "title": "Fresh Vegetables",    "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste from our farms to your table.", "image": "/images/home/service-1.jpg", "href": "/service-detail" },
-              { "icon": "apple",  "title": "Fresh Fruits",         "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.", "image": "/images/home/service-2.jpg", "href": "/service-detail" },
-              { "icon": "sprout", "title": "Agriculture Products", "text": "A wide range of natural agriculture produce to support sustainable farming and healthier communities.", "image": "/images/home/service-3.jpg", "href": "/service-detail" },
-              { "icon": "hand",   "title": "Organic Solutions",    "text": "Eco-friendly and sustainable solutions for a healthier soil, better crops, and a greener tomorrow.", "image": "/images/home/service-4.jpg", "href": "/service-detail" }
+              {
+                "icon": "leaf",
+                "title": "Fresh Vegetables",
+                "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste from our farms to your table.",
+                "image": "/images/home/service-1.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "apple",
+                "title": "Fresh Fruits",
+                "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
+                "image": "/images/home/service-2.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "sprout",
+                "title": "Agriculture Products",
+                "text": "A wide range of natural agriculture produce to support sustainable farming and healthier communities.",
+                "image": "/images/home/service-3.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "hand",
+                "title": "Organic Solutions",
+                "text": "Eco-friendly and sustainable solutions for a healthier soil, better crops, and a greener tomorrow.",
+                "image": "/images/home/service-4.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "leaf",
+                "title": "Fresh Vegetables",
+                "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste from our farms to your table.",
+                "image": "/images/home/service-1.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "apple",
+                "title": "Fresh Fruits",
+                "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
+                "image": "/images/home/service-2.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "sprout",
+                "title": "Agriculture Products",
+                "text": "A wide range of natural agriculture produce to support sustainable farming and healthier communities.",
+                "image": "/images/home/service-3.jpg",
+                "href": "/service-detail"
+              },
+              {
+                "icon": "hand",
+                "title": "Organic Solutions",
+                "text": "Eco-friendly and sustainable solutions for a healthier soil, better crops, and a greener tomorrow.",
+                "image": "/images/home/service-4.jpg",
+                "href": "/service-detail"
+              }
             ]
           }
         }
@@ -347,19 +723,43 @@
             "title": "Organic",
             "accent": "Fertilizer Supply",
             "text": "We provide high-quality organic fertilizers that enrich soil naturally, improve nutrient content and support healthy crop growth. Our fertilizers are chemical-free, eco-friendly and suitable for all types of farming.",
-            "button": { "label": "Enquiry Now", "href": "/enquiry" },
+            "button": {
+              "label": "Enquiry Now",
+              "href": "/enquiry"
+            },
             "image": "/images/services/hero.jpg",
             "sidebar": {
               "title": "Our Services",
               "activeTitle": "Organic Fertilizer Supply",
               "items": [
-                { "title": "Organic Farm Consultation",     "image": "/images/services/thumb-1.jpg" },
-                { "title": "Vertical Farming Solutions",    "image": "/images/services/thumb-2.jpg" },
-                { "title": "Custom Container Gardening",    "image": "/images/services/thumb-3.jpg" },
-                { "title": "Garden Maintenance Plans",      "image": "/images/services/thumb-4.jpg" },
-                { "title": "Organic Fertilizer Supply",     "image": "/images/services/thumb-5.jpg" },
-                { "title": "Crop Rotation Planning",        "image": "/images/services/thumb-6.jpg" },
-                { "title": "Natural Pest Control",          "image": "/images/services/thumb-7.jpg" }
+                {
+                  "title": "Organic Farm Consultation",
+                  "image": "/images/services/thumb-1.jpg"
+                },
+                {
+                  "title": "Vertical Farming Solutions",
+                  "image": "/images/services/thumb-2.jpg"
+                },
+                {
+                  "title": "Custom Container Gardening",
+                  "image": "/images/services/thumb-3.jpg"
+                },
+                {
+                  "title": "Garden Maintenance Plans",
+                  "image": "/images/services/thumb-4.jpg"
+                },
+                {
+                  "title": "Organic Fertilizer Supply",
+                  "image": "/images/services/thumb-5.jpg"
+                },
+                {
+                  "title": "Crop Rotation Planning",
+                  "image": "/images/services/thumb-6.jpg"
+                },
+                {
+                  "title": "Natural Pest Control",
+                  "image": "/images/services/thumb-7.jpg"
+                }
               ],
               "help": {
                 "title": "Need Help?",
@@ -385,12 +785,36 @@
           "FarmoraServiceBenefits1": {
             "title": "Key Benefits",
             "items": [
-              { "icon": "leaf",  "title": "Improves Soil Health",   "text": "Enriches soil with essential nutrients and organic matter." },
-              { "icon": "hand",  "title": "Better Crop Yield",      "text": "Promotes stronger root development and higher productivity." },
-              { "icon": "coins", "title": "Chemical-Free",          "text": "100% natural and safe for soil, crops and the environment." },
-              { "icon": "leaf",  "title": "Enhances Soil Structure","text": "Improves water retention and aeration in soil." },
-              { "icon": "hand",  "title": "Sustainable Farming",    "text": "Supports long-term soil fertility and eco-friendly agriculture." },
-              { "icon": "globe", "title": "Suitable for All Crops", "text": "Effective for vegetables, fruits, grains and plantations." }
+              {
+                "icon": "leaf",
+                "title": "Improves Soil Health",
+                "text": "Enriches soil with essential nutrients and organic matter."
+              },
+              {
+                "icon": "hand",
+                "title": "Better Crop Yield",
+                "text": "Promotes stronger root development and higher productivity."
+              },
+              {
+                "icon": "coins",
+                "title": "Chemical-Free",
+                "text": "100% natural and safe for soil, crops and the environment."
+              },
+              {
+                "icon": "leaf",
+                "title": "Enhances Soil Structure",
+                "text": "Improves water retention and aeration in soil."
+              },
+              {
+                "icon": "hand",
+                "title": "Sustainable Farming",
+                "text": "Supports long-term soil fertility and eco-friendly agriculture."
+              },
+              {
+                "icon": "globe",
+                "title": "Suitable for All Crops",
+                "text": "Effective for vegetables, fruits, grains and plantations."
+              }
             ]
           }
         }
@@ -420,14 +844,62 @@
             "text": "Explore our wide range of fresh, organic and chemical-free products, grown with care on our farms and delivered with natural goodness.",
             "buttonLabel": "Explore More",
             "items": [
-              { "icon": "veg",   "title": "Fresh Vegetables", "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste.", "image": "/images/home/product-1.jpg", "href": "/product-detail" },
-              { "icon": "apple", "title": "Fresh Fruits",     "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.", "image": "/images/home/product-2.jpg", "href": "/product-detail" },
-              { "icon": "wheat", "title": "Grains & Pulses",  "text": "High-quality, naturally grown grains and pulses for a healthier and more balanced diet.", "image": "/images/home/product-3.jpg", "href": "/product-detail" },
-              { "icon": "leaf",  "title": "Organic Products", "text": "A wide range of natural and sustainable products for a healthier you and a greener tomorrow.", "image": "/images/home/product-4.jpg", "href": "/product-detail" },
-              { "icon": "veg",   "title": "Fresh Vegetables", "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste.", "image": "/images/home/product-1.jpg", "href": "/product-detail" },
-              { "icon": "apple", "title": "Fresh Fruits",     "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.", "image": "/images/home/product-2.jpg", "href": "/product-detail" },
-              { "icon": "wheat", "title": "Grains & Pulses",  "text": "High-quality, naturally grown grains and pulses for a healthier and more balanced diet.", "image": "/images/home/product-3.jpg", "href": "/product-detail" },
-              { "icon": "leaf",  "title": "Organic Products", "text": "A wide range of natural and sustainable products for a healthier you and a greener tomorrow.", "image": "/images/home/product-4.jpg", "href": "/product-detail" }
+              {
+                "icon": "veg",
+                "title": "Fresh Vegetables",
+                "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste.",
+                "image": "/images/home/product-1.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "apple",
+                "title": "Fresh Fruits",
+                "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
+                "image": "/images/home/product-2.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "wheat",
+                "title": "Grains & Pulses",
+                "text": "High-quality, naturally grown grains and pulses for a healthier and more balanced diet.",
+                "image": "/images/home/product-3.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "leaf",
+                "title": "Organic Products",
+                "text": "A wide range of natural and sustainable products for a healthier you and a greener tomorrow.",
+                "image": "/images/home/product-4.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "veg",
+                "title": "Fresh Vegetables",
+                "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste.",
+                "image": "/images/home/product-1.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "apple",
+                "title": "Fresh Fruits",
+                "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
+                "image": "/images/home/product-2.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "wheat",
+                "title": "Grains & Pulses",
+                "text": "High-quality, naturally grown grains and pulses for a healthier and more balanced diet.",
+                "image": "/images/home/product-3.jpg",
+                "href": "/product-detail"
+              },
+              {
+                "icon": "leaf",
+                "title": "Organic Products",
+                "text": "A wide range of natural and sustainable products for a healthier you and a greener tomorrow.",
+                "image": "/images/home/product-4.jpg",
+                "href": "/product-detail"
+              }
             ]
           }
         }
@@ -441,12 +913,27 @@
             "text": "Our Organic Compost Fertilizer is made from natural kitchen and garden waste, enriched with essential nutrients to improve soil health and boost plant growth. It helps in creating a fertile soil environment, enhances water retention and promotes stronger, healthier plants.",
             "image": "/images/product-detail/main.jpg",
             "badges": [
-              { "icon": "leaf",   "label": "100% Natural" },
-              { "icon": "flask",  "label": "Chemical Free" },
-              { "icon": "sprout", "label": "Eco Friendly" },
-              { "icon": "hand",   "label": "Safe for All Plants" }
+              {
+                "icon": "leaf",
+                "label": "100% Natural"
+              },
+              {
+                "icon": "flask",
+                "label": "Chemical Free"
+              },
+              {
+                "icon": "sprout",
+                "label": "Eco Friendly"
+              },
+              {
+                "icon": "hand",
+                "label": "Safe for All Plants"
+              }
             ],
-            "button": { "label": "Enquiry Now", "href": "/enquiry" }
+            "button": {
+              "label": "Enquiry Now",
+              "href": "/enquiry"
+            }
           }
         }
       },
@@ -464,10 +951,26 @@
           "FarmoraProductFeatures1": {
             "title": "Key Features",
             "items": [
-              { "icon": "leaf",   "title": "Natural & Safe",    "text": "Made from natural organic waste." },
-              { "icon": "sprout", "title": "Nutrient Rich",     "text": "Provides essential plant nutrients." },
-              { "icon": "drop",   "title": "Improves Soil",     "text": "Enhances soil structure and water retention." },
-              { "icon": "leaf",   "title": "Wide Application",  "text": "Suitable for all types of plants and crops." }
+              {
+                "icon": "leaf",
+                "title": "Natural & Safe",
+                "text": "Made from natural organic waste."
+              },
+              {
+                "icon": "sprout",
+                "title": "Nutrient Rich",
+                "text": "Provides essential plant nutrients."
+              },
+              {
+                "icon": "drop",
+                "title": "Improves Soil",
+                "text": "Enhances soil structure and water retention."
+              },
+              {
+                "icon": "leaf",
+                "title": "Wide Application",
+                "text": "Suitable for all types of plants and crops."
+              }
             ]
           }
         }
@@ -477,13 +980,34 @@
           "FarmoraProductSpecs1": {
             "title": "Product Specifications",
             "rows": [
-              ["Product Name",   "Organic Compost Fertilizer"],
-              ["Category",       "Organic Fertilizer"],
-              ["Form",           "Granular / Powder"],
-              ["Packaging Size", "1 kg, 5 kg, 10 kg, 25 kg"],
-              ["Shelf Life",     "12 Months"],
-              ["Usage",          "Home Garden, Terrace Garden, Farms, Landscaping"],
-              ["Storage",        "Keep in a cool and dry place"]
+              [
+                "Product Name",
+                "Organic Compost Fertilizer"
+              ],
+              [
+                "Category",
+                "Organic Fertilizer"
+              ],
+              [
+                "Form",
+                "Granular / Powder"
+              ],
+              [
+                "Packaging Size",
+                "1 kg, 5 kg, 10 kg, 25 kg"
+              ],
+              [
+                "Shelf Life",
+                "12 Months"
+              ],
+              [
+                "Usage",
+                "Home Garden, Terrace Garden, Farms, Landscaping"
+              ],
+              [
+                "Storage",
+                "Keep in a cool and dry place"
+              ]
             ]
           }
         }
@@ -493,10 +1017,26 @@
           "FarmoraProductBenefits1": {
             "title": "Quality & Benefits",
             "items": [
-              { "icon": "sprout", "title": "Improves Soil Health",      "text": "Boosts soil fertility and microbial activity." },
-              { "icon": "chart",  "title": "Better Plant Growth",        "text": "Provides essential nutrients for higher yield." },
-              { "icon": "drop",   "title": "Enhanced Water Retention",   "text": "Keeps soil moist for longer periods." },
-              { "icon": "leaf",   "title": "Eco-Friendly Solution",      "text": "Made from organic matter, safe for the environment." }
+              {
+                "icon": "sprout",
+                "title": "Improves Soil Health",
+                "text": "Boosts soil fertility and microbial activity."
+              },
+              {
+                "icon": "chart",
+                "title": "Better Plant Growth",
+                "text": "Provides essential nutrients for higher yield."
+              },
+              {
+                "icon": "drop",
+                "title": "Enhanced Water Retention",
+                "text": "Keeps soil moist for longer periods."
+              },
+              {
+                "icon": "leaf",
+                "title": "Eco-Friendly Solution",
+                "text": "Made from organic matter, safe for the environment."
+              }
             ]
           }
         }
@@ -506,9 +1046,21 @@
           "FarmoraProductAvailability1": {
             "title": "Product Availability",
             "items": [
-              { "icon": "box",   "title": "Available Sizes", "text": "1 kg, 5 kg, 10 kg, 25 kg" },
-              { "icon": "truck", "title": "Availability",    "text": "In Stock" },
-              { "icon": "pin",   "title": "Delivery",        "text": "Pan India Delivery Available" }
+              {
+                "icon": "box",
+                "title": "Available Sizes",
+                "text": "1 kg, 5 kg, 10 kg, 25 kg"
+              },
+              {
+                "icon": "truck",
+                "title": "Availability",
+                "text": "In Stock"
+              },
+              {
+                "icon": "pin",
+                "title": "Delivery",
+                "text": "Pan India Delivery Available"
+              }
             ]
           }
         }
@@ -520,24 +1072,78 @@
             "accent": "Gallery",
             "text": "Explore moments from our organic farming activities, natural products and on-ground initiatives. Our gallery reflects our commitment to sustainable and healthy living.",
             "images": [
-              { "src": "/images/gallery/g1.jpg",  "alt": "Young seedling growing in fertile soil" },
-              { "src": "/images/gallery/g2.jpg",  "alt": "Organic crop rows at sunrise" },
-              { "src": "/images/gallery/g3.jpg",  "alt": "Fresh ripe tomatoes on the vine" },
-              { "src": "/images/gallery/g4.jpg",  "alt": "Hands holding rich organic compost" },
-              { "src": "/images/gallery/g5.jpg",  "alt": "Fresh lettuce growing in the field" },
-              { "src": "/images/gallery/g6_clean.jpg",  "alt": "Sprinkler irrigation over crop rows" },
-              { "src": "/images/gallery/g7.jpg",  "alt": "Young plants in a greenhouse row" },
-              { "src": "/images/gallery/g8.jpg",  "alt": "Basket of fresh organic vegetables" },
-              { "src": "/images/gallery/g9.jpg",  "alt": "Sunlit seedling in the soil" },
-              { "src": "/images/gallery/g10.jpg", "alt": "Close-up of a healthy green leaf" },
-              { "src": "/images/gallery/g11.jpg", "alt": "Hand spreading organic fertilizer" },
-              { "src": "/images/gallery/g12.jpg", "alt": "Farm fields at sunrise" },
-              { "src": "/images/gallery/g13.jpg", "alt": "Farm rows under evening sun" },
-              { "src": "/images/gallery/g14.jpg", "alt": "Seedlings growing in sunlight" },
-              { "src": "/images/gallery/g15.jpg", "alt": "Leafy green crops" },
-              { "src": "/images/gallery/g16.jpg", "alt": "Watering a young plant" },
-              { "src": "/images/gallery/g17_clean.jpg", "alt": "Aerial view of green farmland" },
-              { "src": "/images/gallery/g18.jpg", "alt": "Hands holding fresh compost" }
+              {
+                "src": "/images/gallery/g1.jpg",
+                "alt": "Young seedling growing in fertile soil"
+              },
+              {
+                "src": "/images/gallery/g2.jpg",
+                "alt": "Organic crop rows at sunrise"
+              },
+              {
+                "src": "/images/gallery/g3.jpg",
+                "alt": "Fresh ripe tomatoes on the vine"
+              },
+              {
+                "src": "/images/gallery/g4.jpg",
+                "alt": "Hands holding rich organic compost"
+              },
+              {
+                "src": "/images/gallery/g5.jpg",
+                "alt": "Fresh lettuce growing in the field"
+              },
+              {
+                "src": "/images/gallery/g6_clean.jpg",
+                "alt": "Sprinkler irrigation over crop rows"
+              },
+              {
+                "src": "/images/gallery/g7.jpg",
+                "alt": "Young plants in a greenhouse row"
+              },
+              {
+                "src": "/images/gallery/g8.jpg",
+                "alt": "Basket of fresh organic vegetables"
+              },
+              {
+                "src": "/images/gallery/g9.jpg",
+                "alt": "Sunlit seedling in the soil"
+              },
+              {
+                "src": "/images/gallery/g10.jpg",
+                "alt": "Close-up of a healthy green leaf"
+              },
+              {
+                "src": "/images/gallery/g11.jpg",
+                "alt": "Hand spreading organic fertilizer"
+              },
+              {
+                "src": "/images/gallery/g12.jpg",
+                "alt": "Farm fields at sunrise"
+              },
+              {
+                "src": "/images/gallery/g13.jpg",
+                "alt": "Farm rows under evening sun"
+              },
+              {
+                "src": "/images/gallery/g14.jpg",
+                "alt": "Seedlings growing in sunlight"
+              },
+              {
+                "src": "/images/gallery/g15.jpg",
+                "alt": "Leafy green crops"
+              },
+              {
+                "src": "/images/gallery/g16.jpg",
+                "alt": "Watering a young plant"
+              },
+              {
+                "src": "/images/gallery/g17_clean.jpg",
+                "alt": "Aerial view of green farmland"
+              },
+              {
+                "src": "/images/gallery/g18.jpg",
+                "alt": "Hands holding fresh compost"
+              }
             ]
           }
         }
@@ -546,15 +1152,60 @@
         "variants": {
           "FarmoraTestimonialsPage1": {
             "reviews": [
-              { "name": "Ramesh Patel",     "role": "Progressive Farmer",         "quote": "The organic fertilizer from Farmora Organics has significantly improved the soil quality on my farm. I've noticed healthier crops and better yields naturally.", "avatar": "/images/testimonials/avatar-1.png" },
-              { "name": "Sunita Verma",     "role": "Organic Farmer",             "quote": "We have been using Farmora's organic solutions for over a year. The results in our vegetable crops are excellent, and the soil is more fertile than before.", "avatar": "/images/testimonials/avatar-2.png" },
-              { "name": "Amit Kumar",       "role": "Agriculture Business Owner", "quote": "Farmora Organics provides truly natural products. Their compost fertilizer has helped us reduce chemical usage and maintain healthier soil for long-term farming.", "avatar": "/images/testimonials/avatar-3.png" },
-              { "name": "Vikram Singh",     "role": "Crop Producer",              "quote": "The quality of Farmora's products is outstanding. Our crop growth has improved greatly, and the plants are noticeably healthier, stronger and more resilient.", "avatar": "/images/testimonials/avatar-4.png" },
-              { "name": "Mahesh Yadav",     "role": "Organic Farmer",             "quote": "I switched to Farmora Organics for natural farming and the difference is clear. Better soil structure, healthy plants and improved yield without harmful chemicals.", "avatar": "/images/testimonials/avatar-5.png" },
-              { "name": "Rohit Sharma",     "role": "Vegetable Grower",           "quote": "Farmora's organic inputs are easy to use and very effective. Our vegetables have better taste and quality, and customers love the natural produce.", "avatar": "/images/testimonials/avatar-6.png" },
-              { "name": "Pooja Desai",      "role": "Organic Farmer",             "quote": "Using Farmora's organic fertilizer has improved the health of our crops and reduced soil problems. I highly recommend their products to all farmers.", "avatar": "/images/testimonials/avatar-7.png" },
-              { "name": "Deepak Joshi",     "role": "Farmer & Distributor",       "quote": "Farmora Organics has helped us move towards sustainable farming. Their products are reliable, natural and give consistent results year after year.", "avatar": "/images/testimonials/avatar-8.png" },
-              { "name": "Suresh Choudhary", "role": "Agri Entrepreneur",          "quote": "Excellent quality organic products and great support from the Farmora team. Our farm is now more productive and the soil health has improved a lot.", "avatar": "/images/testimonials/avatar-9.png" }
+              {
+                "name": "Ramesh Patel",
+                "role": "Progressive Farmer",
+                "quote": "The organic fertilizer from Farmora Organics has significantly improved the soil quality on my farm. I've noticed healthier crops and better yields naturally.",
+                "avatar": "/images/testimonials/avatar-1.png"
+              },
+              {
+                "name": "Sunita Verma",
+                "role": "Organic Farmer",
+                "quote": "We have been using Farmora's organic solutions for over a year. The results in our vegetable crops are excellent, and the soil is more fertile than before.",
+                "avatar": "/images/testimonials/avatar-2.png"
+              },
+              {
+                "name": "Amit Kumar",
+                "role": "Agriculture Business Owner",
+                "quote": "Farmora Organics provides truly natural products. Their compost fertilizer has helped us reduce chemical usage and maintain healthier soil for long-term farming.",
+                "avatar": "/images/testimonials/avatar-3.png"
+              },
+              {
+                "name": "Vikram Singh",
+                "role": "Crop Producer",
+                "quote": "The quality of Farmora's products is outstanding. Our crop growth has improved greatly, and the plants are noticeably healthier, stronger and more resilient.",
+                "avatar": "/images/testimonials/avatar-4.png"
+              },
+              {
+                "name": "Mahesh Yadav",
+                "role": "Organic Farmer",
+                "quote": "I switched to Farmora Organics for natural farming and the difference is clear. Better soil structure, healthy plants and improved yield without harmful chemicals.",
+                "avatar": "/images/testimonials/avatar-5.png"
+              },
+              {
+                "name": "Rohit Sharma",
+                "role": "Vegetable Grower",
+                "quote": "Farmora's organic inputs are easy to use and very effective. Our vegetables have better taste and quality, and customers love the natural produce.",
+                "avatar": "/images/testimonials/avatar-6.png"
+              },
+              {
+                "name": "Pooja Desai",
+                "role": "Organic Farmer",
+                "quote": "Using Farmora's organic fertilizer has improved the health of our crops and reduced soil problems. I highly recommend their products to all farmers.",
+                "avatar": "/images/testimonials/avatar-7.png"
+              },
+              {
+                "name": "Deepak Joshi",
+                "role": "Farmer & Distributor",
+                "quote": "Farmora Organics has helped us move towards sustainable farming. Their products are reliable, natural and give consistent results year after year.",
+                "avatar": "/images/testimonials/avatar-8.png"
+              },
+              {
+                "name": "Suresh Choudhary",
+                "role": "Agri Entrepreneur",
+                "quote": "Excellent quality organic products and great support from the Farmora team. Our farm is now more productive and the soil health has improved a lot.",
+                "avatar": "/images/testimonials/avatar-9.png"
+              }
             ]
           }
         }
@@ -568,12 +1219,60 @@
             "text": "Stay updated with our latest articles, tips and insights on organic farming, healthy living and sustainable agriculture.",
             "readMoreLabel": "Read More",
             "posts": [
-              { "day": "28", "month": "AUG 2026", "tag": "Farming Tips",       "title": "10 Easy Tips for Growing Organic Vegetables at Home", "text": "Discover simple and effective tips to grow your own organic vegetables and enjoy fresh, chemical-free produce at home.", "image": "/images/home/blog-1.jpg", "href": "/blog-details" },
-              { "day": "24", "month": "AUG 2026", "tag": "Organic Living",     "title": "Why Healthy Soil Leads to Healthier Food",            "text": "Learn how nutrient-rich soil improves crop quality, enhances flavor and supports a healthier lifestyle.", "image": "/images/home/blog-2.jpg", "href": "/blog-details" },
-              { "day": "20", "month": "AUG 2026", "tag": "Health & Nutrition", "title": "The Benefits of Eating Seasonal Fruits",              "text": "Explore the health benefits of seasonal fruits and why they are a better choice for you and the environment.", "image": "/images/home/blog-3.jpg", "href": "/blog-details" },
-              { "day": "28", "month": "AUG 2026", "tag": "Farming Tips",       "title": "10 Easy Tips for Growing Organic Vegetables at Home", "text": "Discover simple and effective tips to grow your own organic vegetables and enjoy fresh, chemical-free produce at home.", "image": "/images/home/blog-1.jpg", "href": "/blog-details" },
-              { "day": "24", "month": "AUG 2026", "tag": "Organic Living",     "title": "Why Healthy Soil Leads to Healthier Food",            "text": "Learn how nutrient-rich soil improves crop quality, enhances flavor and supports a healthier lifestyle.", "image": "/images/home/blog-2.jpg", "href": "/blog-details" },
-              { "day": "20", "month": "AUG 2026", "tag": "Health & Nutrition", "title": "The Benefits of Eating Seasonal Fruits",              "text": "Explore the health benefits of seasonal fruits and why they are a better choice for you and the environment.", "image": "/images/home/blog-3.jpg", "href": "/blog-details" }
+              {
+                "day": "28",
+                "month": "AUG 2026",
+                "tag": "Organic Farming",
+                "title": "The Future of Organic Farming",
+                "text": "Explore how certified organic cultivation eliminates synthetic chemicals, protects pollinators, and restores natural ecosystems.",
+                "image": "/images/blog/blog-1.jpg",
+                "href": "/blog-details/the-future-of-organic-farming"
+              },
+              {
+                "day": "24",
+                "month": "AUG 2026",
+                "tag": "Soil Health",
+                "title": "Why Living Soil Grows Better Food",
+                "text": "Uncover how nutrient-dense, microbe-rich living soil directly enhances crop flavor, natural vitality, and human wellness.",
+                "image": "/images/blog/blog-2.jpg",
+                "href": "/blog-details/why-living-soil-grows-better-food"
+              },
+              {
+                "day": "20",
+                "month": "AUG 2026",
+                "tag": "Sustainable Agriculture",
+                "title": "Smart Irrigation for Sustainable Yields",
+                "text": "Discover modern precision drip irrigation and water-saving methods that maximize crop yields while preserving groundwater.",
+                "image": "/images/blog/blog-3.jpg",
+                "href": "/blog-details/smart-irrigation-for-sustainable-yields"
+              },
+              {
+                "day": "15",
+                "month": "AUG 2026",
+                "tag": "Health & Nutrition",
+                "title": "The Power of Peak Seasonal Harvests",
+                "text": "Learn why eating fresh, locally harvested organic produce provides superior vitamin density and natural immunity benefits.",
+                "image": "/images/blog/blog-4.jpg",
+                "href": "/blog-details/the-power-of-peak-seasonal-harvests"
+              },
+              {
+                "day": "12",
+                "month": "AUG 2026",
+                "tag": "Farming Tips",
+                "title": "Companion Planting for Thriving Gardens",
+                "text": "Master proven companion plant pairings and natural organic pest deterrence to grow lush, chemical-free home vegetables.",
+                "image": "/images/blog/blog-5.jpg",
+                "href": "/blog-details/companion-planting-for-thriving-gardens"
+              },
+              {
+                "day": "08",
+                "month": "AUG 2026",
+                "tag": "Eco Living",
+                "title": "Zero-Waste Guide to Organic Living",
+                "text": "Simple daily habits to reduce plastic waste, compost kitchen scraps, and create a healthy sustainable home in harmony with nature.",
+                "image": "/images/blog/blog-6.jpg",
+                "href": "/blog-details/zero-waste-guide-to-organic-living"
+              }
             ]
           }
         }
@@ -590,10 +1289,16 @@
             "image": "/images/blog-details/main.jpg",
             "imageAlt": "Young plants growing in healthy soil",
             "sections": [
-              { "heading": "What is Soil Health?",  "text": "Soil health refers to the soil's ability to function as a living ecosystem. It includes a balance of nutrients, organic matter, microorganisms, and proper soil structure. Healthy soil not only supports plant growth but also helps in water retention, reduces erosion and contributes to a cleaner environment." },
-              { "heading": "Why Soil Health Matters?", "text": "Healthy soil leads to stronger roots, better nutrient absorption and higher crop productivity. It also reduces the need for chemical inputs, making farming more cost-effective and environmentally friendly. Additionally, well-maintained soil resists drought, supports biodiversity and ensures long-term agricultural sustainability." }
+              {
+                "heading": "What is Soil Health?",
+                "text": "Soil health refers to the soil's ability to function as a living ecosystem. It includes a balance of nutrients, organic matter, microorganisms, and proper soil structure. Healthy soil not only supports plant growth but also helps in water retention, reduces erosion and contributes to a cleaner environment."
+              },
+              {
+                "heading": "Why Soil Health Matters?",
+                "text": "Healthy soil leads to stronger roots, better nutrient absorption and higher crop productivity. It also reduces the need for chemical inputs, making farming more cost-effective and environmentally friendly. Additionally, well-maintained soil resists drought, supports biodiversity and ensures long-term agricultural sustainability."
+              }
             ],
-            "quote": "\u201cHealthy soil is not just a resource, it is a responsibility for a greener and more food-secure future.\u201d",
+            "quote": "“Healthy soil is not just a resource, it is a responsibility for a greener and more food-secure future.”",
             "maintain": {
               "heading": "How to Maintain Soil Health?",
               "items": [
@@ -613,27 +1318,65 @@
           "FarmoraBlogSidebar1": {
             "recentTitle": "Recent Posts",
             "recent": [
-              { "title": "Benefits of Organic Farming for a Healthier Future", "date": "12 Sep 2026", "image": "/images/blog-details/recent-1.jpg", "href": "/blog-details" },
-              { "title": "How to Choose the Right Organic Fertilizer",          "date": "05 Sep 2026", "image": "/images/blog-details/recent-2.jpg", "href": "/blog-details" },
-              { "title": "Top Sustainable Farming Practices for Better Yield",  "date": "28 Aug 2026", "image": "/images/blog-details/recent-3.jpg", "href": "/blog-details" },
-              { "title": "Role of Natural Fertilizers in Soil Health",          "date": "20 Aug 2026", "image": "/images/blog-details/recent-4.jpg", "href": "/blog-details" }
+              {
+                "title": "The Future of Organic Farming",
+                "date": "28 Aug 2026",
+                "image": "/images/blog-details/recent-1.jpg",
+                "href": "/blog-details/the-future-of-organic-farming",
+                "tag": "Organic Farming"
+              },
+              {
+                "title": "Why Living Soil Grows Better Food",
+                "date": "24 Aug 2026",
+                "image": "/images/blog-details/recent-2.jpg",
+                "href": "/blog-details/why-living-soil-grows-better-food",
+                "tag": "Soil Health"
+              },
+              {
+                "title": "Smart Irrigation for Sustainable Yields",
+                "date": "20 Aug 2026",
+                "image": "/images/blog-details/recent-3.jpg",
+                "href": "/blog-details/smart-irrigation-for-sustainable-yields",
+                "tag": "Sustainable Agriculture"
+              },
+              {
+                "title": "The Power of Peak Seasonal Harvests",
+                "date": "15 Aug 2026",
+                "image": "/images/blog-details/recent-4.jpg",
+                "href": "/blog-details/the-power-of-peak-seasonal-harvests",
+                "tag": "Health & Nutrition"
+              },
+              {
+                "title": "Companion Planting for Thriving Gardens",
+                "date": "12 Aug 2026",
+                "image": "/images/blog-details/recent-5.jpg",
+                "href": "/blog-details/companion-planting-for-thriving-gardens",
+                "tag": "Farming Tips"
+              },
+              {
+                "title": "Zero-Waste Guide to Organic Living",
+                "date": "08 Aug 2026",
+                "image": "/images/blog-details/recent-6.jpg",
+                "href": "/blog-details/zero-waste-guide-to-organic-living",
+                "tag": "Eco Living"
+              }
             ],
             "tagsTitle": "Popular Tags",
             "tags": [
               "Organic Farming",
               "Soil Health",
               "Sustainable Agriculture",
-              "Organic Fertilizer",
-              "Crop Yield",
-              "Farming Tips"
+              "Health & Nutrition",
+              "Farming Tips",
+              "Eco Living"
             ],
             "cta": {
-              "titleLine1":   "Need Expert Advice",
-              "titleAccent":  "Organic Farming?",
-              "titlePrefix":  "for",
-              "text":   "Get in touch with our team for personalized guidance and the best farming solutions.",
+              "titleLine1": "Need Expert Advice",
+              "titleAccent": "Organic Farming?",
+              "titlePrefix": "for",
+              "text": "Get in touch with our team for personalized guidance and the best farming solutions.",
               "button": "Enquiry Now",
-              "href":   "/enquiry"
+              "href": "/enquiry"
             }
           }
         }
@@ -641,23 +1384,23 @@
       "ContactForm": {
         "variants": {
           "FarmoraContactForm1": {
-            "title":    "Send Us a",
-            "accent":   "Message",
+            "title": "Send Us a",
+            "accent": "Message",
             "subtitle": "Fill out the form and our team will get back to you shortly.",
             "fields": {
-              "name":    "Your Name",
-              "email":   "Your Email",
-              "phone":   "Phone Number",
+              "name": "Your Name",
+              "email": "Your Email",
+              "phone": "Phone Number",
               "subject": "Subject",
               "message": "Your Message"
             },
-            "button":  "Send Message",
+            "button": "Send Message",
             "success": "Thank you! Your message has been sent. Our team will get back to you shortly.",
             "promo": {
-              "image":      "/images/contact/plant.jpg",
+              "image": "/images/contact/plant.jpg",
               "titleLine1": "Let's Grow",
-              "titlePrefix":"a",
-              "titleAccent":"Greener",
+              "titlePrefix": "a",
+              "titleAccent": "Greener",
               "titleLine3": "Tomorrow Together",
               "text": "For inquiries, support or collaboration opportunities, feel free to reach out. We are always happy to connect with fellow farmers, customers and business partners."
             }
@@ -668,10 +1411,36 @@
         "variants": {
           "FarmoraContactInfo1": {
             "items": [
-              { "key": "address", "title": "Our Address", "lines": ["Farmora Organics LLC", "742 Evergreen Terrace,", "Springfield, IL 62704,", "United States"] },
-              { "key": "phone",   "title": "Call Us",     "lines": ["+1 00000 00000"] },
-              { "key": "email",   "title": "Email Us",    "lines": ["info@xyz.com"], "note": "We usually respond within 24 hours." },
-              { "key": "follow",  "title": "Follow Us",   "note": "Stay connected for updates and farming insights." }
+              {
+                "key": "address",
+                "title": "Our Address",
+                "lines": [
+                  "Farmora Organics LLC",
+                  "742 Evergreen Terrace,",
+                  "Springfield, IL 62704,",
+                  "United States"
+                ]
+              },
+              {
+                "key": "phone",
+                "title": "Call Us",
+                "lines": [
+                  "+1 00000 00000"
+                ]
+              },
+              {
+                "key": "email",
+                "title": "Email Us",
+                "lines": [
+                  "info@xyz.com"
+                ],
+                "note": "We usually respond within 24 hours."
+              },
+              {
+                "key": "follow",
+                "title": "Follow Us",
+                "note": "Stay connected for updates and farming insights."
+              }
             ]
           }
         }
@@ -680,28 +1449,44 @@
         "variants": {
           "FarmoraContactLocation1": {
             "mapImage": "/images/contact/map.jpg",
-            "mapAlt":   "Map showing Farmora Organics in Springfield, IL",
-            "mapHref":  "https://maps.google.com/?q=742+Evergreen+Terrace,+Springfield,+IL+62704",
-            "eyebrow":  "Visit Our Office",
-            "title":    "Our",
-            "accent":   "Location",
-            "text":     "You are always welcome to visit our office. Use the map to get directions or contact us for any assistance.",
-            "button":   "Get Directions"
+            "mapAlt": "Map showing Farmora Organics in Springfield, IL",
+            "mapHref": "https://maps.google.com/?q=742+Evergreen+Terrace,+Springfield,+IL+62704",
+            "eyebrow": "Visit Our Office",
+            "title": "Our",
+            "accent": "Location",
+            "text": "You are always welcome to visit our office. Use the map to get directions or contact us for any assistance.",
+            "button": "Get Directions"
           }
         }
       },
       "EnquiryIntro": {
         "variants": {
           "FarmoraEnquiryIntro1": {
-            "eyebrow":   "Enquiry Now",
-            "titleLine1":"Get in Touch",
-            "titleAccent":"With Us",
+            "eyebrow": "Enquiry Now",
+            "titleLine1": "Get in Touch",
+            "titleAccent": "With Us",
             "text": "Have questions about our organic products, farming solutions or partnership opportunities? Share your requirements and our team will get back to you with the best possible solution.",
             "cards": [
-              { "icon": "leaf",      "title": "Product Information", "text": "Get details about our organic products and features." },
-              { "icon": "sprout",    "title": "Farming Guidance",    "text": "Expert advice for sustainable and organic farming practices." },
-              { "icon": "handshake", "title": "Bulk Orders",         "text": "Inquire about bulk supply and partnership opportunities." },
-              { "icon": "chat",      "title": "General Queries",     "text": "Our team is here to answer all your questions." }
+              {
+                "icon": "leaf",
+                "title": "Product Information",
+                "text": "Get details about our organic products and features."
+              },
+              {
+                "icon": "sprout",
+                "title": "Farming Guidance",
+                "text": "Expert advice for sustainable and organic farming practices."
+              },
+              {
+                "icon": "handshake",
+                "title": "Bulk Orders",
+                "text": "Inquire about bulk supply and partnership opportunities."
+              },
+              {
+                "icon": "chat",
+                "title": "General Queries",
+                "text": "Our team is here to answer all your questions."
+              }
             ]
           }
         }
@@ -709,23 +1494,23 @@
       "EnquiryForm": {
         "variants": {
           "FarmoraEnquiryForm1": {
-            "eyebrow":  "Enquiry Form",
-            "title":    "Send Us Your",
-            "accent":   "Enquiry",
+            "eyebrow": "Enquiry Form",
+            "title": "Send Us Your",
+            "accent": "Enquiry",
             "subtitle": "Fill out the form below and our team will get back to you as soon as possible. We're happy to assist you with the information you need.",
             "labels": {
-              "name":    "Full Name",
-              "email":   "Email Address",
-              "phone":   "Phone Number",
-              "type":    "Enquiry Type",
+              "name": "Full Name",
+              "email": "Email Address",
+              "phone": "Phone Number",
+              "type": "Enquiry Type",
               "subject": "Subject",
               "message": "Your Message"
             },
             "placeholders": {
-              "name":    "Enter your full name",
-              "email":   "Enter your email address",
-              "phone":   "Enter your phone number",
-              "type":    "Select enquiry type",
+              "name": "Enter your full name",
+              "email": "Enter your email address",
+              "phone": "Enter your phone number",
+              "type": "Select enquiry type",
               "subject": "Enter subject",
               "message": "Tell us about your requirements..."
             },
@@ -735,7 +1520,7 @@
               "Bulk Orders",
               "General Queries"
             ],
-            "button":  "Submit Enquiry",
+            "button": "Submit Enquiry",
             "success": "Thank you! Your enquiry has been submitted. Our team will contact you soon."
           }
         }
