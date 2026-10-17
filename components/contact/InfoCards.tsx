@@ -1,40 +1,58 @@
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
-import { LuSprout } from "react-icons/lu";
 import { contactContent } from "@/lib/content";
 
 const data = contactContent;
 
 const icons: Record<string, React.ReactNode> = {
-  address: <FiMapPin />, phone: <FiPhone />, email: <FiMail />, follow: <LuSprout />,
+  address: <FiMapPin />,
+  phone: <FiPhone />,
+  email: <FiMail />,
 };
-const socials = [
-  { label: "Facebook", href: "https://www.facebook.com", icon: <FaFacebookF /> },
-  { label: "Instagram", href: "https://www.instagram.com", icon: <FaInstagram /> },
-  { label: "LinkedIn", href: "https://www.linkedin.com", icon: <FaLinkedinIn /> },
-  { label: "YouTube", href: "https://www.youtube.com", icon: <FaYoutube /> },
-];
 
 export default function InfoCards() {
   const cards = data.info.filter((c) => c.key !== "follow");
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {cards.map((c) => (
-        <div key={c.key} className="group cursor-pointer rounded-2xl border border-slate-100 p-6 transition-all duration-300 hover:shadow-lg hover:border-mint">
-          <span className="flex h-[74px] w-[74px] items-center justify-center rounded-full bg-forest/10 text-3xl text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
-            {icons[c.key]}
-          </span>
-          <h3 className="mt-5 text-2xl transition-colors duration-300 group-hover:text-forest">{c.title}</h3>
-          {"lines" in c && c.lines && (
-            <p className={`mt-4 leading-7 ${c.key === "address" ? "text-slate-600" : "text-lg text-forest"}`}>
-              {c.lines.map((l) => (
-                <span key={l} className="block transition-colors group-hover:text-leaf">{l}</span>
-              ))}
-            </p>
-          )}
-          {"note" in c && c.note && <p className="mt-4 text-[17px] leading-7 text-slate-500">{c.note}</p>}
-        </div>
-      ))}
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {cards.map((c) => {
+        const isPhone = c.key === "phone";
+        const isEmail = c.key === "email";
+        const isAddress = c.key === "address";
+        const primaryLine = "lines" in c && c.lines ? c.lines[0] : "";
+        const href = isPhone
+          ? `tel:${primaryLine.replace(/\s/g, "")}`
+          : isEmail
+          ? `mailto:${primaryLine}`
+          : `https://maps.google.com/?q=${encodeURIComponent(primaryLine)}`;
+
+        return (
+          <a
+            key={c.key}
+            href={href}
+            target={isAddress ? "_blank" : undefined}
+            rel={isAddress ? "noopener noreferrer" : undefined}
+            className="group cursor-pointer rounded-2xl border border-slate-100 bg-white p-5 sm:p-6 transition-all duration-300 hover:shadow-lg hover:border-mint hover:-translate-y-0.5 flex items-center gap-4 sm:gap-5"
+          >
+            <span className="flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-full bg-forest/10 text-2xl sm:text-[26px] text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
+              {icons[c.key]}
+            </span>
+            <div className="min-w-0 flex-1">
+              <h3 className="font-serif text-xl sm:text-[22px] font-bold text-forest transition-colors duration-300 group-hover:text-leaf">
+                {c.title}
+              </h3>
+              {"lines" in c && c.lines && (
+                <p className={`mt-1.5 text-sm sm:text-[15px] leading-snug sm:leading-relaxed ${isAddress ? "text-slate-600" : "font-semibold text-forest group-hover:text-leaf"}`}>
+                  {c.lines.map((l) => (
+                    <span key={l} className="block transition-colors">{l}</span>
+                  ))}
+                </p>
+              )}
+              {"note" in c && c.note && (
+                <p className="mt-1 text-xs sm:text-sm text-slate-500">{c.note}</p>
+              )}
+            </div>
+          </a>
+        );
+      })}
     </div>
   );
 }

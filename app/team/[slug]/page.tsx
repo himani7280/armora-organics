@@ -1,14 +1,20 @@
 import { notFound } from "next/navigation";
 import PageBanner from "@/components/common/PageBanner";
 import TeamDetail from "@/components/team/TeamDetail";
-import { getMember, teamContent } from "@/lib/content";
+import { getMember, teamContent, type TeamMember } from "@/lib/content";
 
 export function generateStaticParams() {
-  return teamContent.members.map((m) => ({ slug: m.slug }));
+  return ((teamContent.members || []) as TeamMember[]).map((m: TeamMember) => ({ slug: m.slug }));
 }
 
-export default async function TeamMemberPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+type TeamMemberPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function TeamMemberPage(props: TeamMemberPageProps) {
+  const resolvedParams = await Promise.resolve(props?.params);
+  const slug = resolvedParams?.slug;
+  if (!slug) notFound();
   const member = getMember(slug);
   if (!member) notFound();
   return (

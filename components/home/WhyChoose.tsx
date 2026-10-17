@@ -53,7 +53,7 @@ export default function WhyChoose() {
             <Column points={w.left} side="left" />
           </div>
           <div className="reveal-scale relative order-first mx-auto w-full max-w-[362px] lg:order-none flex flex-col justify-center">
-            <Image src={w.image} alt="Young plant growing from fertile soil" width={362} height={445} className="plant-fade h-auto w-full mix-blend-multiply transition-transform duration-700 hover:scale-105" />
+            <Image src={w.image} alt={(w as any).imageAlt || "Young plant growing from fertile soil"} width={362} height={445} className="plant-fade h-auto w-full mix-blend-multiply transition-transform duration-700 hover:scale-105" />
             <Connectors />
           </div>
           <div className="reveal-right h-full flex flex-col justify-between">

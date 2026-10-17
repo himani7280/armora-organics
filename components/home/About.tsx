@@ -50,8 +50,8 @@ export default function About() {
           <div className="relative mx-auto w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[550px] xl:max-w-[580px]">
             <div className="relative aspect-square w-full transition-transform duration-500 hover:scale-[1.02]">
               <Image
-                src="/images/home/about-collage.jpg"
-                alt="Farmora organic farmers and fresh harvest"
+                src={(a as any).image || "/images/home/about-collage.jpg"}
+                alt={(a as any).imageAlt || "Farmora organic farmers and fresh harvest"}
                 fill
                 sizes="(min-width:1280px) 580px, (min-width:1024px) 550px, (min-width:640px) 480px, 92vw"
                 className="object-contain object-center"

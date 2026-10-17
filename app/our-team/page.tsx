@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import PageBanner from "@/components/common/PageBanner";
 import TeamGrid from "@/components/team/TeamGrid";
+import { ourTeamPageData, ourTeamContent } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Our Team | Farmora Organics",
-  description:
-    "Meet the dedicated team behind Farmora Organics — passionate people committed to organic farming, sustainability and delivering fresh, chemical-free produce.",
+  title: `${ourTeamPageData.banner.title} | Farmora Organics`,
+  description: ourTeamContent.text,
 };
 
 export default function OurTeamPage() {
   return (
     <>
-      <PageBanner title="Our Team" />
+      <PageBanner title={ourTeamPageData.banner.title} />
       <TeamGrid />
     </>
   );

@@ -81,13 +81,13 @@ export default function Footer() {
           <p className="max-w-sm text-[16px] leading-7 text-slate-600">{footer.about}</p>
           <SocialIcons items={footerSocials} size="lg" variant="dark" className="mt-6" />
         </div>
-        <LinkList title="Quick Links" links={footer.quickLinks.filter((l) => l.href !== "/testimonials")} />
-        <LinkList title="Our Services" links={services.map((s) => ({ label: s.title, href: serviceHref(s.slug) }))} />
+        <LinkList title={(footer as any).quickLinksTitle || "Quick Links"} links={footer.quickLinks.filter((l) => l.href !== "/testimonials")} />
+        <LinkList title={(footer as any).servicesTitle || "Our Services"} links={services.map((s) => ({ label: s.title, href: serviceHref(s.slug) }))} />
         <div>
-          <h4 className="text-2xl">Contact Info</h4>
+          <h4 className="text-2xl">{(footer as any).contactTitle || "Contact Info"}</h4>
           <span className="mb-6 mt-3 block h-0.5 w-10 bg-gold" />
           <ul className="space-y-5">
-            <ContactRow icon={FiMapPin} lines={[header.address]} href="https://maps.google.com/?q=742+Evergreen+Terrace,+Springfield,+IL+62704" />
+            <ContactRow icon={FiMapPin} lines={[header.address]} href={`https://maps.google.com/?q=${encodeURIComponent(header.address)}`} />
             <ContactRow icon={FiPhone} lines={[header.phone]} href={`tel:${header.phone.replace(/\s/g, "")}`} />
             <ContactRow icon={FiMail} lines={[header.email]} href={`mailto:${header.email}`} />
           </ul>
@@ -95,10 +95,10 @@ export default function Footer() {
       </div>
       <div className="footer-top-line footer-bottom">
         <div className="container-x flex flex-col items-center justify-between gap-3 py-4 text-center sm:flex-row sm:gap-6 sm:py-5 sm:text-left font-copy text-xs sm:text-sm text-white">
-          <span className="leading-relaxed">{footer.copyright} powered by lestow</span>
+          <span className="leading-relaxed">{footer.copyright} {(footer as any).poweredBy || ""}</span>
           <div className="flex shrink-0 items-center gap-4">
             <Link href="/thank-you" className="whitespace-nowrap transition hover:text-gold">
-              Thank You
+              {(footer as any).thankYouLabel || "Thank You"}
             </Link>
           </div>
         </div>

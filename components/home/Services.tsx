@@ -28,7 +28,7 @@ export default function Services({ showHeading = true }: { showHeading?: boolean
                   </Link>
                   <p className="mt-2 flex-1 text-[15.5px] leading-[1.5] text-slate-600">{item.text}</p>
                   <Button href={href} size="md" fullWidth className="mt-4">
-                    Learn More
+                    {s.learnMoreLabel || "Learn More"}
                   </Button>
                 </div>
               </Card>

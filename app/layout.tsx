@@ -20,10 +20,14 @@ const poppins = Poppins({
   display: "swap",
 });
 
+import content from "@/data/content.json";
+
+const site = content.Farmora.sections.SiteChrome.variants.FarmoraHeader1;
+const hero = content.Farmora.sections.Hero.variants.FarmoraHomeHero1;
+
 export const metadata: Metadata = {
-  title: "Farmora Organics",
-  description:
-    "Pure & organic food for a healthier tomorrow. Fresh, naturally grown, chemical-free produce from our farms to your table.",
+  title: site.name || "Farmora Organics",
+  description: hero.text || "Pure & organic food for a healthier tomorrow. Fresh, naturally grown, chemical-free produce from our farms to your table.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

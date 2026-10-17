@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { bannerContent } from "@/lib/content";
 
 export type BreadcrumbItem = {
   label: string;
@@ -20,11 +21,13 @@ export default function PageBanner({
           { label: title },
         ];
 
+  const bgImage = (bannerContent as any).backgroundImage || "/images/common/banner.jpg";
+
   return (
     <section
       id="page-banner"
       className="relative flex h-[210px] items-center justify-center bg-cover bg-center sm:h-[270px] lg:h-[310px]"
-      style={{ backgroundImage: "url(/images/common/banner.jpg)" }}
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="banner-overlay absolute inset-0" />
       <div className="relative text-center text-white animate-banner-fade-up px-4">

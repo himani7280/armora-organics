@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import PageBanner from "@/components/common/PageBanner";
 import ProductDetailView from "@/components/product-detail/ProductDetailView";
-import { products } from "@/lib/content";
+import { productDetailPageData, products } from "@/lib/content";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -22,11 +22,11 @@ export default async function ProductDetailSlugPage(props: ProductDetailPageProp
   return (
     <>
       <PageBanner
-        title="Product Detail"
+        title={productDetailPageData.banner.title}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },
-          { label: "Product Detail" },
+          { label: productDetailPageData.banner.title },
         ]}
       />
       <ProductDetailView product={product} />

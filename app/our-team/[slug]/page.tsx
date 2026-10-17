@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageBanner from "@/components/common/PageBanner";
 import TeamMemberDetail from "@/components/team/TeamMemberDetail";
-import { teamMembers } from "@/lib/content";
+import { bannerContent, teamMembers } from "@/lib/content";
 
 // Generate all static paths for team members
 export function generateStaticParams() {
@@ -10,12 +10,12 @@ export function generateStaticParams() {
 }
 
 // Dynamic metadata per member
-export async function generateMetadata({
-  params,
-}: {
+export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const resolvedParams = await Promise.resolve(props?.params);
+  const slug = resolvedParams?.slug;
+  if (!slug) return { title: "Team Member | Farmora Organics" };
   const member = teamMembers.find((m) => m.slug === slug);
   if (!member) return { title: "Team Member | Farmora Organics" };
   return {
@@ -24,23 +24,28 @@ export async function generateMetadata({
   };
 }
 
-export default async function TeamMemberPage({
-  params,
-}: {
+type TeamMemberPageProps = {
   params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
+};
+
+export default async function TeamMemberPage(props: TeamMemberPageProps) {
+  const resolvedParams = await Promise.resolve(props?.params);
+  const slug = resolvedParams?.slug;
+  if (!slug) notFound();
+
   const member = teamMembers.find((m) => m.slug === slug);
   if (!member) notFound();
+
+  const title = (bannerContent as any).FarmoraTeamDetailBanner1?.title || "Team Detail";
 
   return (
     <>
       <PageBanner
-        title="Team Detail"
+        title={title}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Our Team", href: "/our-team" },
-          { label: "Team Detail" },
+          { label: title },
         ]}
       />
       <TeamMemberDetail slug={slug} />

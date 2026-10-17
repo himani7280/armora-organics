@@ -28,7 +28,7 @@ export default function Products({ showHeading = true }: { showHeading?: boolean
                   </Link>
                   <p className="mt-3 flex-1 text-[15.5px] leading-[1.55] text-slate-600">{item.text}</p>
                   <Button href={href} size="md" fullWidth className="mt-4">
-                    Explore More
+                    {p.buttonLabel || "Explore More"}
                   </Button>
                 </div>
               </Card>

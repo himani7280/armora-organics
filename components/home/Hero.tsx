@@ -17,32 +17,18 @@ interface HeroSlide {
 export default function Hero() {
   const h = homeContent.hero;
 
-  const slides: HeroSlide[] = [
-    {
-      id: 1,
-      image: h.image || "/images/home/hero-farmer.jpg",
-      alt: "Farmer holding a crate of fresh vegetables",
-      eyebrow: h.eyebrow || "Natural Farming",
-      titleLines: ["Pure & Organic", "Food For A"],
-      titleAccent: "Healthier Tomorrow",
-    },
-    {
-      id: 2,
-      image: "/images/home/hero-farmer-2.jpg",
-      alt: "Organic farmer standing in fertile green field",
-      eyebrow: "Sustainable Agriculture",
-      titleLines: ["Naturally Grown", "Fresh From Our"],
-      titleAccent: "Organic Farms",
-    },
-    {
-      id: 3,
-      image: "/images/home/hero-farmer-3.jpg",
-      alt: "Farmer holding wooden crate of freshly harvested organic produce",
-      eyebrow: "Farm Fresh Harvest",
-      titleLines: ["Pure Goodness", "Harvested For Your"],
-      titleAccent: "Health & Family",
-    },
-  ];
+  const slides: HeroSlide[] = ((h as any).slides && (h as any).slides.length > 0)
+    ? (h as any).slides
+    : [
+        {
+          id: 1,
+          image: h.image || "/images/home/hero-farmer.jpg",
+          alt: "Farmer holding a crate of fresh vegetables",
+          eyebrow: h.eyebrow || "Natural Farming",
+          titleLines: h.titleLines || ["Pure & Organic", "Food For A"],
+          titleAccent: h.titleAccent || "Healthier Tomorrow",
+        },
+      ];
 
   const [current, setCurrent] = useState(0);
 

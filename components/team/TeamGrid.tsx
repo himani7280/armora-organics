@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import SectionTitle from "@/components/common/SectionTitle";
-import { teamMembers } from "@/lib/content";
+import { teamMembers, ourTeamContent } from "@/lib/content";
 import { Button } from "@/components/ui";
 
 const socials = [
@@ -62,7 +62,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
 
         {/* View Profile Button */}
         <Button href={`/our-team/${member.slug}`} size="sm" className="mt-5">
-          View Profile
+          {ourTeamContent.viewLabel || "View Profile"}
         </Button>
       </div>
     </div>
@@ -76,10 +76,10 @@ export default function TeamGrid() {
         {/* Section heading */}
         <div className="mb-14">
           <SectionTitle
-            eyebrow="Our People"
-            title="Meet the"
-            accent="Dedicated Team"
-            text="Behind every fresh harvest is a passionate team committed to organic excellence, sustainable practices and delivering pure goodness from our farm to your table."
+            eyebrow={ourTeamContent.eyebrow}
+            title={ourTeamContent.title}
+            accent={ourTeamContent.accent}
+            text={ourTeamContent.text}
           />
         </div>
 
@@ -93,14 +93,13 @@ export default function TeamGrid() {
         {/* Bottom CTA strip */}
         <div className="mt-16 rounded-2xl bg-gradient-to-r from-forest to-leaf px-8 py-10 text-center text-white shadow-lg">
           <h3 className="font-serif text-2xl font-bold sm:text-3xl">
-            Want to Join Our Green Family?
+            {ourTeamContent.joinTitle}
           </h3>
           <p className="mx-auto mt-3 max-w-xl text-white/80">
-            We are always looking for passionate individuals who believe in organic farming and
-            sustainable living. Get in touch with us today.
+            {ourTeamContent.joinText}
           </p>
-          <Button href="/contact" size="lg" className="mt-6">
-            Contact Us
+          <Button href={ourTeamContent.joinButton?.href || "/contact"} size="lg" className="mt-6">
+            {ourTeamContent.joinButton?.label || "Contact Us"}
           </Button>
         </div>
       </div>

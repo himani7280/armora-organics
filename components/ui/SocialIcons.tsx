@@ -1,5 +1,6 @@
 import { FaDribbble, FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { IconType } from "react-icons";
+import content from "@/data/content.json";
 
 export interface SocialItem {
   label: string;
@@ -7,19 +8,29 @@ export interface SocialItem {
   icon: IconType;
 }
 
-export const defaultSocials: SocialItem[] = [
-  { label: "Facebook", href: "https://www.facebook.com", icon: FaFacebookF },
-  { label: "X (Twitter)", href: "https://x.com", icon: FaXTwitter },
-  { label: "Dribbble", href: "https://dribbble.com", icon: FaDribbble },
-  { label: "Instagram", href: "https://www.instagram.com", icon: FaInstagram },
-];
+const iconMap: Record<string, IconType> = {
+  facebook: FaFacebookF,
+  twitter: FaXTwitter,
+  dribbble: FaDribbble,
+  instagram: FaInstagram,
+  youtube: FaYoutube,
+  linkedin: FaLinkedinIn,
+};
 
-export const footerSocials: SocialItem[] = [
-  { label: "Facebook", href: "https://www.facebook.com", icon: FaFacebookF },
-  { label: "Instagram", href: "https://www.instagram.com", icon: FaInstagram },
-  { label: "YouTube", href: "https://www.youtube.com", icon: FaYoutube },
-  { label: "LinkedIn", href: "https://www.linkedin.com", icon: FaLinkedinIn },
-];
+const headerJson = content.Farmora.sections.SiteChrome.variants.FarmoraHeader1;
+const footerJson = content.Farmora.sections.SiteChrome.variants.FarmoraFooter1;
+
+export const defaultSocials: SocialItem[] = (headerJson.socials || []).map((s: any) => ({
+  label: s.label,
+  href: s.href,
+  icon: iconMap[s.icon] || FaFacebookF,
+}));
+
+export const footerSocials: SocialItem[] = ((footerJson as any).socials || []).map((s: any) => ({
+  label: s.label,
+  href: s.href,
+  icon: iconMap[s.icon] || FaFacebookF,
+}));
 
 export interface SocialIconsProps {
   items?: SocialItem[];

@@ -231,7 +231,7 @@ export default function Header() {
 
           {/* Quick Contact Info */}
           <div className="mt-8 space-y-3 rounded-2xl bg-[#fcf6e8] p-4 font-ui text-sm text-forest">
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">Contact Us</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">{(site as any).contactUsLabel || "Contact Us"}</p>
             <a
               href={`tel:${site.phone.replace(/\s/g, "")}`}
               className="group flex items-center gap-3 transition hover:text-leaf"
@@ -256,7 +256,7 @@ export default function Header() {
         {/* Drawer Bottom Socials */}
         <div className="border-t border-mint bg-[#fcf6e8]/60 px-6 py-4">
           <p className="mb-3 text-center font-ui text-xs font-semibold uppercase tracking-wider text-slate-500">
-            Follow Us
+            {(site as any).followUsLabel || "Follow Us"}
           </p>
           <div className="flex items-center justify-center">
             <SocialIcons size="md" />

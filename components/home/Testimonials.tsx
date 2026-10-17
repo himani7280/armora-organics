@@ -110,11 +110,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Right Column: Review Card & Controls
-            - Height equals left content height
-            - Right image extends to screen right edge with zero gap
-            - Left edge of right image anchored behind feedback card
-        */}
+
         <div
           suppressHydrationWarning
           className="reveal-right relative flex flex-col justify-center h-full"
@@ -124,11 +120,8 @@ export default function Testimonials() {
         >
           {/* Card & Background Image wrapper that matches left content height */}
           <div className="relative h-full flex flex-col justify-center w-full max-w-[480px] sm:max-w-[500px] lg:max-w-[520px] mx-auto lg:mx-0">
-            {/* Decorative Right Image & Gold Block:
-                - top-0 to bottom-0 spans the exact height of the left content
-                - starts at card right edge minus overlap, extending 100vw to right screen edge
-                - clipped cleanly at section edge (0 right space)
-            */}
+
+            
             <div
               className="pointer-events-none absolute top-0 bottom-0 left-[calc(100%-50px)] sm:left-[calc(100%-70px)] lg:left-[calc(100%-90px)] w-[100vw] z-0 flex flex-col"
               aria-hidden="true"

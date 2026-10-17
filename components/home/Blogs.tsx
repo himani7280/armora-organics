@@ -40,7 +40,7 @@ export default function Blogs() {
                 </Link>
                 <p className="mt-2.5 flex-1 text-[15.5px] leading-[1.55] text-slate-600 line-clamp-3">{item.text}</p>
                 <Button href={item.href} size="md" className="mt-5 self-start transition-all duration-300 ease-out group-hover:shadow-lg">
-                  Read More
+                  {(b as any).readMoreLabel || "Read More"}
                 </Button>
               </div>
             </Card>

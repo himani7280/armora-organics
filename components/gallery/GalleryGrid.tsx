@@ -78,7 +78,7 @@ export default function GalleryGrid() {
                 )
               }
             >
-              {showAll ? "Show Less" : "View More"}
+              {showAll ? ((data as any).intro.showLessLabel || "Show Less") : ((data as any).intro.viewMoreLabel || "View More")}
             </Button>
           </div>
         )}

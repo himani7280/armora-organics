@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import { FiBriefcase, FiCheckCircle, FiAward, FiBook } from "react-icons/fi";
 import { FaQuoteLeft } from "react-icons/fa6";
-import { teamMembers } from "@/lib/content";
+import { teamMembers, ourTeamContent } from "@/lib/content";
 import { Button } from "@/components/ui";
 
 const socials = [
@@ -17,9 +17,9 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
   if (!member) {
     return (
       <section className="py-24 text-center">
-        <p className="text-2xl text-slate-500">Team member not found.</p>
+        <p className="text-2xl text-slate-500">{ourTeamContent.notFoundText || "Team member not found."}</p>
         <Button href="/our-team" size="lg" className="mt-6">
-          Back to Team
+          {ourTeamContent.backLabel || "Back to Team"}
         </Button>
       </section>
     );
@@ -65,7 +65,7 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
                     <FiBriefcase className="h-4 w-4" />
                   </span>
                   <div>
-                    <p className="text-[11px] uppercase tracking-wider text-white/60">Experience</p>
+                    <p className="text-[11px] uppercase tracking-wider text-white/60">{ourTeamContent.experienceLabel || "Experience"}</p>
                     <p className="font-semibold">{member.experience}</p>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
                     <FiBook className="h-4 w-4" />
                   </span>
                   <div>
-                    <p className="text-[11px] uppercase tracking-wider text-white/60">Education</p>
+                    <p className="text-[11px] uppercase tracking-wider text-white/60">{ourTeamContent.educationLabel || "Education"}</p>
                     <p className="text-sm font-semibold leading-5">{member.education}</p>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
                 <div className="mb-4 flex items-center gap-3">
                   <span className="h-0.5 w-8 bg-gold" />
                   <h2 className="font-eyebrow text-xs font-semibold uppercase tracking-widest text-gold">
-                    About
+                    {ourTeamContent.aboutLabel || "About"}
                   </h2>
                 </div>
                 <p className="text-base leading-8 text-slate-600">{member.about}</p>
@@ -126,7 +126,7 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
                 <div className="mb-4 flex items-center gap-3">
                   <span className="h-0.5 w-8 bg-gold" />
                   <h2 className="font-eyebrow text-xs font-semibold uppercase tracking-widest text-gold">
-                    Areas of Expertise
+                    {ourTeamContent.expertiseLabel || "Areas of Expertise"}
                   </h2>
                 </div>
                 <ul className="grid gap-3 sm:grid-cols-2">
