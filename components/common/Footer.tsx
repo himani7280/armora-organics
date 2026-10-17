@@ -69,19 +69,19 @@ function ContactRow({
 export default function Footer() {
   return (
     <footer>
-      <div className="container-x grid gap-10 py-10 sm:py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr] lg:gap-0 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:not(:first-child)]:border-l lg:[&>*:not(:first-child)]:border-mint">
+      <div className="container-x grid gap-10 py-10 sm:py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr] lg:gap-0 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0 lg:[&>*:not(:first-child)]:border-l lg:[&>*:not(:first-child)]:border-mint">
         <div>
           <Image
             src="/images/common/logo.jpg"
             alt={header.name}
             width={332}
             height={80}
-            className="mb-6 h-11 sm:h-14 md:h-16 lg:h-[68px] w-auto object-contain mix-blend-multiply -ml-2 sm:-ml-3.5 lg:-ml-5"
+            className="mb-6 h-11 sm:h-14 md:h-16 lg:h-[68px] w-auto object-contain mix-blend-multiply -ml-1 sm:-ml-1.5"
           />
           <p className="max-w-sm text-[16px] leading-7 text-slate-600">{footer.about}</p>
           <SocialIcons items={footerSocials} size="lg" variant="dark" className="mt-6" />
         </div>
-        <LinkList title="Quick Links" links={footer.quickLinks} />
+        <LinkList title="Quick Links" links={footer.quickLinks.filter((l) => l.href !== "/testimonials")} />
         <LinkList title="Our Services" links={services.map((s) => ({ label: s.title, href: serviceHref(s.slug) }))} />
         <div>
           <h4 className="text-2xl">Contact Info</h4>

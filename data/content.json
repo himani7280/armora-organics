@@ -287,10 +287,6 @@
                 "href": "/blog"
               },
               {
-                "label": "Testimonials",
-                "href": "/testimonials"
-              },
-              {
                 "label": "Contact Us",
                 "href": "/contact"
               }
@@ -636,9 +632,9 @@
             "title": "Farmora Organics",
             "accent": "Growing a Healthier Future with Nature",
             "paragraphs": [
-              "At Farmora Organics, we are committed to providing pure, naturally grown and chemical-free produce from our farms to your table. Our mission is to support sustainable farming, empower local farmers, and promote healthier communities through fresh and nutritious food.",
-              "At Farmora Organics, we are committed to providing pure, naturally grown and chemical-free produce from our farms to your table. Our mission is to support sustainable farming, empower local farmers, and promote healthier communities through fresh and nutritious food.",
-              "At Farmora Organics, we are committed to providing pure, naturally grown and chemical-free produce from our farms to your table. Our mission is to support sustainable farming, empower local farmers, and promote healthier communities through fresh and nutritious food."
+              "At Farmora Organics, we are committed to providing pure, naturally grown, and chemical-free produce straight from our farms to your table for healthier living.",
+              "We cultivate fertile soil through regenerative organic techniques, free from synthetic pesticides, ensuring wholesome nutrition and natural purity in every harvest.",
+              "By partnering directly with regional farmer families, we build a transparent supply chain delivering fresh organic goodness you and your family can trust."
             ],
             "images": [
               "/images/home/about-1.jpg",

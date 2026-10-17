@@ -31,7 +31,7 @@ export default function EnquiryForm() {
       <p className="flex items-center gap-4 font-ui text-sm font-medium uppercase text-gold">
         <span className="h-[3px] w-9 bg-gold" />{f.eyebrow}
       </p>
-      <h2 className="mt-3 font-serif text-4xl font-extrabold sm:text-5xl">{f.title} <span className="text-gold">{f.accent}</span></h2>
+      <h2 className="mt-3 font-serif text-4xl font-extrabold sm:text-5xl lg:text-[54px]">{f.title} <span className="text-gold">{f.accent}</span></h2>
       <p className="mt-3 text-[17px] leading-7 text-slate-600">{f.subtitle}</p>
       <form onSubmit={submit} className="mt-6 grid gap-x-6 gap-y-5 sm:grid-cols-2">
         <div>

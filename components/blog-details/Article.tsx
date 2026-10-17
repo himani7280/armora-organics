@@ -13,7 +13,7 @@ export default function Article({ article }: { article?: BlogArticle }) {
           <span>{a.tag}</span>
         </span>
       </div>
-      <h2 className="font-serif text-4xl font-extrabold leading-tight sm:text-5xl">
+      <h2 className="font-serif text-4xl font-extrabold leading-tight sm:text-5xl lg:text-[54px]">
         {a.titleLine1}{" "}
         {a.titleLine2 && <span className="block text-gold">{a.titleLine2}</span>}
       </h2>

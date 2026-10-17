@@ -54,14 +54,14 @@ export default function ProductDetailView({ product }: { product?: CatalogProduc
         {/* 1. Hero: Equal Height Image & Content */}
         <div className="grid items-stretch gap-8 lg:grid-cols-2 lg:gap-12">
           <div className="reveal-left relative min-h-[380px] sm:min-h-[440px] overflow-hidden rounded-2xl">
-            <Image src={hero.image} alt={hero.title} fill priority sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
+            <Image src={hero.image} alt={hero.title} fill priority quality={90} sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
           </div>
           <div className="reveal-right flex flex-col justify-between">
             <div>
               <Badge icon variant="outline">
                 {hero.badge}
               </Badge>
-              <h2 className="mt-3.5 text-3xl leading-tight sm:text-4xl lg:text-[48px]">
+              <h2 className="mt-3.5 text-3xl leading-tight sm:text-4xl lg:text-[54px]">
                 {hero.title} <span className="text-gold">{hero.accent}</span>
               </h2>
               <p className="mt-3.5 text-base leading-7 text-slate-600 sm:text-[17px]">{hero.text}</p>
@@ -91,7 +91,7 @@ export default function ProductDetailView({ product }: { product?: CatalogProduc
           <div className="relative min-h-[220px] sm:min-h-[260px]">
             <span className="absolute -right-3 -top-3 hidden h-24 w-24 rounded-xl bg-gold-light sm:block" />
             <div className="relative h-full min-h-[220px] overflow-hidden rounded-xl">
-              <Image src={overview.image} alt={overview.title} fill sizes="(min-width:1024px) 45vw, 100vw" className="object-cover" />
+              <Image src={overview.image} alt={overview.title} fill quality={90} sizes="(min-width:1024px) 45vw, 100vw" className="object-cover" />
             </div>
           </div>
         </div>

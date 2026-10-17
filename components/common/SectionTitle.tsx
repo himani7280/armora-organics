@@ -23,12 +23,12 @@ export default function SectionTitle({ eyebrow, title, accent, text, align = "ce
         </span>
         <span className="h-[1px] w-6 shrink-0 bg-gold sm:w-11" />
       </div>
-      <h2 className={`mt-5 text-3xl leading-[1.08] sm:text-4xl ${size === "lg" ? "lg:text-[54px]" : "lg:text-[46px]"}`}>
+      <h2 className="mt-5 font-serif text-3xl leading-[1.08] sm:text-4xl lg:text-[54px]">
         {title}
         {accent && (
           <>
             {" "}
-            <span className={`text-gold ${stacked ? "block" : ""}`}>{accent}</span>
+            <span className={`text-gold font-serif ${stacked ? "block" : ""}`}>{accent}</span>
           </>
         )}
       </h2>

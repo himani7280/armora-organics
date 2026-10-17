@@ -14,7 +14,7 @@ export default function Intro() {
       <p className="flex items-center gap-4 font-ui text-sm font-medium uppercase text-gold">
         <span className="h-[3px] w-9 bg-gold" />{i.eyebrow}
       </p>
-      <h2 className="mt-5 font-serif text-5xl font-extrabold leading-[1.15] sm:text-6xl">
+      <h2 className="mt-5 font-serif text-5xl font-extrabold leading-[1.15] sm:text-6xl lg:text-[54px]">
         {i.titleLine1}
         <span className="block text-gold">{i.titleAccent}</span>
       </h2>

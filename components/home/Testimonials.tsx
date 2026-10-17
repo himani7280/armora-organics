@@ -116,8 +116,9 @@ export default function Testimonials() {
             - Left edge of right image anchored behind feedback card
         */}
         <div
+          suppressHydrationWarning
           className="reveal-right relative flex flex-col justify-center h-full"
-          style={{ minHeight: leftHeight > 0 ? `${leftHeight}px` : undefined }}
+          style={leftHeight > 0 ? { minHeight: `${leftHeight}px` } : undefined}
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >

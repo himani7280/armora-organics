@@ -44,15 +44,45 @@
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .font-heading,
+  .font-title {
     font-family: var(--font-serif);
     color: var(--color-forest);
     font-weight: 700;
+    letter-spacing: -0.01em;
   }
 
   h1,
   h2 {
     font-weight: 800;
+  }
+
+  /* All children inside headings (spans, accents, etc.) must strictly inherit the heading font, size, and line height */
+  h1 *,
+  h2 *,
+  h3 *,
+  h4 *,
+  h5 *,
+  h6 *,
+  .font-heading *,
+  .font-title * {
+    font-family: inherit !important;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+  }
+
+  p,
+  a,
+  li,
+  button,
+  input,
+  textarea,
+  select,
+  label {
+    font-family: var(--font-body);
   }
 }
 

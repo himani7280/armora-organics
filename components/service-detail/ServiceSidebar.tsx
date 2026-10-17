@@ -9,8 +9,8 @@ const data = serviceDetailContent;
 export default function ServiceSidebar({ activeSlug }: { activeSlug?: string }) {
   const { sidebar } = data;
   return (
-    <aside className="space-y-8">
-      <Card hoverEffect={false} className="overflow-hidden">
+    <aside className="space-y-8 lg:sticky lg:top-[160px] lg:self-start">
+      <Card hoverEffect={false} className="overflow-hidden shadow-md">
         <h3 className="bg-forest px-6 py-5 font-serif text-2xl font-bold text-white">{sidebar.title}</h3>
         <ul className="p-2 space-y-1">
           {services.map((s) => {
@@ -32,22 +32,6 @@ export default function ServiceSidebar({ activeSlug }: { activeSlug?: string }) 
           })}
         </ul>
       </Card>
-      <div className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-[#fcf6e8] p-6 transition-all duration-300 hover:shadow-md">
-        <div className="relative z-10 pr-28 sm:pr-32">
-          <h3 className="font-serif text-2xl font-bold text-forest">{sidebar.help.title}</h3>
-          <p className="mt-2.5 text-[14px] leading-6 text-slate-700">{sidebar.help.text}</p>
-        </div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 h-full w-28 sm:w-32 overflow-hidden transition-transform duration-500 group-hover:scale-105">
-          <Image
-            src={sidebar.help.image}
-            alt=""
-            fill
-            sizes="128px"
-            className="object-cover object-center"
-          />
-        </div>
-        <Link href={sidebar.help.href} aria-label={sidebar.help.title} className="absolute inset-0 z-20" />
-      </div>
     </aside>
   );
 }

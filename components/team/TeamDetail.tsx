@@ -21,7 +21,7 @@ export default function TeamDetail({ member: m }: { member: TeamMember }) {
           </ul>
         </div>
         <div className="h-full flex flex-col justify-between">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl">About <span className="text-gold">{m.name}</span></h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-[54px]">About <span className="text-gold">{m.name}</span></h1>
           <div className="mt-6 space-y-4 text-[17px] leading-8 text-slate-600">
             {m.about.map((p) => (<p key={p}>{p}</p>))}
           </div>
@@ -33,9 +33,6 @@ export default function TeamDetail({ member: m }: { member: TeamMember }) {
               </li>
             ))}
           </ul>
-          <Button href="/our-team" size="lg" className="mt-10">
-            Back to Team
-          </Button>
         </div>
       </div>
     </section>

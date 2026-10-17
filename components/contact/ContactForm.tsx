@@ -26,7 +26,7 @@ export default function ContactForm() {
   return (
     <div className="reveal-left rounded-2xl border border-slate-100 p-5 sm:p-7 h-full flex flex-col justify-between">
       <div>
-        <h2 className="text-3xl sm:text-4xl">{f.title} <span className="text-gold">{f.accent}</span></h2>
+        <h2 className="font-serif text-3xl sm:text-4xl lg:text-[54px] leading-[1.08]">{f.title} <span className="text-gold">{f.accent}</span></h2>
         <span className="mt-2 block h-[3px] w-12 bg-gold" />
         <p className="mt-2 text-base text-slate-600 sm:text-[16px]">{f.subtitle}</p>
       </div>

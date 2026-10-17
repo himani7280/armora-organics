@@ -35,7 +35,7 @@ export default function GalleryGrid() {
   return (
     <section className="pt-8 pb-4 sm:pt-10 sm:pb-6 lg:pt-12 lg:pb-8">
       <div className="container-x">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl">
+        <h2 className="text-4xl sm:text-5xl lg:text-[54px]">
           {intro.title} <span className="text-gold">{intro.accent}</span>
         </h2>
         <span className="mt-3 block h-[3px] w-14 rounded bg-gold" />
@@ -55,6 +55,7 @@ export default function GalleryGrid() {
                 src={img.src}
                 alt={img.alt}
                 fill
+                quality={90}
                 sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -122,7 +123,7 @@ export default function GalleryGrid() {
             <FiChevronRight />
           </button>
           <div className="relative h-[70vh] w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
-            <Image src={images[open].src} alt={images[open].alt} fill sizes="100vw" className="object-contain" />
+            <Image src={images[open].src} alt={images[open].alt} fill quality={95} sizes="100vw" className="object-contain" priority />
           </div>
         </div>
       )}

@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
-      <body className="flex min-h-screen flex-col">
+    <html lang="en" suppressHydrationWarning className={`${playfair.variable} ${poppins.variable}`}>
+      <body suppressHydrationWarning className="flex min-h-screen flex-col">
         <ScrollToTop />
         <ScrollReveal />
         <Header />

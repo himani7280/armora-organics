@@ -1,4 +1,4 @@
-import { FaDribbble, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa6";
+import { FaDribbble, FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { IconType } from "react-icons";
 
 export interface SocialItem {
@@ -9,7 +9,7 @@ export interface SocialItem {
 
 export const defaultSocials: SocialItem[] = [
   { label: "Facebook", href: "https://www.facebook.com", icon: FaFacebookF },
-  { label: "Twitter", href: "https://x.com", icon: FaTwitter },
+  { label: "X (Twitter)", href: "https://x.com", icon: FaXTwitter },
   { label: "Dribbble", href: "https://dribbble.com", icon: FaDribbble },
   { label: "Instagram", href: "https://www.instagram.com", icon: FaInstagram },
 ];

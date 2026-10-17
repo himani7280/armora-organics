@@ -42,59 +42,66 @@ export default function Header() {
     <header className="sticky top-0 z-40 w-full overflow-x-clip bg-white shadow-[0_4px_20px_rgba(11,59,31,0.08)]">
       {/* Top bar - side leaf images visible, non-adjusting content hidden below lg */}
       <div className="relative w-full overflow-hidden bg-[#fcf6e8]">
-        {/* Left leaf accent - always visible */}
+        {/* Left leaf accent - crisp original image */}
         <Image
-          src="/images/common/leaf-left.jpg"
+          src="/images/common/leaf-left.png"
           alt=""
           width={92}
           height={78}
-          className="pointer-events-none absolute left-0 top-0 h-10 w-auto mix-blend-multiply sm:h-12 md:h-14 lg:h-[74px] [mask-image:radial-gradient(ellipse_at_top_left,black_60%,transparent_100%)]"
+          priority
+          className="pointer-events-none absolute left-0 top-0 h-8 sm:h-11 md:h-13 lg:h-[58px] w-auto object-contain object-left-top select-none"
         />
-        {/* Right leaf accent - always visible */}
+        {/* Right leaf accent - crisp original image */}
         <Image
-          src="/images/common/leaf-right.jpg"
+          src="/images/common/leaf-right.png"
           alt=""
           width={83}
           height={96}
-          className="pointer-events-none absolute right-0 top-0 h-11 w-auto mix-blend-multiply sm:h-13 md:h-15 lg:h-[82px] [mask-image:radial-gradient(ellipse_at_top_right,black_60%,transparent_100%)]"
+          priority
+          className="pointer-events-none absolute right-0 top-0 h-9 sm:h-12 md:h-14 lg:h-[62px] w-auto object-contain object-right-top select-none"
         />
-        <div className="container-x relative flex h-14 sm:h-16 md:h-[76px] items-center justify-center lg:justify-between font-ui text-xs text-forest sm:text-sm px-4 sm:px-6 md:px-8 lg:px-28 xl:px-32">
-          {/* Contact details - hidden on mobile <= 480px, visible on tablet & desktop (100% Tailwind) */}
-          <div className="hidden min-[481px]:flex items-center justify-center gap-3 sm:gap-6 lg:w-auto lg:justify-start shrink min-w-0">
+        <div className="container-x relative flex h-11 sm:h-12 md:h-13 lg:h-14 items-center justify-center min-[426px]:justify-between font-ui text-xs text-forest sm:text-sm px-4 min-[426px]:pl-14 sm:pl-16 md:pl-20 lg:pl-24 min-[426px]:pr-12 sm:pr-14 md:pr-16 lg:pr-20">
+          {/* Left: Mail & Phone together (hidden at 425px and below, visible above 425px) */}
+          <div className="hidden min-[426px]:flex items-center gap-2.5 sm:gap-4 md:gap-5 shrink-0">
+            {/* Email */}
             <a
               href={`mailto:${site.email}`}
               aria-label={`Email ${site.email}`}
-              className="group flex items-center gap-2 transition hover:text-leaf shrink min-w-0"
+              className="group flex items-center gap-1.5 sm:gap-2 transition hover:text-leaf shrink-0"
             >
-              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest transition-all duration-200 group-hover:bg-leaf group-hover:text-white group-hover:scale-105 sm:h-8 sm:w-8">
+              <span className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest transition-all duration-200 group-hover:bg-leaf group-hover:text-white group-hover:scale-105">
                 <FiMail className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               </span>
-              <span className="truncate">{site.email}</span>
+              <span className="whitespace-nowrap font-medium text-xs sm:text-[13px] md:text-sm">{site.email}</span>
             </a>
-            <span className="h-5 w-0.5 bg-forest/30 sm:h-7 shrink-0" />
+
+            {/* Separator between Mail and Phone on the left */}
+            <span className="block h-3.5 sm:h-4 w-px bg-forest/25 shrink-0" />
+
+            {/* Phone */}
             <a
               href={`tel:${site.phone.replace(/\s/g, "")}`}
               aria-label={`Call ${site.phone}`}
-              className="group flex items-center gap-2 transition hover:text-leaf shrink-0"
+              className="group flex items-center gap-1.5 sm:gap-2 transition hover:text-leaf shrink-0"
             >
-              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest transition-all duration-200 group-hover:bg-leaf group-hover:text-white group-hover:scale-105 sm:h-8 sm:w-8">
+              <span className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest transition-all duration-200 group-hover:bg-leaf group-hover:text-white group-hover:scale-105">
                 <FiPhone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               </span>
-              <span className="whitespace-nowrap">{site.phone}</span>
+              <span className="whitespace-nowrap font-semibold text-xs sm:text-[13px] md:text-sm">{site.phone}</span>
             </a>
           </div>
 
-          {/* Social icons with vertical divider line directly attached on every screen */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 min-[481px]:hidden lg:flex lg:w-auto lg:justify-end shrink-0">
-            <span className="h-5 w-0.5 bg-forest/30 sm:h-7 shrink-0" />
-            <SocialIcons size="sm" />
+          {/* Right (or Center at <= 425px): Social Icons with vertical divider above 425px */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <span className="hidden min-[426px]:block h-3.5 sm:h-4 w-px bg-forest/25 shrink-0" />
+            <SocialIcons size="sm" className="gap-1.5 sm:gap-2 md:gap-2.5" />
           </div>
         </div>
       </div>
 
       {/* Main nav bar */}
-      <div className="container-x flex h-20 items-center justify-between gap-3 lg:gap-4 lg:h-[88px] max-w-full">
-        <Link href="/" className="shrink-0 flex items-center -ml-2 sm:-ml-3.5 lg:-ml-5 transition-transform duration-200 hover:opacity-95">
+      <div className="container-x flex h-20 items-center justify-between gap-3 lg:gap-4 lg:h-[88px]">
+        <Link href="/" className="shrink-0 flex items-center -ml-1 sm:-ml-1.5 transition-transform duration-200 hover:opacity-95">
           <Image
             src="/images/common/logo.jpg"
             alt={site.name}

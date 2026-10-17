@@ -143,16 +143,6 @@ export default function TeamMemberDetail({ slug }: { slug: string }) {
                   ))}
                 </ul>
               </div>
-
-              {/* Contact CTA */}
-              <div className="mt-10 flex flex-wrap gap-4">
-                <Button href="/contact" size="lg">
-                  Get in Touch
-                </Button>
-                <Button href="/our-team" size="lg" variant="outline">
-                  Meet the Team
-                </Button>
-              </div>
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ export default function PageBanner({
             </span>
           ))}
         </p>
-        <h1 className="mt-2 font-serif text-3xl font-extrabold text-white drop-shadow-md sm:text-4xl md:text-5xl lg:text-6xl xl:text-[66px] leading-tight tracking-tight">
+        <h1 className="mt-2 font-serif text-3xl font-extrabold text-white drop-shadow-md sm:text-4xl md:text-5xl lg:text-[54px] leading-tight tracking-tight">
           {title}
         </h1>
       </div>

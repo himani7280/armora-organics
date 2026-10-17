@@ -17,7 +17,7 @@ export default function ThankYouPage() {
             </div>
 
             {/* Title */}
-            <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold">
+            <h1 className="mt-4 text-3xl sm:text-4xl lg:text-[54px] font-extrabold">
               Thank <span className="text-gold">You!</span>
             </h1>
 

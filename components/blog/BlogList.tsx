@@ -26,7 +26,7 @@ export default function BlogList() {
                   className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-108"
                 />
                 <div className="absolute left-[3.4%] top-[5.5%] flex h-[33%] w-[20.5%] flex-col items-center justify-center rounded-xl border border-slate-100 bg-white/95 text-center shadow transition-all duration-300 ease-out group-hover:scale-105 group-hover:bg-white group-hover:shadow-md">
-                  <span className="block font-serif text-xl font-bold leading-none text-forest">{item.day}</span>
+                  <span className="block text-xl font-bold leading-none text-forest">{item.day}</span>
                   <span className="block text-[10px] font-semibold uppercase text-slate-500">{item.month}</span>
                 </div>
               </Link>
@@ -42,7 +42,7 @@ export default function BlogList() {
                 <p className="mt-2.5 flex-1 text-[15px] leading-6 text-slate-600 line-clamp-3">
                   {item.text}
                 </p>
-                <Button href={blogHref(item.slug)} size="md" fullWidth className="mt-5 transition-all duration-300 ease-out group-hover:shadow-lg">
+                <Button href={blogHref(item.slug)} size="md" className="mt-5 self-start transition-all duration-300 ease-out group-hover:shadow-lg">
                   {data.readMoreLabel}
                 </Button>
               </div>

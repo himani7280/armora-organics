@@ -1,12 +1,5 @@
-import PageBanner from "@/components/common/PageBanner";
-import ReviewGrid from "@/components/testimonials/ReviewGrid";
-import { testimonialsPageData } from "@/lib/content";
+import { redirect } from "next/navigation";
 
 export default function TestimonialsPage() {
-  return (
-    <>
-      <PageBanner title={testimonialsPageData.banner.title} />
-      <ReviewGrid />
-    </>
-  );
+  redirect("/");
 }
