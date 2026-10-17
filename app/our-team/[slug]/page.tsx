@@ -4,19 +4,24 @@ import PageBanner from "@/components/common/PageBanner";
 import TeamMemberDetail from "@/components/team/TeamMemberDetail";
 import { bannerContent, teamMembers } from "@/lib/content";
 
+export const instant = false;
+
 // Generate all static paths for team members
 export function generateStaticParams() {
   return teamMembers.map((m) => ({ slug: m.slug }));
 }
 
 // Dynamic metadata per member
-export async function generateMetadata(props: {
+export async function generateMetadata({
+  params,
+}: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const resolvedParams = await Promise.resolve(props?.params);
-  const slug = resolvedParams?.slug;
+  const { slug } = await params;
   if (!slug) return { title: "Team Member | Farmora Organics" };
-  const member = teamMembers.find((m) => m.slug === slug);
+  const member = teamMembers.find(
+    (m) => m.slug === slug || m.slug.toLowerCase() === decodeURIComponent(slug).toLowerCase()
+  );
   if (!member) return { title: "Team Member | Farmora Organics" };
   return {
     title: `${member.name} – ${member.role} | Farmora Organics`,
@@ -28,12 +33,13 @@ type TeamMemberPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export default async function TeamMemberPage(props: TeamMemberPageProps) {
-  const resolvedParams = await Promise.resolve(props?.params);
-  const slug = resolvedParams?.slug;
+export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
+  const { slug } = await params;
   if (!slug) notFound();
 
-  const member = teamMembers.find((m) => m.slug === slug);
+  const member = teamMembers.find(
+    (m) => m.slug === slug || m.slug.toLowerCase() === decodeURIComponent(slug).toLowerCase()
+  );
   if (!member) notFound();
 
   const title = (bannerContent as any).FarmoraTeamDetailBanner1?.title || "Team Detail";

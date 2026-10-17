@@ -4,6 +4,8 @@ import Article from "@/components/blog-details/Article";
 import Sidebar from "@/components/blog-details/Sidebar";
 import { blogDetailsPageData, blogs, getBlogArticle } from "@/lib/content";
 
+export const instant = false;
+
 export function generateStaticParams() {
   return blogs.map((b) => ({ slug: b.slug }));
 }
@@ -12,9 +14,8 @@ type BlogDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export default async function BlogDetailSlugPage(props: BlogDetailPageProps) {
-  const resolvedParams = await Promise.resolve(props?.params);
-  const slug = resolvedParams?.slug;
+export default async function BlogDetailSlugPage({ params }: BlogDetailPageProps) {
+  const { slug } = await params;
   if (!slug) notFound();
 
   const blog = blogs.find((b) => b.slug === slug);

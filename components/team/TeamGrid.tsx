@@ -15,9 +15,9 @@ const socials = [
 
 function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
   return (
-    <div className="reveal-on-scroll group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="reveal-on-scroll group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
       {/* Photo */}
-      <div className="relative overflow-hidden" style={{ height: 300 }}>
+      <div className="relative shrink-0 overflow-hidden" style={{ height: 300 }}>
         <Image
           src={member.image}
           alt={member.name}
@@ -49,7 +49,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
       </div>
 
       {/* Info */}
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6">
         {/* Gold bar accent */}
         <span className="mb-3 block h-0.5 w-10 bg-gold transition-all duration-300 group-hover:w-16" />
         <Link href={`/our-team/${member.slug}`}>
@@ -61,9 +61,11 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
         <p className="mt-3 text-sm leading-6 text-slate-500">{member.bio}</p>
 
         {/* View Profile Button */}
-        <Button href={`/our-team/${member.slug}`} size="sm" className="mt-5">
-          {ourTeamContent.viewLabel || "View Profile"}
-        </Button>
+        <div className="mt-auto pt-5">
+          <Button href={`/our-team/${member.slug}`} size="sm">
+            {ourTeamContent.viewLabel || "View Profile"}
+          </Button>
+        </div>
       </div>
     </div>
   );
@@ -88,19 +90,6 @@ export default function TeamGrid() {
           {teamMembers.map((m) => (
             <TeamCard key={m.name} member={m} />
           ))}
-        </div>
-
-        {/* Bottom CTA strip */}
-        <div className="mt-16 rounded-2xl bg-gradient-to-r from-forest to-leaf px-8 py-10 text-center text-white shadow-lg">
-          <h3 className="font-serif text-2xl font-bold sm:text-3xl">
-            {ourTeamContent.joinTitle}
-          </h3>
-          <p className="mx-auto mt-3 max-w-xl text-white/80">
-            {ourTeamContent.joinText}
-          </p>
-          <Button href={ourTeamContent.joinButton?.href || "/contact"} size="lg" className="mt-6">
-            {ourTeamContent.joinButton?.label || "Contact Us"}
-          </Button>
         </div>
       </div>
     </section>

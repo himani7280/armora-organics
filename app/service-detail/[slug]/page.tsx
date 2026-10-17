@@ -3,6 +3,8 @@ import PageBanner from "@/components/common/PageBanner";
 import ServiceDetail from "@/components/service-detail/ServiceDetail";
 import { serviceDetailPageData, services } from "@/lib/content";
 
+export const instant = false;
+
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
@@ -11,9 +13,8 @@ type ServiceDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export default async function ServiceDetailSlugPage(props: ServiceDetailPageProps) {
-  const resolvedParams = await Promise.resolve(props?.params);
-  const slug = resolvedParams?.slug;
+export default async function ServiceDetailSlugPage({ params }: ServiceDetailPageProps) {
+  const { slug } = await params;
   if (!slug) notFound();
 
   const service = services.find((s) => s.slug === slug);
