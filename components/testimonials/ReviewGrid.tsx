@@ -178,9 +178,9 @@ export default function ReviewGrid() {
     if (touchStartX === null || touchEndX === null) return;
     const distance = touchStartX - touchEndX;
     if (distance > 45) {
-      go(1); // Swipe left -> advance forward along X-axis
+      go(1); 
     } else if (distance < -45) {
-      go(-1); // Swipe right -> go backward along X-axis
+      go(-1);
     }
   };
 

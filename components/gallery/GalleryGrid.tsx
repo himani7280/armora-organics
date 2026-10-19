@@ -13,7 +13,7 @@ export default function GalleryGrid() {
   const [open, setOpen] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
 
-  // Show only 6 images by default, or all images when "View More" is clicked
+  // Show only 6 images by default,
   const visibleImages = showAll ? images : images.slice(0, 6);
 
   const step = useCallback(

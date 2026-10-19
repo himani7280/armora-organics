@@ -12,7 +12,7 @@ import {
   LuWheat,
 } from "react-icons/lu";
 
-// JSON files refer to icons by name, this maps the name to the real component.
+// JSON files refer to icons by name, 
 export const iconMap: Record<string, IconType> = {
   leaf: LuLeaf,
   sprout: LuSprout,

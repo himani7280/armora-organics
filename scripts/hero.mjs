@@ -1,4 +1,4 @@
-// builds the full-width hero photo: blurred left backdrop (text-free strip stretched) + original right-side photo, feathered together
+
 import sharp from 'sharp';
 const SRC = 'reference/Image Preview_files/home.jpg';
 const W = 1351, H = 505, TOP = 185, CUT = 720, FEATHER = 110;
