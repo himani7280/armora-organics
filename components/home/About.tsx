@@ -18,7 +18,7 @@ export default function About() {
           </div>
           <div className="my-6 grid gap-4.5 sm:grid-cols-2">
             {a.features.map((f) => (
-              <div key={f.title} className="group flex items-center gap-4 cursor-pointer">
+              <div key={f.title} className="group flex items-center gap-4 cursor-pointer active:scale-[0.98] transition-transform duration-150">
                 <span className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
                   <Icon name={f.icon} className="h-6 w-6" />
                 </span>
@@ -34,7 +34,7 @@ export default function About() {
               {a.button.label}
             </Button>
             <span className="hidden h-10 w-px bg-slate-300 sm:block" />
-            <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="group flex items-center gap-3">
+            <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="group flex items-center gap-3 active:scale-95 transition-transform duration-150">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8b95a] text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
                 <FiPhone className="h-5 w-5" />
               </span>
@@ -50,7 +50,7 @@ export default function About() {
           <div className="relative mx-auto w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[550px] xl:max-w-[580px]">
             <div className="relative aspect-square w-full transition-transform duration-500 hover:scale-[1.02]">
               <Image
-                src={(a as any).image || "/images/home/about-collage.jpg"}
+                src={(a as any).image || "/images/home/about-collage.webp"}
                 alt={(a as any).imageAlt || "Farmora organic farmers and fresh harvest"}
                 fill
                 sizes="(min-width:1280px) 580px, (min-width:1024px) 550px, (min-width:640px) 480px, 92vw"

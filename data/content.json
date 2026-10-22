@@ -223,7 +223,7 @@
             "phone": "+1 00000 00000",
             "address": "742 Evergreen Terrace, Springfield, IL 62704, USA",
             "hours": "Monday - Saturday, 9:00 AM - 6:00 PM",
-            "logoSrc": "/images/common/logo.jpg",
+            "logoSrc": "/images/common/logo.webp",
             "nav": [
               {
                 "label": "Home",
@@ -386,11 +386,11 @@
               "label": "Our Services",
               "href": "/services"
             },
-            "image": "/images/home/hero-farmer.jpg",
+            "image": "/images/home/hero-farmer.webp",
             "slides": [
               {
                 "id": 1,
-                "image": "/images/home/hero-farmer.jpg",
+                "image": "/images/home/hero-farmer.webp",
                 "alt": "Farmer holding a crate of fresh vegetables",
                 "eyebrow": "Natural Farming",
                 "titleLines": [
@@ -401,7 +401,7 @@
               },
               {
                 "id": 2,
-                "image": "/images/home/hero-farmer-2.jpg",
+                "image": "/images/home/hero-farmer-2.webp",
                 "alt": "Organic farmer standing in fertile green field",
                 "eyebrow": "Sustainable Agriculture",
                 "titleLines": [
@@ -412,7 +412,7 @@
               },
               {
                 "id": 3,
-                "image": "/images/home/hero-farmer-3.jpg",
+                "image": "/images/home/hero-farmer-3.webp",
                 "alt": "Farmer holding wooden crate of freshly harvested organic produce",
                 "eyebrow": "Farm Fresh Harvest",
                 "titleLines": [
@@ -460,10 +460,10 @@
             },
             "callLabel": "Call Us",
             "images": [
-              "/images/home/about-1.jpg",
-              "/images/home/about-2.jpg"
+              "/images/home/about-1.webp",
+              "/images/home/about-2.webp"
             ],
-            "image": "/images/home/about-collage.jpg",
+            "image": "/images/home/about-collage.webp",
             "imageAlt": "Farmora organic farmers and fresh harvest"
           }
         }
@@ -480,28 +480,28 @@
                 "icon": "leaf",
                 "title": "Fresh Vegetables",
                 "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste from our farms to your table.",
-                "image": "/images/home/service-1.jpg",
+                "image": "/images/home/service-1.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "apple",
                 "title": "Fresh Fruits",
                 "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
-                "image": "/images/home/service-2.jpg",
+                "image": "/images/home/service-2.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "sprout",
                 "title": "Agriculture Products",
                 "text": "A wide range of natural agriculture produce to support sustainable farming and healthier communities.",
-                "image": "/images/home/service-3.jpg",
+                "image": "/images/home/service-3.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "hand",
                 "title": "Organic Solutions",
                 "text": "Eco-friendly and sustainable solutions for a healthier soil, better crops, and a greener tomorrow.",
-                "image": "/images/home/service-4.jpg",
+                "image": "/images/home/service-4.webp",
                 "href": "/service-detail"
               }
             ],
@@ -516,7 +516,7 @@
             "title": "The Natural Way",
             "accent": "We Grow",
             "text": "At Farmora Organics, we follow a natural, sustainable and responsible approach to bring the best from our farms to your table.",
-            "image": "/images/home/why-plant.jpg",
+            "image": "/images/home/why-plant.webp",
             "left": [
               {
                 "icon": "hand",
@@ -567,28 +567,28 @@
                 "icon": "veg",
                 "title": "Fresh Vegetables",
                 "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste.",
-                "image": "/images/home/product-1.jpg",
+                "image": "/images/home/product-1.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "apple",
                 "title": "Fresh Fruits",
                 "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
-                "image": "/images/home/product-2.jpg",
+                "image": "/images/home/product-2.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "wheat",
                 "title": "Grains & Pulses",
                 "text": "High-quality, naturally grown grains and pulses for a healthier and more balanced diet.",
-                "image": "/images/home/product-3.jpg",
+                "image": "/images/home/product-3.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "leaf",
                 "title": "Organic Products",
                 "text": "A wide range of natural and sustainable products for a healthier you and a greener tomorrow.",
-                "image": "/images/home/product-4.jpg",
+                "image": "/images/home/product-4.webp",
                 "href": "/product-detail"
               }
             ],
@@ -604,43 +604,43 @@
             "accent": "Customers Say",
             "text": "Our customers trust us for fresh, healthy and naturally grown products. Here's what they have to say about their experience with us.",
             "avatars": [
-              "/images/home/avatar-1.png",
-              "/images/home/avatar-2.png",
-              "/images/home/avatar-3.png",
-              "/images/home/avatar-4.png",
-              "/images/home/avatar-5.png"
+              "/images/home/avatar-1.webp",
+              "/images/home/avatar-2.webp",
+              "/images/home/avatar-3.webp",
+              "/images/home/avatar-4.webp",
+              "/images/home/avatar-5.webp"
             ],
-            "fieldImage": "/images/home/testi-field.jpg",
+            "fieldImage": "/images/home/testi-field.webp",
             "reviews": [
               {
                 "quote": "The quality of organic fruits and vegetables from this farm is outstanding. Everything is harvested fresh, packed with natural flavor, and delivered right on time. We couldn't be happier with their authentic service and produce.",
                 "name": "Michael Thompson",
                 "role": "Regular Customer",
-                "avatar": "/images/home/avatar-1.png"
+                "avatar": "/images/home/avatar-1.webp"
               },
               {
                 "quote": "I absolutely love their dedication to 100% chemical-free organic farming. The vegetables are always crisp, aromatic, and full of natural nutrients. Our entire family has noticed a wonderful difference in our daily health.",
                 "name": "Aisha Patel",
                 "role": "Health Enthusiast",
-                "avatar": "/images/home/avatar-2.png"
+                "avatar": "/images/home/avatar-2.webp"
               },
               {
                 "quote": "Reliable next-day delivery and genuinely friendly customer support every time. Knowing our food comes straight from healthy, pesticide-free soil gives us complete peace of mind. Highly recommended for every conscious home.",
                 "name": "Luis Garcia",
                 "role": "Busy Professional",
-                "avatar": "/images/home/avatar-3.png"
+                "avatar": "/images/home/avatar-3.webp"
               },
               {
                 "quote": "As a chef who values clean eating, Farmora's fresh produce has elevated our daily family meals. The heirloom tomatoes, crisp leafy greens, and seasonal fruits have an unbeatable farm-to-table freshness you can truly taste.",
                 "name": "Sarah Jenkins",
                 "role": "Organic Chef",
-                "avatar": "/images/home/avatar-4.png"
+                "avatar": "/images/home/avatar-4.webp"
               },
               {
                 "quote": "Supporting sustainable organic agriculture is vital for our future, and Farmora sets the gold standard. Pure, transparent, and ethically grown food with zero synthetic sprays—they are our trusted farming partners for life.",
                 "name": "David Miller",
                 "role": "Eco Advocate",
-                "avatar": "/images/home/avatar-5.png"
+                "avatar": "/images/home/avatar-5.webp"
               }
             ]
           }
@@ -660,7 +660,7 @@
                 "tag": "Organic Farming",
                 "title": "The Future of Organic Farming",
                 "text": "Explore how certified organic cultivation eliminates synthetic chemicals, protects pollinators, and restores natural ecosystems.",
-                "image": "/images/blog/blog-1.jpg",
+                "image": "/images/blog/blog-1.webp",
                 "href": "/blog-details/the-future-of-organic-farming"
               },
               {
@@ -669,7 +669,7 @@
                 "tag": "Soil Health",
                 "title": "Why Living Soil Grows Better Food",
                 "text": "Uncover how nutrient-dense, microbe-rich living soil directly enhances crop flavor, natural vitality, and human wellness.",
-                "image": "/images/blog/blog-2.jpg",
+                "image": "/images/blog/blog-2.webp",
                 "href": "/blog-details/why-living-soil-grows-better-food"
               },
               {
@@ -678,7 +678,7 @@
                 "tag": "Sustainable Agriculture",
                 "title": "Smart Irrigation for Sustainable Yields",
                 "text": "Discover modern precision drip irrigation and water-saving methods that maximize crop yields while preserving groundwater.",
-                "image": "/images/blog/blog-3.jpg",
+                "image": "/images/blog/blog-3.webp",
                 "href": "/blog-details/smart-irrigation-for-sustainable-yields"
               }
             ],
@@ -715,7 +715,7 @@
           "FarmoraEnquiryBanner1": {
             "title": "Enquire Now"
           },
-          "backgroundImage": "/images/common/banner.jpg",
+          "backgroundImage": "/images/common/banner.webp",
           "FarmoraGalleryBanner1": {
             "title": "Gallery"
           },
@@ -748,10 +748,10 @@
               "By partnering directly with regional farmer families, we build a transparent supply chain delivering fresh organic goodness you and your family can trust."
             ],
             "images": [
-              "/images/home/about-1.jpg",
-              "/images/home/about-2.jpg"
+              "/images/home/about-1.webp",
+              "/images/home/about-2.webp"
             ],
-            "image": "/images/home/about-collage.jpg",
+            "image": "/images/home/about-collage.webp",
             "imageAlt": "Farmora organic farmers and fresh harvest"
           }
         }
@@ -769,56 +769,56 @@
                 "icon": "leaf",
                 "title": "Fresh Vegetables",
                 "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste from our farms to your table.",
-                "image": "/images/home/service-1.jpg",
+                "image": "/images/home/service-1.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "apple",
                 "title": "Fresh Fruits",
                 "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
-                "image": "/images/home/service-2.jpg",
+                "image": "/images/home/service-2.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "sprout",
                 "title": "Agriculture Products",
                 "text": "A wide range of natural agriculture produce to support sustainable farming and healthier communities.",
-                "image": "/images/home/service-3.jpg",
+                "image": "/images/home/service-3.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "hand",
                 "title": "Organic Solutions",
                 "text": "Eco-friendly and sustainable solutions for a healthier soil, better crops, and a greener tomorrow.",
-                "image": "/images/home/service-4.jpg",
+                "image": "/images/home/service-4.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "leaf",
                 "title": "Fresh Vegetables",
                 "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste from our farms to your table.",
-                "image": "/images/home/service-1.jpg",
+                "image": "/images/home/service-1.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "apple",
                 "title": "Fresh Fruits",
                 "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
-                "image": "/images/home/service-2.jpg",
+                "image": "/images/home/service-2.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "sprout",
                 "title": "Agriculture Products",
                 "text": "A wide range of natural agriculture produce to support sustainable farming and healthier communities.",
-                "image": "/images/home/service-3.jpg",
+                "image": "/images/home/service-3.webp",
                 "href": "/service-detail"
               },
               {
                 "icon": "hand",
                 "title": "Organic Solutions",
                 "text": "Eco-friendly and sustainable solutions for a healthier soil, better crops, and a greener tomorrow.",
-                "image": "/images/home/service-4.jpg",
+                "image": "/images/home/service-4.webp",
                 "href": "/service-detail"
               }
             ]
@@ -836,44 +836,44 @@
               "label": "Enquiry Now",
               "href": "/enquiry"
             },
-            "image": "/images/services/hero.jpg",
+            "image": "/images/services/hero.webp",
             "sidebar": {
               "title": "Our Services",
               "activeTitle": "Organic Fertilizer Supply",
               "items": [
                 {
                   "title": "Organic Farm Consultation",
-                  "image": "/images/services/thumb-1.jpg"
+                  "image": "/images/services/thumb-1.webp"
                 },
                 {
                   "title": "Vertical Farming Solutions",
-                  "image": "/images/services/thumb-2.jpg"
+                  "image": "/images/services/thumb-2.webp"
                 },
                 {
                   "title": "Custom Container Gardening",
-                  "image": "/images/services/thumb-3.jpg"
+                  "image": "/images/services/thumb-3.webp"
                 },
                 {
                   "title": "Garden Maintenance Plans",
-                  "image": "/images/services/thumb-4.jpg"
+                  "image": "/images/services/thumb-4.webp"
                 },
                 {
                   "title": "Organic Fertilizer Supply",
-                  "image": "/images/services/thumb-5.jpg"
+                  "image": "/images/services/thumb-5.webp"
                 },
                 {
                   "title": "Crop Rotation Planning",
-                  "image": "/images/services/thumb-6.jpg"
+                  "image": "/images/services/thumb-6.webp"
                 },
                 {
                   "title": "Natural Pest Control",
-                  "image": "/images/services/thumb-7.jpg"
+                  "image": "/images/services/thumb-7.webp"
                 }
               ],
               "help": {
                 "title": "Need Help?",
                 "text": "Our team is here to guide you with the best organic farming solutions.",
-                "image": "/images/services/help-leaf.png",
+                "image": "/images/services/help-leaf.webp",
                 "href": "/contact"
               }
             }
@@ -885,7 +885,7 @@
           "FarmoraServiceOverview1": {
             "title": "Service Overview",
             "text": "Our Organic Fertilizer Supply service offers natural and nutrient-rich fertilizers made from compost, plant matter and other organic sources. These fertilizers improve soil structure, enhance microbial activity and provide essential nutrients to crops, resulting in healthier plants, higher yields and long-term soil fertility. We supply organic fertilizers for farms, commercial agriculture and home gardening needs.",
-            "image": "/images/services/overview.jpg"
+            "image": "/images/services/overview.webp"
           }
         }
       },
@@ -933,7 +933,7 @@
           "FarmoraServiceWhy1": {
             "title": "Why Choose Our Service",
             "text": "We are committed to providing premium quality organic fertilizers that help farmers and gardeners achieve healthier soil and better yields. Our products are specially curated to meet the needs of modern and traditional farming practices, ensuring sustainable and productive agriculture.",
-            "image": "/images/services/why.jpg",
+            "image": "/images/services/why.webp",
             "points": [
               "High-quality and nutrient-rich organic fertilizers",
               "Safe and natural for long-term use",
@@ -957,56 +957,56 @@
                 "icon": "veg",
                 "title": "Fresh Vegetables",
                 "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste.",
-                "image": "/images/home/product-1.jpg",
+                "image": "/images/home/product-1.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "apple",
                 "title": "Fresh Fruits",
                 "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
-                "image": "/images/home/product-2.jpg",
+                "image": "/images/home/product-2.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "wheat",
                 "title": "Grains & Pulses",
                 "text": "High-quality, naturally grown grains and pulses for a healthier and more balanced diet.",
-                "image": "/images/home/product-3.jpg",
+                "image": "/images/home/product-3.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "leaf",
                 "title": "Organic Products",
                 "text": "A wide range of natural and sustainable products for a healthier you and a greener tomorrow.",
-                "image": "/images/home/product-4.jpg",
+                "image": "/images/home/product-4.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "veg",
                 "title": "Fresh Vegetables",
                 "text": "Naturally grown, chemical-free vegetables packed with nutrition and natural taste.",
-                "image": "/images/home/product-1.jpg",
+                "image": "/images/home/product-1.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "apple",
                 "title": "Fresh Fruits",
                 "text": "Delicious and healthy fruits grown without harmful chemicals, ensuring pure goodness in every bite.",
-                "image": "/images/home/product-2.jpg",
+                "image": "/images/home/product-2.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "wheat",
                 "title": "Grains & Pulses",
                 "text": "High-quality, naturally grown grains and pulses for a healthier and more balanced diet.",
-                "image": "/images/home/product-3.jpg",
+                "image": "/images/home/product-3.webp",
                 "href": "/product-detail"
               },
               {
                 "icon": "leaf",
                 "title": "Organic Products",
                 "text": "A wide range of natural and sustainable products for a healthier you and a greener tomorrow.",
-                "image": "/images/home/product-4.jpg",
+                "image": "/images/home/product-4.webp",
                 "href": "/product-detail"
               }
             ]
@@ -1020,7 +1020,7 @@
             "title": "Organic Compost",
             "accent": "Fertilizer",
             "text": "Our Organic Compost Fertilizer is made from natural kitchen and garden waste, enriched with essential nutrients to improve soil health and boost plant growth. It helps in creating a fertile soil environment, enhances water retention and promotes stronger, healthier plants.",
-            "image": "/images/product-detail/main.jpg",
+            "image": "/images/product-detail/main.webp",
             "badges": [
               {
                 "icon": "leaf",
@@ -1051,7 +1051,7 @@
           "FarmoraProductOverview1": {
             "title": "Product Overview",
             "text": "Our Organic Compost Fertilizer is a nutrient-rich, all-natural soil amendment made from decomposed organic matter. It improves soil structure, enhances moisture retention and provides essential nutrients for healthy plant growth. Ideal for home gardens, terrace gardening, farmers and landscaping projects.",
-            "image": "/images/product-detail/overview.jpg"
+            "image": "/images/product-detail/overview.webp"
           }
         }
       },
@@ -1182,75 +1182,75 @@
             "text": "Explore moments from our organic farming activities, natural products and on-ground initiatives. Our gallery reflects our commitment to sustainable and healthy living.",
             "images": [
               {
-                "src": "/images/gallery/g1.jpg",
+                "src": "/images/gallery/g1.webp",
                 "alt": "Young seedling growing in fertile soil"
               },
               {
-                "src": "/images/gallery/g2.jpg",
+                "src": "/images/gallery/g2.webp",
                 "alt": "Organic crop rows at sunrise"
               },
               {
-                "src": "/images/gallery/g3.jpg",
+                "src": "/images/gallery/g3.webp",
                 "alt": "Fresh ripe tomatoes on the vine"
               },
               {
-                "src": "/images/gallery/g4.jpg",
+                "src": "/images/gallery/g4.webp",
                 "alt": "Hands holding rich organic compost"
               },
               {
-                "src": "/images/gallery/g5.jpg",
+                "src": "/images/gallery/g5.webp",
                 "alt": "Fresh lettuce growing in the field"
               },
               {
-                "src": "/images/gallery/g6_clean.jpg",
+                "src": "/images/gallery/g6_clean.webp",
                 "alt": "Sprinkler irrigation over crop rows"
               },
               {
-                "src": "/images/gallery/g7.jpg",
+                "src": "/images/gallery/g7.webp",
                 "alt": "Young plants in a greenhouse row"
               },
               {
-                "src": "/images/gallery/g8.jpg",
+                "src": "/images/gallery/g8.webp",
                 "alt": "Basket of fresh organic vegetables"
               },
               {
-                "src": "/images/gallery/g9.jpg",
+                "src": "/images/gallery/g9.webp",
                 "alt": "Sunlit seedling in the soil"
               },
               {
-                "src": "/images/gallery/g10.jpg",
+                "src": "/images/gallery/g10.webp",
                 "alt": "Close-up of a healthy green leaf"
               },
               {
-                "src": "/images/gallery/g11.jpg",
+                "src": "/images/gallery/g11.webp",
                 "alt": "Hand spreading organic fertilizer"
               },
               {
-                "src": "/images/gallery/g12.jpg",
+                "src": "/images/gallery/g12.webp",
                 "alt": "Farm fields at sunrise"
               },
               {
-                "src": "/images/gallery/g13.jpg",
+                "src": "/images/gallery/g13.webp",
                 "alt": "Farm rows under evening sun"
               },
               {
-                "src": "/images/gallery/g14.jpg",
+                "src": "/images/gallery/g14.webp",
                 "alt": "Seedlings growing in sunlight"
               },
               {
-                "src": "/images/gallery/g15.jpg",
+                "src": "/images/gallery/g15.webp",
                 "alt": "Leafy green crops"
               },
               {
-                "src": "/images/gallery/g16.jpg",
+                "src": "/images/gallery/g16.webp",
                 "alt": "Watering a young plant"
               },
               {
-                "src": "/images/gallery/g17_clean.jpg",
+                "src": "/images/gallery/g17_clean.webp",
                 "alt": "Aerial view of green farmland"
               },
               {
-                "src": "/images/gallery/g18.jpg",
+                "src": "/images/gallery/g18.webp",
                 "alt": "Hands holding fresh compost"
               }
             ],
@@ -1267,55 +1267,55 @@
                 "name": "Ramesh Patel",
                 "role": "Progressive Farmer",
                 "quote": "The organic fertilizer from Farmora Organics has significantly improved the soil quality on my farm. I've noticed healthier crops and better yields naturally.",
-                "avatar": "/images/testimonials/avatar-1.png"
+                "avatar": "/images/testimonials/avatar-1.webp"
               },
               {
                 "name": "Sunita Verma",
                 "role": "Organic Farmer",
                 "quote": "We have been using Farmora's organic solutions for over a year. The results in our vegetable crops are excellent, and the soil is more fertile than before.",
-                "avatar": "/images/testimonials/avatar-2.png"
+                "avatar": "/images/testimonials/avatar-2.webp"
               },
               {
                 "name": "Amit Kumar",
                 "role": "Agriculture Business Owner",
                 "quote": "Farmora Organics provides truly natural products. Their compost fertilizer has helped us reduce chemical usage and maintain healthier soil for long-term farming.",
-                "avatar": "/images/testimonials/avatar-3.png"
+                "avatar": "/images/testimonials/avatar-3.webp"
               },
               {
                 "name": "Vikram Singh",
                 "role": "Crop Producer",
                 "quote": "The quality of Farmora's products is outstanding. Our crop growth has improved greatly, and the plants are noticeably healthier, stronger and more resilient.",
-                "avatar": "/images/testimonials/avatar-4.png"
+                "avatar": "/images/testimonials/avatar-4.webp"
               },
               {
                 "name": "Mahesh Yadav",
                 "role": "Organic Farmer",
                 "quote": "I switched to Farmora Organics for natural farming and the difference is clear. Better soil structure, healthy plants and improved yield without harmful chemicals.",
-                "avatar": "/images/testimonials/avatar-5.png"
+                "avatar": "/images/testimonials/avatar-5.webp"
               },
               {
                 "name": "Rohit Sharma",
                 "role": "Vegetable Grower",
                 "quote": "Farmora's organic inputs are easy to use and very effective. Our vegetables have better taste and quality, and customers love the natural produce.",
-                "avatar": "/images/testimonials/avatar-6.png"
+                "avatar": "/images/testimonials/avatar-6.webp"
               },
               {
                 "name": "Pooja Desai",
                 "role": "Organic Farmer",
                 "quote": "Using Farmora's organic fertilizer has improved the health of our crops and reduced soil problems. I highly recommend their products to all farmers.",
-                "avatar": "/images/testimonials/avatar-7.png"
+                "avatar": "/images/testimonials/avatar-7.webp"
               },
               {
                 "name": "Deepak Joshi",
                 "role": "Farmer & Distributor",
                 "quote": "Farmora Organics has helped us move towards sustainable farming. Their products are reliable, natural and give consistent results year after year.",
-                "avatar": "/images/testimonials/avatar-8.png"
+                "avatar": "/images/testimonials/avatar-8.webp"
               },
               {
                 "name": "Suresh Choudhary",
                 "role": "Agri Entrepreneur",
                 "quote": "Excellent quality organic products and great support from the Farmora team. Our farm is now more productive and the soil health has improved a lot.",
-                "avatar": "/images/testimonials/avatar-9.png"
+                "avatar": "/images/testimonials/avatar-9.webp"
               }
             ]
           }
@@ -1336,7 +1336,7 @@
                 "tag": "Organic Farming",
                 "title": "The Future of Organic Farming",
                 "text": "Explore how certified organic cultivation eliminates synthetic chemicals, protects pollinators, and restores natural ecosystems.",
-                "image": "/images/blog/blog-1.jpg",
+                "image": "/images/blog/blog-1.webp",
                 "href": "/blog-details/the-future-of-organic-farming"
               },
               {
@@ -1345,7 +1345,7 @@
                 "tag": "Soil Health",
                 "title": "Why Living Soil Grows Better Food",
                 "text": "Uncover how nutrient-dense, microbe-rich living soil directly enhances crop flavor, natural vitality, and human wellness.",
-                "image": "/images/blog/blog-2.jpg",
+                "image": "/images/blog/blog-2.webp",
                 "href": "/blog-details/why-living-soil-grows-better-food"
               },
               {
@@ -1354,7 +1354,7 @@
                 "tag": "Sustainable Agriculture",
                 "title": "Smart Irrigation for Sustainable Yields",
                 "text": "Discover modern precision drip irrigation and water-saving methods that maximize crop yields while preserving groundwater.",
-                "image": "/images/blog/blog-3.jpg",
+                "image": "/images/blog/blog-3.webp",
                 "href": "/blog-details/smart-irrigation-for-sustainable-yields"
               },
               {
@@ -1363,7 +1363,7 @@
                 "tag": "Health & Nutrition",
                 "title": "The Power of Peak Seasonal Harvests",
                 "text": "Learn why eating fresh, locally harvested organic produce provides superior vitamin density and natural immunity benefits.",
-                "image": "/images/blog/blog-4.jpg",
+                "image": "/images/blog/blog-4.webp",
                 "href": "/blog-details/the-power-of-peak-seasonal-harvests"
               },
               {
@@ -1372,7 +1372,7 @@
                 "tag": "Farming Tips",
                 "title": "Companion Planting for Thriving Gardens",
                 "text": "Master proven companion plant pairings and natural organic pest deterrence to grow lush, chemical-free home vegetables.",
-                "image": "/images/blog/blog-5.jpg",
+                "image": "/images/blog/blog-5.webp",
                 "href": "/blog-details/companion-planting-for-thriving-gardens"
               },
               {
@@ -1381,7 +1381,7 @@
                 "tag": "Eco Living",
                 "title": "Zero-Waste Guide to Organic Living",
                 "text": "Simple daily habits to reduce plastic waste, compost kitchen scraps, and create a healthy sustainable home in harmony with nature.",
-                "image": "/images/blog/blog-6.jpg",
+                "image": "/images/blog/blog-6.webp",
                 "href": "/blog-details/zero-waste-guide-to-organic-living"
               }
             ]
@@ -1397,7 +1397,7 @@
             "author": "By Admin",
             "readTime": "5 Min Read",
             "intro": "Soil is the foundation of agriculture. Healthy soil supports strong plant growth, improves crop yield and plays a vital role in maintaining a balanced ecosystem. As the demand for food continues to rise, adopting sustainable farming practices that focus on soil health has become more important than ever.",
-            "image": "/images/blog-details/main.jpg",
+            "image": "/images/blog-details/main.webp",
             "imageAlt": "Young plants growing in healthy soil",
             "sections": [
               {
@@ -1432,42 +1432,42 @@
               {
                 "title": "The Future of Organic Farming",
                 "date": "28 Aug 2026",
-                "image": "/images/blog-details/recent-1.jpg",
+                "image": "/images/blog-details/recent-1.webp",
                 "href": "/blog-details/the-future-of-organic-farming",
                 "tag": "Organic Farming"
               },
               {
                 "title": "Why Living Soil Grows Better Food",
                 "date": "24 Aug 2026",
-                "image": "/images/blog-details/recent-2.jpg",
+                "image": "/images/blog-details/recent-2.webp",
                 "href": "/blog-details/why-living-soil-grows-better-food",
                 "tag": "Soil Health"
               },
               {
                 "title": "Smart Irrigation for Sustainable Yields",
                 "date": "20 Aug 2026",
-                "image": "/images/blog-details/recent-3.jpg",
+                "image": "/images/blog-details/recent-3.webp",
                 "href": "/blog-details/smart-irrigation-for-sustainable-yields",
                 "tag": "Sustainable Agriculture"
               },
               {
                 "title": "The Power of Peak Seasonal Harvests",
                 "date": "15 Aug 2026",
-                "image": "/images/blog-details/recent-4.jpg",
+                "image": "/images/blog-details/recent-4.webp",
                 "href": "/blog-details/the-power-of-peak-seasonal-harvests",
                 "tag": "Health & Nutrition"
               },
               {
                 "title": "Companion Planting for Thriving Gardens",
                 "date": "12 Aug 2026",
-                "image": "/images/blog-details/recent-5.jpg",
+                "image": "/images/blog-details/recent-5.webp",
                 "href": "/blog-details/companion-planting-for-thriving-gardens",
                 "tag": "Farming Tips"
               },
               {
                 "title": "Zero-Waste Guide to Organic Living",
                 "date": "08 Aug 2026",
-                "image": "/images/blog-details/recent-6.jpg",
+                "image": "/images/blog-details/recent-6.webp",
                 "href": "/blog-details/zero-waste-guide-to-organic-living",
                 "tag": "Eco Living"
               }
@@ -1508,7 +1508,7 @@
             "button": "Send Message",
             "success": "Thank you! Your message has been sent. Our team will get back to you shortly.",
             "promo": {
-              "image": "/images/contact/plant.jpg",
+              "image": "/images/contact/plant.webp",
               "titleLine1": "Let's Grow",
               "titlePrefix": "a",
               "titleAccent": "Greener",
@@ -1560,7 +1560,7 @@
       "ContactLocation": {
         "variants": {
           "FarmoraContactLocation1": {
-            "mapImage": "/images/contact/map.jpg",
+            "mapImage": "/images/contact/map.webp",
             "mapAlt": "Map showing Farmora Organics in Springfield, IL",
             "mapHref": "https://maps.google.com/?q=742+Evergreen+Terrace,+Springfield,+IL+62704",
             "eyebrow": "Visit Our Office",
@@ -1680,7 +1680,7 @@
                 "slug": "rajiv-sharma",
                 "name": "Rajiv Sharma",
                 "role": "Farm Director",
-                "image": "/images/team/team-rajiv.jpg",
+                "image": "/images/team/team-rajiv.webp",
                 "bio": "With over 20 years of experience in organic farming, Rajiv leads our operations with a passion for sustainable agriculture and soil health.",
                 "about": "Rajiv Sharma founded Farmora Organics with a single vision — bring pure, chemical-free food from farm to every Indian table. Growing up on a small farm in Rajasthan, he witnessed first-hand how industrial farming degraded soil and endangered health. He holds a degree in Agricultural Science from IARI, New Delhi, and has spent two decades perfecting the art of organic farming across five states.",
                 "expertise": [
@@ -1698,7 +1698,7 @@
                 "slug": "priya-nair",
                 "name": "Priya Nair",
                 "role": "Organic Specialist",
-                "image": "/images/team/team-priya.jpg",
+                "image": "/images/team/team-priya.webp",
                 "bio": "Priya brings expertise in certified organic practices and guides our crop cycles to ensure chemical-free, nutrient-rich produce for every customer.",
                 "about": "Priya joined Farmora Organics after earning her Master's in Organic Agriculture from Kerala Agricultural University. She has led the certification process for our farm under NPOP (National Programme for Organic Production) and works closely with farmers to transition from conventional to organic methods. Her research on natural pest management has been published in two national journals.",
                 "expertise": [
@@ -1716,7 +1716,7 @@
                 "slug": "amit-verma",
                 "name": "Amit Verma",
                 "role": "Soil Scientist",
-                "image": "/images/team/team-amit.jpg",
+                "image": "/images/team/team-amit.webp",
                 "bio": "Amit analyses soil composition and designs enrichment programmes that keep our farmland fertile, healthy and productive season after season.",
                 "about": "Amit Verma is a certified soil scientist with a PhD in Soil Microbiology from Banaras Hindu University. He leads our soil lab where every plot of farmland is tested and monitored throughout the year. His work on bio-fertiliser formulations has reduced our dependence on external inputs by 40%, while simultaneously increasing crop yields and soil organic matter content.",
                 "expertise": [
@@ -1734,7 +1734,7 @@
                 "slug": "sunita-devi",
                 "name": "Sunita Devi",
                 "role": "Head of Operations",
-                "image": "/images/team/team-sunita.jpg",
+                "image": "/images/team/team-sunita.webp",
                 "bio": "Sunita oversees day-to-day farm logistics, quality checks and supply-chain coordination so fresh produce reaches you on time, every time.",
                 "about": "Sunita Devi brings 15 years of supply-chain and operations expertise to Farmora Organics. Before joining us, she managed logistics for one of India's largest food cooperatives. At Farmora, she has built an end-to-end cold-chain system ensuring that produce harvested in the morning reaches our customers' doors within 24 hours — fresh, safe and flavour-intact.",
                 "expertise": [
@@ -1752,7 +1752,7 @@
                 "slug": "karan-mehta",
                 "name": "Karan Mehta",
                 "role": "Marketing Manager",
-                "image": "/images/team/team-karan.jpg",
+                "image": "/images/team/team-karan.webp",
                 "bio": "Karan connects our farm story with customers across India, building trust through honest communication and a deep love for organic living.",
                 "about": "Karan Mehta is the voice of Farmora Organics. A passionate storyteller and digital marketer, he has grown our online community from zero to over 50,000 followers across platforms. Karan believes that the best marketing for organic food is radical transparency — showing customers exactly where their food comes from, who grows it and how. He runs Farmora's farm-visit programme and live harvest broadcasts.",
                 "expertise": [
@@ -1770,7 +1770,7 @@
                 "slug": "deepa-singh",
                 "name": "Deepa Singh",
                 "role": "Quality Analyst",
-                "image": "/images/team/team-deepa.jpg",
+                "image": "/images/team/team-deepa.webp",
                 "bio": "Deepa ensures every product leaving our farm meets the highest purity and freshness standards through rigorous testing and quality control.",
                 "about": "Deepa Singh is the guardian of quality at Farmora Organics. With a background in Food Technology from NIFTEM Haryana, she oversees all laboratory testing, pesticide residue checks and nutritional profiling of our produce. Every batch leaving the farm carries Deepa's sign-off. She has also developed our internal grading system that classifies produce by freshness, size and nutritional density.",
                 "expertise": [
@@ -1804,7 +1804,7 @@
                 "slug": "ramesh-patel",
                 "name": "Ramesh Patel",
                 "role": "Founder & CEO",
-                "image": "/images/testimonials/avatar-1.png",
+                "image": "/images/testimonials/avatar-1.webp",
                 "experience": "25+ Years",
                 "skills": [
                   "Organic Farming",
@@ -1823,7 +1823,7 @@
                 "slug": "sunita-verma",
                 "name": "Sunita Verma",
                 "role": "Head of Organic Farming",
-                "image": "/images/testimonials/avatar-2.png",
+                "image": "/images/testimonials/avatar-2.webp",
                 "experience": "15+ Years",
                 "skills": [
                   "Crop Planning",
@@ -1842,7 +1842,7 @@
                 "slug": "amit-kumar",
                 "name": "Amit Kumar",
                 "role": "Agronomist",
-                "image": "/images/testimonials/avatar-3.png",
+                "image": "/images/testimonials/avatar-3.webp",
                 "experience": "12+ Years",
                 "skills": [
                   "Agronomy",
@@ -1861,7 +1861,7 @@
                 "slug": "vikram-singh",
                 "name": "Vikram Singh",
                 "role": "Production Manager",
-                "image": "/images/testimonials/avatar-4.png",
+                "image": "/images/testimonials/avatar-4.webp",
                 "experience": "14+ Years",
                 "skills": [
                   "Harvesting",
@@ -1880,7 +1880,7 @@
                 "slug": "pooja-desai",
                 "name": "Pooja Desai",
                 "role": "Quality & Certification Lead",
-                "image": "/images/testimonials/avatar-7.png",
+                "image": "/images/testimonials/avatar-7.webp",
                 "experience": "10+ Years",
                 "skills": [
                   "Organic Certification",
@@ -1899,7 +1899,7 @@
                 "slug": "deepak-joshi",
                 "name": "Deepak Joshi",
                 "role": "Sales & Distribution Head",
-                "image": "/images/testimonials/avatar-8.png",
+                "image": "/images/testimonials/avatar-8.webp",
                 "experience": "11+ Years",
                 "skills": [
                   "Distribution",
@@ -1947,7 +1947,7 @@
               "author": "By Agronomist Team",
               "readTime": "5 Min Read",
               "intro": "Organic agriculture represents a profound return to natural balance. By working with nature rather than against it, organic farmers produce wholesome food while safeguarding groundwater, preserving pollinators, and regenerating rural farmland across the globe.",
-              "image": "/images/blog/blog-1.jpg",
+              "image": "/images/blog/blog-1.webp",
               "imageAlt": "Golden sunlit organic crop fields with thriving biodiversity",
               "sections": [
                 {
@@ -1977,7 +1977,7 @@
               "author": "By Soil Science Team",
               "readTime": "6 Min Read",
               "intro": "Soil is not merely dirt; it is a vibrant living ecosystem teeming with billions of beneficial fungi, bacteria, protozoa, and earthworms. When soil biology thrives, crops absorb essential trace minerals and nutrients that directly nourish human health.",
-              "image": "/images/blog/blog-2.jpg",
+              "image": "/images/blog/blog-2.webp",
               "imageAlt": "Rich dark living compost soil held in farmer hands with fresh green seedling",
               "sections": [
                 {
@@ -2007,7 +2007,7 @@
               "author": "By Sustainable Agri Team",
               "readTime": "5 Min Read",
               "intro": "Fresh water is agriculture's most precious and finite resource. Modern sustainable farms are revolutionizing water efficiency through micro-drip irrigation, solar-powered pressure systems, and rainwater harvesting that ensure abundant yields while conserving every droplet.",
-              "image": "/images/blog/blog-3.jpg",
+              "image": "/images/blog/blog-3.webp",
               "imageAlt": "Precision drip irrigation delivering water droplets to green organic crops",
               "sections": [
                 {
@@ -2037,7 +2037,7 @@
               "author": "By Nutrition Experts",
               "readTime": "4 Min Read",
               "intro": "Nature synchronizes nutrient availability with what the human body requires across seasons. Choosing vine-ripened, seasonal organic produce delivers exceptional flavor, peak concentrations of vital phytonutrients, and clean wellness without artificial ripening agents.",
-              "image": "/images/blog/blog-4.jpg",
+              "image": "/images/blog/blog-4.webp",
               "imageAlt": "Vibrant rustic wooden crate overflowing with freshly harvested organic vegetables",
               "sections": [
                 {
@@ -2067,7 +2067,7 @@
               "author": "By Master Gardeners",
               "readTime": "6 Min Read",
               "intro": "You don't need synthetic sprays to protect your vegetable patch. By pairing complementary plants together, nature creates its own aromatic shields, beneficial insect attractors, and nutrient-sharing alliances that make your home garden burst with vigor.",
-              "image": "/images/blog/blog-5.jpg",
+              "image": "/images/blog/blog-5.webp",
               "imageAlt": "Lush raised bed kitchen garden with companion marigolds, tomatoes and basil",
               "sections": [
                 {
@@ -2097,7 +2097,7 @@
               "author": "By Eco Living Specialists",
               "readTime": "5 Min Read",
               "intro": "Sustainable living extends beyond what we put on our plates—it encompasses the choices we make every day to reduce disposable waste, eliminate single-use plastics, and honor nature's circular rhythm in our homes.",
-              "image": "/images/blog/blog-6.jpg",
+              "image": "/images/blog/blog-6.webp",
               "imageAlt": "Aesthetic sustainable kitchen with organic grains in glass jars and woven jute bags",
               "sections": [
                 {

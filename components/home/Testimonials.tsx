@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaQuoteRight, FaStar } from "react-icons/fa6";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import SectionTitle from "@/components/common/SectionTitle";
@@ -20,41 +20,22 @@ export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const total = t.reviews.length;
   const review = t.reviews[index];
-  const [paused, setPaused] = useState(false);
   const go = (dir: number) => setIndex((i) => (i + dir + total) % total);
 
-  // Measure left column height so right image height equals left content exactly
-  const leftColRef = useRef<HTMLDivElement>(null);
-  const [leftHeight, setLeftHeight] = useState<number>(0);
-
+  // Continuous auto-run in infinite loop every 3.5 seconds
   useEffect(() => {
-    if (!leftColRef.current) return;
-    const update = () => {
-      if (leftColRef.current) {
-        setLeftHeight(leftColRef.current.offsetHeight);
-      }
-    };
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(leftColRef.current);
-    window.addEventListener("resize", update);
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", update);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (paused || total < 2) return;
-    const id = setInterval(() => setIndex((i) => (i + 1) % total), 4500);
+    if (total < 2) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % total);
+    }, 3500);
     return () => clearInterval(id);
-  }, [paused, total]);
+  }, [total, index]);
 
   return (
     <section className="relative overflow-hidden pt-6 pb-2 sm:pt-8 sm:pb-3 lg:pt-10 lg:pb-4">
       <div className="container-x grid items-stretch gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-10 xl:gap-14">
-        {/* Left Column: Heading + Avatar Cluster (defines total section height) */}
-        <div ref={leftColRef} className="reveal-left flex flex-col justify-center">
+        {/* Left Column: Heading + Avatar Cluster */}
+        <div className="reveal-left flex flex-col justify-center">
           <div>
             <SectionTitle
               align="left"
@@ -70,8 +51,6 @@ export default function Testimonials() {
           {/* Avatars Cluster */}
           <div
             className="relative mx-auto mt-4 sm:mt-6 aspect-[1.75/1] w-full max-w-[490px] lg:mx-0"
-            onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
           >
             {/* Decorative background accent dots matching design */}
             <span className="pointer-events-none absolute -left-2 top-6 h-8 w-8 rounded-full bg-[#dbe6b8]/50 blur-[0.5px]" aria-hidden="true" />
@@ -111,13 +90,7 @@ export default function Testimonials() {
         </div>
 
 
-        <div
-          suppressHydrationWarning
-          className="reveal-right relative flex flex-col justify-center h-full"
-          style={leftHeight > 0 ? { minHeight: `${leftHeight}px` } : undefined}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
+        <div className="reveal-right relative flex flex-col justify-center h-full">
           {/* Card & Background Image wrapper that matches left content height */}
           <div className="relative h-full flex flex-col justify-center w-full max-w-[480px] sm:max-w-[500px] lg:max-w-[520px] mx-auto lg:mx-0">
 

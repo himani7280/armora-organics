@@ -11,7 +11,7 @@ function Column({ points, side }: { points: Point[]; side: "left" | "right" }) {
       {points.map((p) => (
         <div
           key={p.title}
-          className="group flex items-center gap-4 lg:py-6 cursor-pointer"
+          className="group flex items-center gap-4 lg:py-6 cursor-pointer active:scale-[0.98] transition-transform duration-150"
         >
           <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest transition-all duration-300 group-hover:bg-forest group-hover:text-white group-hover:scale-105 shadow-xs">
             <Icon name={p.icon} className="h-7 w-7" />

@@ -223,3 +223,81 @@
     animation: none !important;
   }
 }
+
+/* ==========================================================================
+   TAP / PRESS ANIMATION
+   Tactile press feedback for interactive elements across the application.
+   EXCLUDED: Header, Banners (Hero/Page Banner), and Standalone Images.
+   ========================================================================== */
+
+/* 1. Base transition for smooth press and release */
+main button:not(:disabled),
+main a,
+main [role="button"],
+main input[type="submit"],
+main input[type="button"],
+main input[type="reset"],
+footer button:not(:disabled),
+footer a,
+.tap-animate {
+  transition: transform 0.14s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.14s ease, filter 0.14s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 2. Active Tap / Click scale feedback on buttons, links, controls */
+main button:not(:disabled):active,
+main a:not(:has(img:only-child)):active,
+main [role="button"]:active,
+main input[type="submit"]:active,
+main input[type="button"]:active,
+main input[type="reset"]:active,
+footer button:not(:disabled):active,
+footer a:not(:has(img:only-child)):active,
+.tap-animate:active {
+  transform: scale(0.95) !important;
+}
+
+/* 3. Cards & Articles: slightly gentler tactile press for larger surface area */
+main article:active,
+main .card-shadow:active,
+main div[class*="rounded-2xl"]:has(a):active {
+  transform: scale(0.985);
+  transition: transform 0.14s cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* 4. EXCLUSIONS: Header, Banners, and Standalone Images strictly excluded */
+header,
+header *,
+#page-banner,
+#page-banner *,
+section[aria-label*="Hero"],
+section[aria-label*="Hero"] *,
+section[aria-label*="Banner"],
+section[aria-label*="Banner"] *,
+img,
+img *,
+picture,
+picture *,
+[data-nimg],
+[data-nimg] * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+header:active,
+header *:active,
+#page-banner:active,
+#page-banner *:active,
+section[aria-label*="Hero"]:active,
+section[aria-label*="Hero"] *:active,
+section[aria-label*="Banner"]:active,
+section[aria-label*="Banner"] *:active,
+img:active,
+img *:active,
+picture:active,
+picture *:active,
+[data-nimg]:active,
+[data-nimg] *:active,
+a:has(> img:only-child):active,
+a:has(> picture:only-child):active {
+  transform: none !important;
+}

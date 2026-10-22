@@ -17,7 +17,7 @@ const data = testimonialsContent as { reviews: ReviewItem[] };
 
 function TestimonialCard({ review }: { review: ReviewItem }) {
   return (
-    <article className="group relative flex h-full flex-col justify-between rounded-2xl border border-[#e3edd5] bg-[#fbfdf9] p-5 sm:p-6 shadow-xs transition-all duration-300 hover:shadow-md hover:border-leaf/40 hover:-translate-y-1">
+    <article className="group relative flex h-full flex-col justify-between rounded-2xl border border-[#e3edd5] bg-[#fbfdf9] p-5 sm:p-6 shadow-xs transition-all duration-300 hover:shadow-md hover:border-leaf/40 hover:-translate-y-1 active:scale-[0.985] active:duration-150">
       <div className="flex gap-4 sm:gap-5">
         {/* Left Column: Avatar + Name + Underline + Role */}
         <div className="flex w-[100px] sm:w-[115px] shrink-0 flex-col items-start text-left">
@@ -99,7 +99,6 @@ export default function ReviewGrid() {
   const [currentIndex, setCurrentIndex] = useState(baseCount);
   const [withTransition, setWithTransition] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [paused, setPaused] = useState(false);
   const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Advance by 1 vertical column along the X-axis
@@ -112,7 +111,6 @@ export default function ReviewGrid() {
     []
   );
 
-  
   const handleTransitionEnd = () => {
     setIsTransitioning(false);
     if (currentIndex >= 2 * baseCount) {
@@ -134,16 +132,15 @@ export default function ReviewGrid() {
     }
   };
 
-  // Autoplay: 1 column forward along X-axis every 4.5 seconds in continuous infinite loop
+  // Autoplay: 1 column forward along X-axis every 3.5 seconds in continuous infinite loop
   useEffect(() => {
-    if (paused) return;
     autoPlayTimerRef.current = setInterval(() => {
       go(1);
-    }, 4500);
+    }, 3500);
     return () => {
       if (autoPlayTimerRef.current) clearInterval(autoPlayTimerRef.current);
     };
-  }, [paused, go]);
+  }, [go, currentIndex]);
 
   // 4 Navigation Dots mapping across the 9 column positions
   const DOT_COUNT = 4;
@@ -192,13 +189,12 @@ export default function ReviewGrid() {
         {/* ---- X-Axis Carousel Viewport (Shows exactly 6 cards: 3 columns x 2 rows) ---- */}
         <div
           className="relative overflow-hidden"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
           <div
+            suppressHydrationWarning
             className="flex"
             onTransitionEnd={handleTransitionEnd}
             style={{
@@ -211,7 +207,8 @@ export default function ReviewGrid() {
             {displayColumns.map((col, idx) => (
               <div
                 key={`${idx}-${col.id}`}
-                className="shrink-0 px-2.5 sm:px-3"
+                suppressHydrationWarning
+                className="shrink-0 px-2.5 sm:px-3 w-full md:w-1/2 lg:w-1/3"
                 style={{ width: `${colWidthPercent}%` }}
               >
                 {/* 1 Vertical Column containing 2 Cards */}

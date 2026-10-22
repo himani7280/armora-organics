@@ -15,7 +15,7 @@ const socials = [
 
 function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
   return (
-    <div className="reveal-on-scroll group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="reveal-on-scroll group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl active:scale-[0.98] active:duration-150">
       {/* Photo */}
       <div className="relative shrink-0 overflow-hidden" style={{ height: 300 }}>
         <Image

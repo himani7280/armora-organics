@@ -72,7 +72,7 @@ export default function Footer() {
       <div className="container-x grid gap-10 py-10 sm:py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr] lg:gap-0 lg:[&>*]:px-8 lg:[&>*:first-child]:pl-0 lg:[&>*:last-child]:pr-0 lg:[&>*:not(:first-child)]:border-l lg:[&>*:not(:first-child)]:border-mint">
         <div>
           <Image
-            src="/images/common/logo.jpg"
+            src="/images/common/logo.webp"
             alt={header.name}
             width={332}
             height={80}

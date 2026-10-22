@@ -44,7 +44,7 @@ export default function Header() {
       <div className="relative w-full overflow-hidden bg-[#fcf6e8]">
         {/* Left leaf accent - crisp original image */}
         <Image
-          src="/images/common/leaf-left.png"
+          src="/images/common/leaf-left.webp"
           alt=""
           width={92}
           height={78}
@@ -53,7 +53,7 @@ export default function Header() {
         />
         {/* Right leaf accent - crisp original image */}
         <Image
-          src="/images/common/leaf-right.png"
+          src="/images/common/leaf-right.webp"
           alt=""
           width={83}
           height={96}
@@ -103,7 +103,7 @@ export default function Header() {
       <div className="container-x flex h-20 items-center justify-between gap-3 lg:gap-4 lg:h-[88px]">
         <Link href="/" className="shrink-0 flex items-center -ml-1 sm:-ml-1.5 transition-transform duration-200 hover:opacity-95">
           <Image
-            src="/images/common/logo.jpg"
+            src="/images/common/logo.webp"
             alt={site.name}
             width={332}
             height={80}
@@ -170,7 +170,7 @@ export default function Header() {
         <div className="flex items-center justify-between border-b border-mint px-6 py-5">
           <Link href="/" onClick={() => setOpen(false)} className="shrink-0">
             <Image
-              src="/images/common/logo.jpg"
+              src="/images/common/logo.webp"
               alt={site.name}
               width={220}
               height={60}

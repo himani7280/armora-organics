@@ -21,7 +21,7 @@ export default function PageBanner({
           { label: title },
         ];
 
-  const bgImage = (bannerContent as any).backgroundImage || "/images/common/banner.jpg";
+  const bgImage = (bannerContent as any).backgroundImage || "/images/common/banner.webp";
 
   return (
     <section

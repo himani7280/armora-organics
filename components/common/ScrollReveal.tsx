@@ -4,12 +4,18 @@ import { useEffect } from "react";
 
 export default function ScrollReveal() {
   useEffect(() => {
+    // Enable instant CSS :active state on touch devices (iOS Safari & Android)
+    const enableTouchActive = () => {};
+    document.addEventListener("touchstart", enableTouchActive, { passive: true });
+
     // Graceful fallback for environments without IntersectionObserver
     if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
       document.querySelectorAll(".reveal-on-scroll, .reveal-left, .reveal-right, .reveal-scale").forEach((el) => {
         el.classList.add("is-revealed");
       });
-      return;
+      return () => {
+        document.removeEventListener("touchstart", enableTouchActive);
+      };
     }
 
     const observer = new IntersectionObserver(
@@ -44,6 +50,7 @@ export default function ScrollReveal() {
     mutationObserver.observe(document.body, { childList: true, subtree: true });
 
     return () => {
+      document.removeEventListener("touchstart", enableTouchActive);
       observer.disconnect();
       mutationObserver.disconnect();
     };

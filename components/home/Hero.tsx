@@ -22,7 +22,7 @@ export default function Hero() {
     : [
         {
           id: 1,
-          image: h.image || "/images/home/hero-farmer.jpg",
+          image: h.image || "/images/home/hero-farmer.webp",
           alt: "Farmer holding a crate of fresh vegetables",
           eyebrow: h.eyebrow || "Natural Farming",
           titleLines: h.titleLines || ["Pure & Organic", "Food For A"],

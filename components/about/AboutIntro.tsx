@@ -22,7 +22,7 @@ export default function AboutIntro() {
           <div className="relative mx-auto w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[570px] xl:max-w-[600px]">
             <div className="relative aspect-square w-full transition-transform duration-500 hover:scale-[1.02]">
               <Image
-                src={(a as any).image || "/images/home/about-collage.jpg"}
+                src={(a as any).image || "/images/home/about-collage.webp"}
                 alt={(a as any).imageAlt || "Farmora organic farmers and fresh harvest"}
                 fill
                 sizes="(min-width:1280px) 600px, (min-width:1024px) 570px, (min-width:640px) 480px, 92vw"
